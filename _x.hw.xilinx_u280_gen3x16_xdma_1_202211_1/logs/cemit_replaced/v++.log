@@ -1,0 +1,64 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/cemit_replaced
+	Log files: /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/logs/cemit_replaced
+INFO: [v++ 60-1548] Creating build summary session with primary output /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced.xo.compile_summary, at Mon Jun 12 16:49:41 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/cemit_replaced/v++_compile_cemit_replaced_guidance.html', at Mon Jun 12 16:49:41 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2022.2
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-242] Creating kernel: 'cemit_replaced'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: cemit_replaced Log file: /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_125_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_125_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_271_1_VITIS_LOOP_272_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_271_1_VITIS_LOOP_272_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_283_3'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_283_3'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_247_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_247_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_89_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_89_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_101_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_101_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 31, loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_141_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_141_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_153_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_153_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 31, loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_83_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_83_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_93_1_VITIS_LOOP_94_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_93_1_VITIS_LOOP_94_2'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_119_8'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_119_8'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_59_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_59_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_62_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'VITIS_LOOP_62_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_154_1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_67_5'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_5'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_33_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'VITIS_LOOP_33_2'
+ERROR: [v++ 206-102] Illegal connection is found on FIFO pin 'forward_node1|l_strA' connecting to 'call_ln40'('gemm_float_1024u_2u_10u_unsigned_int_s|l_strA4_i').
+ERROR: [v++ 206-102] Illegal connection is found on FIFO pin 'forward_node1|l_strB' connecting to 'call_ln40'('gemm_float_1024u_2u_10u_unsigned_int_s|l_strB5_i').
+ERROR: [v++ 200-103] RTL generation terminated by exceptions!
+ERROR: [v++ 60-300] Failed to build kernel(ip) cemit_replaced, see log for details: /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log
+ERROR: [v++ 60-773] In '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log', caught Tcl error: ERROR: [RTGEN 206-102] Illegal connection is found on FIFO pin 'forward_node1|l_strA' connecting to 'call_ln40'('gemm_float_1024u_2u_10u_unsigned_int_s|l_strA4_i').
+ERROR: [v++ 60-773] In '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log', caught Tcl error: ERROR: [RTGEN 206-102] Illegal connection is found on FIFO pin 'forward_node1|l_strB' connecting to 'call_ln40'('gemm_float_1024u_2u_10u_unsigned_int_s|l_strB5_i').
+ERROR: [v++ 60-773] In '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log', caught Tcl error: ERROR: [HLS 200-103] RTL generation terminated by exceptions!
+ERROR: [v++ 60-599] Kernel compilation failed to complete
+ERROR: [v++ 60-592] Failed to finish compilation

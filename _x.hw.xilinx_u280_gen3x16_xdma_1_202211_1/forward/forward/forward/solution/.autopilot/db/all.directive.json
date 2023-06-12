@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "forward",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/mnt\/shared\/home\/tz32\/scalehls_vitis_test\/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1\/forward\/forward\/forward.tcl",
+          "sourceLine": "23",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "forward"
+              }]
+          }
+        }]
+    }]}

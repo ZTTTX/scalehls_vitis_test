@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'muls_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+================================================================
+* Date:           Mon Jun 12 16:50:37 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        cemit_replaced
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.447 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6|  19.998 ns|  19.998 ns|    6|    6|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_633_1_VITIS_LOOP_634_2  |        4|        4|         1|          1|          1|     4|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.44>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%col = alloca i32 1"   --->   Operation 4 'alloca' 'col' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%row = alloca i32 1"   --->   Operation 5 'alloca' 'row' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 6 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.38ns)   --->   "%store_ln0 = store i3 0, i3 %indvar_flatten"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 8 [1/1] (0.38ns)   --->   "%store_ln0 = store i2 0, i2 %row"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 9 [1/1] (0.38ns)   --->   "%store_ln0 = store i2 0, i2 %col"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body5.i"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%col_4 = load i2 %col" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 11 'load' 'col_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i3 %indvar_flatten" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 12 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%l_Tc_m_Sreg_Array_2_addr = getelementptr i32 %l_Tc_m_Sreg_Array_2, i64 0, i64 0"   --->   Operation 13 'getelementptr' 'l_Tc_m_Sreg_Array_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%l_Tc_m_Sreg_Array_addr = getelementptr i32 %l_Tc_m_Sreg_Array, i64 0, i64 0"   --->   Operation 14 'getelementptr' 'l_Tc_m_Sreg_Array_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.49ns)   --->   "%icmp_ln633 = icmp_eq  i3 %indvar_flatten_load, i3 4" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 15 'icmp' 'icmp_ln633' <Predicate = true> <Delay = 0.49> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.57ns)   --->   "%add_ln633_2 = add i3 %indvar_flatten_load, i3 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 16 'add' 'add_ln633_2' <Predicate = true> <Delay = 0.57> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln633 = br i1 %icmp_ln633, void %for.cond.cleanup4.i, void %_ZN2xf4blas9TriangSrlIfLj2EE5clearEv.exit.exitStub" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 17 'br' 'br_ln633' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%row_load = load i2 %row" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 18 'load' 'row_load' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.43ns)   --->   "%add_ln633 = add i2 %row_load, i2 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 19 'add' 'add_ln633' <Predicate = (!icmp_ln633)> <Delay = 0.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_633_1_VITIS_LOOP_634_2_str"   --->   Operation 20 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 4, i64 4, i64 4"   --->   Operation 21 'speclooptripcount' 'empty' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.34ns)   --->   "%icmp_ln634 = icmp_eq  i2 %col_4, i2 2" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 22 'icmp' 'icmp_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.34> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.27ns)   --->   "%select_ln633 = select i1 %icmp_ln634, i2 %add_ln633, i2 %row_load" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 23 'select' 'select_ln633' <Predicate = (!icmp_ln633)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln633 = trunc i2 %select_ln633" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 24 'trunc' 'trunc_ln633' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln635 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_26" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:635]   --->   Operation 25 'specpipeline' 'specpipeline_ln635' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3"   --->   Operation 26 'specloopname' 'specloopname_ln76' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln85 = br i1 %trunc_ln633, void %arrayidx2.i.i3052.case.0, void %arrayidx2.i.i3052.case.1"   --->   Operation 27 'br' 'br_ln85' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.61ns)   --->   "%p_07 = memshiftread i32 @_ssdm_op_MemShiftRead.[2 x float]P0A, i1 %l_Tc_m_Sreg_Array_addr, i32 0, i1 1"   --->   Operation 28 'memshiftread' 'p_07' <Predicate = (!icmp_ln633 & !trunc_ln633)> <Delay = 0.61> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 32> <Depth = 2> <ShiftMem>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln85 = br void %arrayidx2.i.i3052.exit"   --->   Operation 29 'br' 'br_ln85' <Predicate = (!icmp_ln633 & !trunc_ln633)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.61ns)   --->   "%p_06 = memshiftread i32 @_ssdm_op_MemShiftRead.[2 x float]P0A, i1 %l_Tc_m_Sreg_Array_2_addr, i32 0, i1 1"   --->   Operation 30 'memshiftread' 'p_06' <Predicate = (!icmp_ln633 & trunc_ln633)> <Delay = 0.61> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 32> <Depth = 2> <ShiftMem>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln85 = br void %arrayidx2.i.i3052.exit"   --->   Operation 31 'br' 'br_ln85' <Predicate = (!icmp_ln633 & trunc_ln633)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.43ns)   --->   "%add_ln634 = add i2 %col_4, i2 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 32 'add' 'add_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.27ns)   --->   "%col_5 = select i1 %icmp_ln634, i2 1, i2 %add_ln634" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 33 'select' 'col_5' <Predicate = (!icmp_ln633)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.38ns)   --->   "%store_ln634 = store i3 %add_ln633_2, i3 %indvar_flatten" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 34 'store' 'store_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.38>
+ST_1 : Operation 35 [1/1] (0.38ns)   --->   "%store_ln634 = store i2 %select_ln633, i2 %row" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 35 'store' 'store_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.38>
+ST_1 : Operation 36 [1/1] (0.38ns)   --->   "%store_ln634 = store i2 %col_5, i2 %col" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 36 'store' 'store_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.38>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln634 = br void %for.body5.i" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 37 'br' 'br_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 38 'ret' 'ret_ln0' <Predicate = (icmp_ln633)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 1.45ns
+The critical path consists of the following:
+	'alloca' operation ('row') [4]  (0 ns)
+	'load' operation ('row_load', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633) on local variable 'row' [19]  (0 ns)
+	'add' operation ('add_ln633', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633) [20]  (0.436 ns)
+	'select' operation ('select_ln633', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633) [24]  (0.278 ns)
+	'store' operation ('store_ln634', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634) of variable 'select_ln633', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633 on local variable 'row' [39]  (0.387 ns)
+	blocking operation 0.346 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,24 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'tz32' on host 'xacc-head-000-5.csl.illinois.edu' (Linux_x86_64 version 4.15.0-208-generic) on Mon Jun 12 17:05:44 CDT 2023
+INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
+INFO: [HLS 200-10] In directory '/mnt/shared/home/tz32/scalehls_vitis_test/build'
+Sourcing Tcl script '/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp'
+invalid command name "//===------------------------------------------------------------*-"
+    while executing
+"//===------------------------------------------------------------*- C++ -*-===//"
+    (file "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp" line 2)
+    invoked from within
+"source /mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [HLS 200-112] Total CPU user time: 1.03 seconds. Total CPU system time: 0.21 seconds. Total elapsed time: 0.91 seconds; peak allocated memory: 98.957 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Jun 12 17:05:44 2023...

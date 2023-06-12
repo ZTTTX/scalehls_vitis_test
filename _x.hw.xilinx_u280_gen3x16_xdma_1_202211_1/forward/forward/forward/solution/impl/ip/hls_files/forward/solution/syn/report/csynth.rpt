@@ -1,0 +1,189 @@
+
+
+================================================================
+== Synthesis Summary Report of 'forward'
+================================================================
++ General Information: 
+    * Date:           Sat Jun 10 16:44:18 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        forward
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+    |                Modules               |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |         |            |            |     |
+    |                & Loops               |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT    | URAM|
+    +--------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+    |+ forward                             |  Timing|  -0.00|    73702|  2.456e+05|         -|    73703|     -|        no|  4 (~0%)|  5 (~0%)|  3349 (~0%)|  4437 (~0%)|    -|
+    | + forward_Pipeline_VITIS_LOOP_60_1   |  Timing|  -0.00|     1097|  3.656e+03|         -|     1097|     -|        no|        -|        -|   359 (~0%)|   440 (~0%)|    -|
+    |  o VITIS_LOOP_60_1                   |       -|   2.43|     1095|  3.650e+03|        73|        1|  1024|       yes|        -|        -|           -|           -|    -|
+    | + forward_Pipeline_VITIS_LOOP_26_2   |  Timing|  -0.00|       22|     73.326|         -|       22|     -|        no|  1 (~0%)|        -|   349 (~0%)|   240 (~0%)|    -|
+    |  o VITIS_LOOP_26_2                   |       -|   2.43|       20|     66.660|        12|        1|    10|       yes|        -|        -|           -|           -|    -|
+    | o VITIS_LOOP_43_2                    |       -|   2.43|    72510|  2.417e+05|      7251|        -|    10|        no|        -|        -|           -|           -|    -|
+    |  + forward_Pipeline_VITIS_LOOP_44_3  |  Timing|  -0.00|     7247|  2.415e+04|         -|     7247|     -|        no|        -|  3 (~0%)|   617 (~0%)|   686 (~0%)|    -|
+    |   o VITIS_LOOP_44_3                  |      II|   2.43|     7245|  2.415e+04|        85|        7|  1024|       yes|        -|        -|           -|           -|    -|
+    +--------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 32 -> 64   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+
+| Interface  | Data Width | Address Width | Offset | Register |
++------------+------------+---------------+--------+----------+
+| s_axi_ctrl | 32         | 6             | 16     | 0        |
++------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface  | Register | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_ctrl | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_ctrl | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_ctrl | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_ctrl | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_ctrl | v25_1    | 0x10   | 32    | W      | Data signal of v25               |                                                                                    |
+| s_axi_ctrl | v25_2    | 0x14   | 32    | W      | Data signal of v25               |                                                                                    |
+| s_axi_ctrl | v26_1    | 0x1c   | 32    | W      | Data signal of v26               |                                                                                    |
+| s_axi_ctrl | v26_2    | 0x20   | 32    | W      | Data signal of v26               |                                                                                    |
+| s_axi_ctrl | v27_1    | 0x28   | 32    | W      | Data signal of v27               |                                                                                    |
+| s_axi_ctrl | v27_2    | 0x2c   | 32    | W      | Data signal of v27               |                                                                                    |
++------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| v25      | inout     | float*   |
+| v26      | inout     | float*   |
+| v27      | inout     | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+----------+---------------------------------+
+| Argument | HW Interface | HW Type   | HW Usage | HW Info                         |
++----------+--------------+-----------+----------+---------------------------------+
+| v25      | m_axi_gmem   | interface |          |                                 |
+| v25      | s_axi_ctrl   | register  | offset   | name=v25_1 offset=0x10 range=32 |
+| v25      | s_axi_ctrl   | register  | offset   | name=v25_2 offset=0x14 range=32 |
+| v26      | m_axi_gmem   | interface |          |                                 |
+| v26      | s_axi_ctrl   | register  | offset   | name=v26_1 offset=0x1c range=32 |
+| v26      | s_axi_ctrl   | register  | offset   | name=v26_2 offset=0x20 range=32 |
+| v27      | m_axi_gmem   | interface |          |                                 |
+| v27      | s_axi_ctrl   | register  | offset   | name=v27_1 offset=0x28 range=32 |
+| v27      | s_axi_ctrl   | register  | offset   | name=v27_2 offset=0x2c range=32 |
++----------+--------------+-----------+----------+---------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-----------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Location                                                        |
++--------------+-----------+--------+-------+-----------------------------------------------------------------+
+| m_axi_gmem   | write     | 5      | 64    | /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:26:22 |
++--------------+-----------+--------+-------+-----------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------------+---------------------------+------------+-----------------------------------------------------------------+
+| HW Interface | Variable | Loop            | Problem                   | Resolution | Location                                                        |
++--------------+----------+-----------------+---------------------------+------------+-----------------------------------------------------------------+
+| m_axi_gmem   | v25      | VITIS_LOOP_60_1 | Could not analyze pattern | 214-229    | /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:60:20 |
+| m_axi_gmem   | v27      | VITIS_LOOP_44_3 | Stride is incompatible    | 214-230    | /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:44:24 |
++--------------+----------+-----------------+---------------------------+------------+-----------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+------------+------+--------+---------+
+| Name                                 | DSP | Pragma | Variable   | Op   | Impl   | Latency |
++--------------------------------------+-----+--------+------------+------+--------+---------+
+| + forward                            | 5   |        |            |      |        |         |
+|   add_ln43_fu_227_p2                 | -   |        | add_ln43   | add  | fabric | 0       |
+|   fadd_32ns_32ns_32_7_full_dsp_1_U21 | -   |        | add_ln46   | add  | fabric | 0       |
+|  + forward_Pipeline_VITIS_LOOP_60_1  | 0   |        |            |      |        |         |
+|    add_ln60_fu_147_p2                | -   |        | add_ln60   | add  | fabric | 0       |
+|    add_ln61_2_fu_239_p2              | -   |        | add_ln61_2 | add  | fabric | 0       |
+|  + forward_Pipeline_VITIS_LOOP_44_3  | 3   |        |            |      |        |         |
+|    add_ln44_fu_241_p2                | -   |        | add_ln44   | add  | fabric | 0       |
+|    add_ln46_2_fu_205_p2              | -   |        | add_ln46_2 | add  | fabric | 0       |
+|    add_ln46_1_fu_215_p2              | -   |        | add_ln46_1 | add  | fabric | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U6  | 3   |        | v19        | fmul | maxdsp | 3       |
+|  + forward_Pipeline_VITIS_LOOP_26_2  | 0   |        |            |      |        |         |
+|    add_ln26_fu_156_p2                | -   |        | add_ln26   | add  | fabric | 0       |
++--------------------------------------+-----+--------+------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------+------+------+--------+----------+---------+------+---------+
+| Name                                | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++-------------------------------------+------+------+--------+----------+---------+------+---------+
+| + forward                           | 4    | 0    |        |          |         |      |         |
+|   v29_U                             | 2    | -    | yes    | v29      | ram_t2p | bram | 1       |
+|   v30_U                             | 1    | -    | yes    | v30      | ram_t2p | bram | 1       |
+|  + forward_Pipeline_VITIS_LOOP_26_2 | 1    | 0    |        |          |         |      |         |
+|    v28_U                            | 1    | -    | pragma | v28      | ram_t2p | bram | 1       |
++-------------------------------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+--------------------------------+---------------------------------------------+----------------------------------------------------------------------------+
+| Type     | Options                        | Location                                    | Messages                                                                   |
++----------+--------------------------------+---------------------------------------------+----------------------------------------------------------------------------+
+| resource | variable=v28 core=ram_t2p_bram | ../../../src/forward.cpp:81 in forward, v28 | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable=v29 core=ram_t2p_bram | ../../../src/forward.cpp:84 in forward, v29 | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable=v30 core=ram_t2p_bram | ../../../src/forward.cpp:88 in forward, v30 | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
++----------+--------------------------------+---------------------------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+-----------------------------------+------------------------------------------------+
+| Type      | Options                           | Location                                       |
++-----------+-----------------------------------+------------------------------------------------+
+| interface | s_axilite port=return bundle=ctrl | ../../../src/forward.cpp:73 in forward, return |
+| interface | m_axi offset=slave port=v25       | ../../../src/forward.cpp:74 in forward, v25    |
+| interface | s_axilite port=v25 bundle=ctrl    | ../../../src/forward.cpp:75 in forward, v25    |
+| interface | m_axi offset=slave port=v26       | ../../../src/forward.cpp:76 in forward, v26    |
+| interface | s_axilite port=v26 bundle=ctrl    | ../../../src/forward.cpp:77 in forward, v26    |
+| interface | m_axi offset=slave port=v27       | ../../../src/forward.cpp:78 in forward, v27    |
+| interface | s_axilite port=v27 bundle=ctrl    | ../../../src/forward.cpp:79 in forward, v27    |
++-----------+-----------------------------------+------------------------------------------------+
+
+

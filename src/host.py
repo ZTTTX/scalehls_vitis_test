@@ -26,7 +26,28 @@ sys.path.append('/mnt/shared/home/tz32/Vitis_Accel_Examples/host_py/hello_world_
 
 from utils_binding import *
 
+# import torch
+# import torch.nn as nn
+
+
+
 def runKernel(opt):
+    # # Define the module layers
+    # layers = nn.Sequential(
+    #     nn.Flatten(),
+    #     nn.Linear(32 * 32 * 1, 10),
+    #     nn.ReLU()
+    # )
+
+    # # Generate random inputs
+    # input_shape = (1, 3, 32, 32)  # Adjust the shape according to your module's input shape
+    # inputs = torch.randn(*input_shape)
+
+    # # Compute the expected output
+    # golden_out = layers(inputs)
+     
+    # opt.DATA_SIZE = inputs.size()
+     
     try:
         #This is the original code.
         print("Trying original code")
@@ -44,7 +65,7 @@ def runKernel(opt):
     #Get kernel.
     kernellist = xbin.get_kernels()
 
-    rule = re.compile("vadd*")
+    rule = re.compile("forward*")
     kernel = list(filter(lambda val: rule.match(val.get_name()), kernellist))[0]
     kHandle= pyxrt.kernel(d, uuid, kernel.get_name(), pyxrt.kernel.shared)
 
@@ -63,33 +84,37 @@ def runKernel(opt):
     bo3 = boHandle3.map()
 
     for i in range(opt.DATA_SIZE):
-        bo1[i] = 1 
-        bo2[i] = 2
+        bo1[i] = 1
+        bo2[i] = 0
 
     bufReference = [3 for i in range(opt.DATA_SIZE)]
 
     boHandle1.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_TO_DEVICE, opt.DATA_SIZE, 0)
-    boHandle2.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_TO_DEVICE, opt.DATA_SIZE, 0)
-
+    # boHandle2.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_TO_DEVICE, opt.DATA_SIZE, 0)
+    boHandle3.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_TO_DEVICE, opt.DATA_SIZE, 0)
+    
     print("Start the kernel")
     run = kHandle(boHandle1, boHandle2, boHandle3, opt.DATA_SIZE)
     print("Now wait for the kernel to finish")
     state = run.wait()
 
     print("Get the output data from the device and validate it")
-    boHandle3.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_FROM_DEVICE, opt.DATA_SIZE, 0)
+    boHandle2.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_FROM_DEVICE, opt.DATA_SIZE, 0)
     
-    for i in range(opt.DATA_SIZE):
-        if(bufReference[i] != bo3[i]):
-            print("Computed value done not match reference")
-            assert False
+    # for i in range(opt.DATA_SIZE):
+    #     if(golden_out[i] != bo2[i]):
+    #         print("Computed value done not match reference")
+    #         assert False
+    for i in range(10):
+        print("output Num ", i, "= ", bo2[i])
+    
     
 def main(args):
     opt = Options()
     Options.getOptions(opt, args)
     try:
         runKernel(opt)
-        print("TEST PASSED")
+        print("TEST DONE")
         return 0
     except OSError as o:
         print(o)

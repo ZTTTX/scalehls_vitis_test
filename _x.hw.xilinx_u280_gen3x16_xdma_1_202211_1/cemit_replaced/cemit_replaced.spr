@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cemit_replaced" dir="">
+  <FileSets>
+    <FileSet Name="kernel_cemit_replaced" Type="DesignSrcs">
+      <File Path="/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

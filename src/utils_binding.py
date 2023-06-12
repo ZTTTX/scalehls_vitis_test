@@ -19,7 +19,7 @@ import uuid
 
 class Options(object):
     def __init__(self):
-        self.DATA_SIZE = 1024
+        self.DATA_SIZE = 1024 * 512
         self.sharedLibrary = None
         self.bitstreamFile = None
         self.halLogFile = None

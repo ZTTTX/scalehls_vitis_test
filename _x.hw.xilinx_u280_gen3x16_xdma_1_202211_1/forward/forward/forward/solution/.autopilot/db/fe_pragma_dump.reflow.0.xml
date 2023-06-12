@@ -1,0 +1,12 @@
+<pragmas>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="73" pragmaType="interface" parentfunction="forward" mode="s_axilite" port="" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="74" pragmaType="interface" parentfunction="forward" mode="m_axi" port="v25" bundle="" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="75" pragmaType="interface" parentfunction="forward" mode="s_axilite" port="v25" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="76" pragmaType="interface" parentfunction="forward" mode="m_axi" port="v26" bundle="" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="77" pragmaType="interface" parentfunction="forward" mode="s_axilite" port="v26" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="78" pragmaType="interface" parentfunction="forward" mode="m_axi" port="v27" bundle="" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="79" pragmaType="interface" parentfunction="forward" mode="s_axilite" port="v27" bundle="ctrl" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="81" pragmaType="bind_storage" parentfunction="forward" op="666" impl="30" latency="-1" variable="v28"/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="84" pragmaType="bind_storage" parentfunction="forward" op="666" impl="30" latency="-1" variable="v29"/>
+<pragma file="/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp" line="88" pragmaType="bind_storage" parentfunction="forward" op="666" impl="30" latency="-1" variable="v30"/>
+</pragmas>

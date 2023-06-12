@@ -1,0 +1,214 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'forward_node2(float (*) [1][32][32], float (*) [1024])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 59, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'forward_node1(float (*) [1024], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 41, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 72, Column: 0 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'forward_node0(float (*) [10], float*, float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 24, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 26, Column: 22 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body4.i.store.16
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        v2620seq
+  - String:          ' '
+  - ArrayName:       v26
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ' '
+  - LoopLoc:         '/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:26:22'
+  - String:          ' '
+  - Function:        'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 61, Column: 17 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.i.load.8
+  - String:          ' '
+  - ArrayName:       v25
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_60_1
+  - String:          ' '
+  - LoopLoc:         '/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:60:20'
+  - String:          ' '
+  - Function:        'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 46, Column: 21 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.inc.i2.load.7
+  - String:          ' '
+  - ArrayName:       v27
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_44_3
+  - String:          ' '
+  - LoopLoc:         '/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:44:24'
+  - String:          ' '
+  - Function:        'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 26, Column: 22 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OldLength:       '10'
+  - String:          ' x '
+  - OldWords:        '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '2'
+  - String:          ': '
+  - Length:          '5'
+  - String:          ' x '
+  - Words:           '64'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          v2620seq
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - String:          ' '
+  - ArrayName:       v26
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ' '
+  - LoopLoc:         '/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:26:22'
+  - String:          ' '
+  - Function:        'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 26, Column: 22 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '5'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'forward(float (*) [1][32][32], float (*) [10], float (*) [10])'
+    DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                       Line: 72, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp, 
+                   Line: 26, Column: 22 }
+Function:        _Z7forwardPA1_A32_A32_fPA10_fS4_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '5'
+  - String:          ' and bit width '
+  - Width:           '64'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

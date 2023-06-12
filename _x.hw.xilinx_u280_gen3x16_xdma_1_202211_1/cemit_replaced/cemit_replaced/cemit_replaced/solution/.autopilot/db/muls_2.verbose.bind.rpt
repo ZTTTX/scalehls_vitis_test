@@ -1,0 +1,433 @@
+
+
+================================================================
+== Vitis HLS Report for 'muls_2'
+================================================================
+* Date:           Mon Jun 12 16:50:38 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        cemit_replaced
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.322 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                             |                                                   |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                           Instance                          |                       Module                      |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_muls_2_Pipeline_VITIS_LOOP_141_1_fu_38                   |muls_2_Pipeline_VITIS_LOOP_141_1                   |        4|        4|  13.332 ns|  13.332 ns|    4|    4|       no|
+        |grp_muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2_fu_44  |muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2  |        6|        6|  19.998 ns|  19.998 ns|    6|    6|       no|
+        |grp_muls_2_Pipeline_VITIS_LOOP_153_2_fu_52                   |muls_2_Pipeline_VITIS_LOOP_153_2                   |        ?|        ?|          ?|          ?|    ?|    ?|       no|
+        +-------------------------------------------------------------+---------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.61>
+ST_1 : Operation 5 [1/1] (0.61ns)   --->   "%l_flush_Array = alloca i64 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:140]   --->   Operation 5 'alloca' 'l_flush_Array' <Predicate = true> <Delay = 0.61>
+ST_1 : Operation 6 [1/1] (0.61ns)   --->   "%l_Tc_m_Sreg_Array = alloca i64 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:145]   --->   Operation 6 'alloca' 'l_Tc_m_Sreg_Array' <Predicate = true> <Delay = 0.61>
+ST_1 : Operation 7 [1/1] (0.61ns)   --->   "%l_Tc_m_Sreg_Array_1 = alloca i64 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:145]   --->   Operation 7 'alloca' 'l_Tc_m_Sreg_Array_1' <Predicate = true> <Delay = 0.61>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln0 = call void @muls.2_Pipeline_VITIS_LOOP_141_1, i1 %l_flush_Array"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 9 [2/2] (0.00ns)   --->   "%call_ln0 = call void @muls.2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2, i32 %l_Tc_m_Sreg_Array_1, i32 %l_Tc_m_Sreg_Array"   --->   Operation 9 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (0.00ns)   --->   "%call_ln0 = call void @muls.2_Pipeline_VITIS_LOOP_141_1, i1 %l_flush_Array"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [1/2] (0.00ns)   --->   "%call_ln0 = call void @muls.2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2, i32 %l_Tc_m_Sreg_Array_1, i32 %l_Tc_m_Sreg_Array"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 12 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [2/2] (0.00ns)   --->   "%call_ln0 = call void @muls.2_Pipeline_VITIS_LOOP_153_2, i32 %l_Tc_m_Sreg_Array_1, i32 %l_Tc_m_Sreg_Array, i1 %l_flush_Array, i34 %l_dataA_1, i64 %l_dataB_1, i64 %l_mul1"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_mul1, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i34 %l_dataA_1, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_dataB_1, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/2] (0.00ns)   --->   "%call_ln0 = call void @muls.2_Pipeline_VITIS_LOOP_153_2, i32 %l_Tc_m_Sreg_Array_1, i32 %l_Tc_m_Sreg_Array, i1 %l_flush_Array, i34 %l_dataA_1, i64 %l_dataB_1, i64 %l_mul1"   --->   Operation 17 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln188 = ret" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:188]   --->   Operation 18 'ret' 'ret_ln188' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ l_dataA_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ l_dataB_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ l_mul1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+l_flush_Array       (alloca       ) [ 00111]
+l_Tc_m_Sreg_Array   (alloca       ) [ 00111]
+l_Tc_m_Sreg_Array_1 (alloca       ) [ 00111]
+call_ln0            (call         ) [ 00000]
+call_ln0            (call         ) [ 00000]
+empty               (wait         ) [ 00000]
+specinterface_ln0   (specinterface) [ 00000]
+specinterface_ln0   (specinterface) [ 00000]
+specinterface_ln0   (specinterface) [ 00000]
+call_ln0            (call         ) [ 00000]
+ret_ln188           (ret          ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="l_dataA_1">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="l_dataA_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="l_dataB_1">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="l_dataB_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="l_mul1">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="l_mul1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="muls.2_Pipeline_VITIS_LOOP_141_1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="muls.2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="muls.2_Pipeline_VITIS_LOOP_153_2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_11"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_26"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1004" name="l_flush_Array_alloca_fu_26">
+<pin_list>
+<pin id="27" dir="0" index="0" bw="1" slack="0"/>
+<pin id="28" dir="1" index="1" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="l_flush_Array/1 "/>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="l_Tc_m_Sreg_Array_alloca_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="1" slack="0"/>
+<pin id="32" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="l_Tc_m_Sreg_Array/1 "/>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="l_Tc_m_Sreg_Array_1_alloca_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="1" slack="0"/>
+<pin id="36" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="l_Tc_m_Sreg_Array_1/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="grp_muls_2_Pipeline_VITIS_LOOP_141_1_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="0" slack="0"/>
+<pin id="40" dir="0" index="1" bw="1" slack="0"/>
+<pin id="41" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="grp_muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="0" slack="0"/>
+<pin id="46" dir="0" index="1" bw="32" slack="0"/>
+<pin id="47" dir="0" index="2" bw="32" slack="0"/>
+<pin id="48" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="grp_muls_2_Pipeline_VITIS_LOOP_153_2_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="0" slack="0"/>
+<pin id="54" dir="0" index="1" bw="32" slack="2147483647"/>
+<pin id="55" dir="0" index="2" bw="32" slack="2147483647"/>
+<pin id="56" dir="0" index="3" bw="1" slack="2147483647"/>
+<pin id="57" dir="0" index="4" bw="34" slack="0"/>
+<pin id="58" dir="0" index="5" bw="64" slack="0"/>
+<pin id="59" dir="0" index="6" bw="64" slack="0"/>
+<pin id="60" dir="1" index="7" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/3 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="29"><net_src comp="6" pin="0"/><net_sink comp="26" pin=0"/></net>
+
+<net id="33"><net_src comp="6" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="37"><net_src comp="6" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="42"><net_src comp="8" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="43"><net_src comp="26" pin="1"/><net_sink comp="38" pin=1"/></net>
+
+<net id="49"><net_src comp="10" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="50"><net_src comp="34" pin="1"/><net_sink comp="44" pin=1"/></net>
+
+<net id="51"><net_src comp="30" pin="1"/><net_sink comp="44" pin=2"/></net>
+
+<net id="61"><net_src comp="14" pin="0"/><net_sink comp="52" pin=0"/></net>
+
+<net id="62"><net_src comp="0" pin="0"/><net_sink comp="52" pin=4"/></net>
+
+<net id="63"><net_src comp="2" pin="0"/><net_sink comp="52" pin=5"/></net>
+
+<net id="64"><net_src comp="4" pin="0"/><net_sink comp="52" pin=6"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: l_mul1 | {3 4 }
+ - Input state : 
+	Port: muls.2 : l_dataA_1 | {3 4 }
+	Port: muls.2 : l_dataB_1 | {3 4 }
+  - Chain level:
+	State 1
+		call_ln0 : 1
+		call_ln0 : 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------------------------------------------|---------|---------|---------|---------|
+| Operation|                       Functional Unit                       |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|-------------------------------------------------------------|---------|---------|---------|---------|
+|          |          grp_muls_2_Pipeline_VITIS_LOOP_141_1_fu_38         |    0    |    0    |    2    |    17   |
+|   call   | grp_muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2_fu_44 |    0    |    0    |    7    |    48   |
+|          |          grp_muls_2_Pipeline_VITIS_LOOP_153_2_fu_52         |    6    |  1.548  |   673   |   278   |
+|----------|-------------------------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                                             |    6    |  1.548  |   682   |   343   |
+|----------|-------------------------------------------------------------|---------|---------|---------|---------|
+
+Memories:
++-------------------+--------+--------+
+|                   |   FF   |   LUT  |
++-------------------+--------+--------+
+| l_Tc_m_Sreg_Array |   64   |   32   |
+|l_Tc_m_Sreg_Array_1|   64   |   32   |
+|   l_flush_Array   |   64   |   32   |
++-------------------+--------+--------+
+|       Total       |   192  |   96   |
++-------------------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    6   |    1   |   682  |   343  |
+|   Memory  |    -   |    -   |   192  |   96   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    6   |    1   |   874  |   439  |
++-----------+--------+--------+--------+--------+

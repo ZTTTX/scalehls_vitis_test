@@ -1,0 +1,10 @@
+/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:81:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable=v28 core=ram_t2p_bram
+        ^
+/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:84:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable=v29 core=ram_t2p_bram
+        ^
+/mnt/shared/home/tz32/scalehls_vitis_test/src/forward.cpp:88:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable=v30 core=ram_t2p_bram
+        ^
+3 warnings generated.

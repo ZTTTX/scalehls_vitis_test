@@ -1,0 +1,48 @@
+===============================================================================
+Version:    v++ v2022.2 (64-bit)
+Build:      SW Build 3671529 on 2022-10-13-17:52:11
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Jun 10 16:44:51 2023
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             forward
+Target Device:           xilinx:u280:gen3x16_xdma_1:202211.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+forward      c     fpga0:OCL_REGION_0  forward         1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     forward
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                       Target Frequency  Estimated Frequency
+------------  -----------  --------------------------------  ----------------  -------------------
+forward_1     forward      forward_Pipeline_VITIS_LOOP_60_1  300.300293        411.015198
+forward_1     forward      forward_Pipeline_VITIS_LOOP_44_3  300.300293        411.015198
+forward_1     forward      forward_Pipeline_VITIS_LOOP_26_2  300.300293        411.015198
+forward_1     forward      forward                           300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                       Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  --------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+forward_1     forward      forward_Pipeline_VITIS_LOOP_60_1  1097            1097           1097          1097            3.656 us         3.656 us        3.656 us
+forward_1     forward      forward_Pipeline_VITIS_LOOP_44_3  7247            7247           7247          7247            24.154 us        24.154 us       24.154 us
+forward_1     forward      forward_Pipeline_VITIS_LOOP_26_2  22              22             22            22              73.326 ns        73.326 ns       73.326 ns
+forward_1     forward      forward                           73703           73702          73702         73702           0.246 ms         0.246 ms        0.246 ms
+
+Area Information
+Compute Unit  Kernel Name  Module Name                       FF    LUT   DSP  BRAM  URAM
+------------  -----------  --------------------------------  ----  ----  ---  ----  ----
+forward_1     forward      forward_Pipeline_VITIS_LOOP_60_1  359   440   0    0     0
+forward_1     forward      forward_Pipeline_VITIS_LOOP_44_3  617   686   0    0     0
+forward_1     forward      forward_Pipeline_VITIS_LOOP_26_2  349   240   0    1     0
+forward_1     forward      forward                           3349  4437  0    4     0
+-------------------------------------------------------------------------------

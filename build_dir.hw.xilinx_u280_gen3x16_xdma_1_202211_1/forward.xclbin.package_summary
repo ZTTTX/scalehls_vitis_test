@@ -1,0 +1,124 @@
+<ENTRY>
+{
+ "thisFile": "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jun 10 18:41:38 2023",
+ "timestampMillis": "1686440498957",
+ "buildStep": {
+  "cmdId": "99979eaf-2e47-4a43-b13b-a81310bcca58",
+  "name": "v++",
+  "logFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x/package/package.steps.log",
+  "commandLine": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -p ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.link.xclbin --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --package.out_dir ./package.hw -o ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin ",
+  "args": [
+   "-p",
+   "./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.link.xclbin",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--package.out_dir",
+   "./package.hw",
+   "-o",
+   "./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/shared/home/tz32/scalehls_vitis_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 10 18:41:38 2023",
+ "timestampMillis": "1686440498957",
+ "status": {
+  "cmdId": "99979eaf-2e47-4a43-b13b-a81310bcca58",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jun 10 18:41:43 2023",
+ "timestampMillis": "1686440503248",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_PACKAGE",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "forward",
+    "file": "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11",
+  "inputBinaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "forward.link",
+    "file": "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.link.xclbin",
+    "reports": [],
+    "uuid": "cb3c0a98-482e-496e-8ea6-3dd3f3bfdca2"
+   },
+   "kernels": []
+  }
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jun 10 18:41:43 2023",
+ "timestampMillis": "1686440503914",
+ "status": {
+  "cmdId": "99979eaf-2e47-4a43-b13b-a81310bcca58",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 10 18:41:44 2023",
+ "timestampMillis": "1686440504078",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x/reports/package/v++_package_forward_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jun 10 18:41:44 2023",
+ "timestampMillis": "1686440504080",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x/v++_package_forward_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

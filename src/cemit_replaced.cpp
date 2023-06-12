@@ -15,9 +15,14 @@
 #include <math.h>
 #include <stdint.h>
 #include <string.h>
-#include "Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp"
 
-using namespace std
+#include "ap_int.h"
+#include "hls_stream.h"
+#include "xf_blas.hpp"
+#include "xf_blas/uut_top.hpp"
+
+using namespace xf;
+using namespace blas;
 
 void forward_node0(
   float v0[1][10],
@@ -40,8 +45,29 @@ void forward_node1(
   float v10[1024][10],
   float v11[1][1024],
   float v12[1][10]
-) {	//
-  gemm<float, int, 32, 2, 1024>((int)1, (int)10, (int)1024, (float)1.000000, (float)0.000000, v10, v11, v12, v12);	// L19
+) {	
+  float p_A[1024];
+  float p_B[10240];
+  float p_C[10];
+  float p_R[10];
+
+  // Unroll v10 into p_A (1024 10)
+  for (int i = 0; i < 1024; i++) {
+    for (int j = 0; j < 10; j++) {
+      p_B[i * 10 + j] = v10[i][j];
+    }
+  }
+  for (int i = 0; i < 1024; i++) {
+    p_A[i] = v11[0][i];
+  }
+  for (int i = 0; i < 10; i++) {
+    p_C[i] = 0;
+  }
+  uut_top(1, 10, 1024, 1.00, 0.00, (float *)p_A, (float *)p_B, (float *)p_C, (float *)p_R);
+  for (int i = 0; i < 10; i++) {
+    v12[0][i] = p_R[i];
+  }
+
 }
 
 void forward_node2(
@@ -55,7 +81,7 @@ void forward_node2(
 }
 
 /// This is top function.
-void forward(
+void cemit_replaced(
   float v17[1][1][32][32],
   float v18[1][10],
   float v19[1024][10]
@@ -76,8 +102,10 @@ void forward(
   forward_node2(v17, v21);	//
   float v22[1][10];	// L18
   #pragma HLS resource variable=v22 core=ram_t2p_bram
-
+  float v30[1][10];	// L18
+  #pragma HLS resource variable=v30 core=ram_t2p_bram
   forward_node1(v19, v21, v22);	//
+
   forward_node0(v22, v20, v18);	//
 }
 

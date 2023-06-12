@@ -1,0 +1,232 @@
+
+
+================================================================
+== Vitis HLS Report for 'axpy_float_2u_unsigned_int_s'
+================================================================
+* Date:           Mon Jun 12 16:50:41 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        cemit_replaced
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.342 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       15|       15|  49.995 ns|  49.995 ns|   15|   15|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_62_1  |       13|       13|        10|          1|          1|     5|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 10
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 10, States = { 1 2 3 4 5 6 7 8 9 10 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.95>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 13 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_betaC5, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_mat4, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strSum7_i, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.38ns)   --->   "%store_ln62 = store i3 0, i3 %i" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 17 'store' 'store_ln62' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln62 = br void %for.inc" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 18 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%i_11 = load i3 %i" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 19 'load' 'i_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.49ns)   --->   "%icmp_ln62 = icmp_eq  i3 %i_11, i3 5" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 20 'icmp' 'icmp_ln62' <Predicate = true> <Delay = 0.49> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 5, i64 5, i64 5"   --->   Operation 21 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.57ns)   --->   "%i_12 = add i3 %i_11, i3 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 22 'add' 'i_12' <Predicate = true> <Delay = 0.57> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %icmp_ln62, void %for.inc.split, void %for.end11" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 23 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.38ns)   --->   "%store_ln62 = store i3 %i_12, i3 %i" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 24 'store' 'store_ln62' <Predicate = (!icmp_ln62)> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 1.21>
+ST_2 : Operation 25 [1/1] (1.21ns)   --->   "%p_Val2_s = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %l_mat4" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:64]   --->   Operation 25 'read' 'p_Val2_s' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%l_val = trunc i64 %p_Val2_s"   --->   Operation 26 'trunc' 'l_val' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%l_val_11 = partselect i32 @_ssdm_op_PartSelect.i32.i64.i32.i32, i64 %p_Val2_s, i32 32, i32 63"   --->   Operation 27 'partselect' 'l_val_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.21ns)   --->   "%p_Val2_5 = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %l_betaC5" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:65]   --->   Operation 28 'read' 'p_Val2_5' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%l_val_12 = trunc i64 %p_Val2_5"   --->   Operation 29 'trunc' 'l_val_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%l_val_13 = partselect i32 @_ssdm_op_PartSelect.i32.i64.i32.i32, i64 %p_Val2_5, i32 32, i32 63"   --->   Operation 30 'partselect' 'l_val_13' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.34>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%l_realX = bitcast i32 %l_val" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:110]   --->   Operation 31 'bitcast' 'l_realX' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%l_realX_1 = bitcast i32 %l_val_11" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:110]   --->   Operation 32 'bitcast' 'l_realX_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%l_realY = bitcast i32 %l_val_12" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:110]   --->   Operation 33 'bitcast' 'l_realY' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%l_realY_1 = bitcast i32 %l_val_13" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:110]   --->   Operation 34 'bitcast' 'l_realY_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [7/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 35 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [7/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 36 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.34>
+ST_4 : Operation 37 [6/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 37 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 38 [6/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 38 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.34>
+ST_5 : Operation 39 [5/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 39 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [5/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 40 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.34>
+ST_6 : Operation 41 [4/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 41 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 42 [4/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 42 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.34>
+ST_7 : Operation 43 [3/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 43 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 44 [3/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 44 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.34>
+ST_8 : Operation 45 [2/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 45 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 46 [2/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 46 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 2.34>
+ST_9 : Operation 47 [1/7] (2.34ns)   --->   "%l_result = fadd i32 %l_realX, i32 %l_realY" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 47 'fadd' 'l_result' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 48 [1/7] (2.34ns)   --->   "%l_result_1 = fadd i32 %l_realX_1, i32 %l_realY_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71]   --->   Operation 48 'fadd' 'l_result_1' <Predicate = true> <Delay = 2.34> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 6> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln76 = ret" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:76]   --->   Operation 56 'ret' 'ret_ln76' <Predicate = (icmp_ln62)> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 1.21>
+ST_10 : Operation 49 [1/1] (0.00ns)   --->   "%specpipeline_ln63 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_26" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:63]   --->   Operation 49 'specpipeline' 'specpipeline_ln63' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%specloopname_ln62 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 50 'specloopname' 'specloopname_ln62' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (0.00ns)   --->   "%l_val_V = bitcast i32 %l_result" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:132]   --->   Operation 51 'bitcast' 'l_val_V' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%l_val_V_10 = bitcast i32 %l_result_1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:132]   --->   Operation 52 'bitcast' 'l_val_V_10' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %l_val_V_10, i32 %l_val_V"   --->   Operation 53 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [1/1] (1.21ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %l_strSum7_i, i64 %p_Result_s" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:74]   --->   Operation 54 'write' 'write_ln74' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln62 = br void %for.inc" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62]   --->   Operation 55 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 0.959ns
+The critical path consists of the following:
+	'alloca' operation ('i') [4]  (0 ns)
+	'load' operation ('i', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62) on local variable 'i' [11]  (0 ns)
+	'add' operation ('i', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62) [14]  (0.572 ns)
+	'store' operation ('store_ln62', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62) of variable 'i', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:62 on local variable 'i' [35]  (0.387 ns)
+
+ <State 2>: 1.22ns
+The critical path consists of the following:
+	fifo read operation ('__Val2__', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:64) on port 'l_mat4' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:64) [19]  (1.22 ns)
+
+ <State 3>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 4>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 5>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 6>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 7>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 8>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 9>: 2.34ns
+The critical path consists of the following:
+	'fadd' operation ('l_result', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:71) [29]  (2.34 ns)
+
+ <State 10>: 1.22ns
+The critical path consists of the following:
+	fifo write operation ('write_ln74', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:74) on port 'l_strSum7_i' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:74) [34]  (1.22 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

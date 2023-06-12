@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vitis HLS Report for 'systolicArray_Pipeline_VITIS_LOOP_247_1'
+================================================================
+* Date:           Mon Jun 12 16:50:44 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        cemit_replaced
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.828 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_247_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       10|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       72|    -|
+|Register             |        -|     -|      135|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      135|       82|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_condition_247                  |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  10|           5|           6|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
+    |l_aStr1_blk_n                     |   9|          2|    1|          2|
+    |l_bStr2_blk_n                     |   9|          2|    1|          2|
+    |l_dataA_0_blk_n                   |   9|          2|    1|          2|
+    |l_dataA_1_blk_n                   |   9|          2|    1|          2|
+    |l_dataB_0_blk_n                   |   9|          2|    1|          2|
+    |p_Repl2_s_reg_121                 |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  72|         16|    8|         16|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |l_val_2_reg_260                   |  32|   0|   32|          0|
+    |l_val_3_reg_265                   |  32|   0|   32|          0|
+    |l_val_4_reg_250                   |  32|   0|   32|          0|
+    |l_val_reg_245                     |  32|   0|   32|          0|
+    |p_Repl2_s_reg_121                 |   1|   0|    1|          0|
+    |p_Result_1_reg_239                |   1|   0|    1|          0|
+    |p_Result_s_reg_255                |   1|   0|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 135|   0|  135|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  systolicArray_Pipeline_VITIS_LOOP_247_1|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  systolicArray_Pipeline_VITIS_LOOP_247_1|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  systolicArray_Pipeline_VITIS_LOOP_247_1|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  systolicArray_Pipeline_VITIS_LOOP_247_1|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  systolicArray_Pipeline_VITIS_LOOP_247_1|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  systolicArray_Pipeline_VITIS_LOOP_247_1|  return value|
+|l_aStr1_dout                  |   in|   66|     ap_fifo|                                  l_aStr1|       pointer|
+|l_aStr1_num_data_valid        |   in|    2|     ap_fifo|                                  l_aStr1|       pointer|
+|l_aStr1_fifo_cap              |   in|    2|     ap_fifo|                                  l_aStr1|       pointer|
+|l_aStr1_empty_n               |   in|    1|     ap_fifo|                                  l_aStr1|       pointer|
+|l_aStr1_read                  |  out|    1|     ap_fifo|                                  l_aStr1|       pointer|
+|l_bStr2_dout                  |   in|   64|     ap_fifo|                                  l_bStr2|       pointer|
+|l_bStr2_num_data_valid        |   in|    2|     ap_fifo|                                  l_bStr2|       pointer|
+|l_bStr2_fifo_cap              |   in|    2|     ap_fifo|                                  l_bStr2|       pointer|
+|l_bStr2_empty_n               |   in|    1|     ap_fifo|                                  l_bStr2|       pointer|
+|l_bStr2_read                  |  out|    1|     ap_fifo|                                  l_bStr2|       pointer|
+|l_dataB_0_din                 |  out|   64|     ap_fifo|                                l_dataB_0|       pointer|
+|l_dataB_0_num_data_valid      |   in|    3|     ap_fifo|                                l_dataB_0|       pointer|
+|l_dataB_0_fifo_cap            |   in|    3|     ap_fifo|                                l_dataB_0|       pointer|
+|l_dataB_0_full_n              |   in|    1|     ap_fifo|                                l_dataB_0|       pointer|
+|l_dataB_0_write               |  out|    1|     ap_fifo|                                l_dataB_0|       pointer|
+|l_dataA_0_din                 |  out|   34|     ap_fifo|                                l_dataA_0|       pointer|
+|l_dataA_0_num_data_valid      |   in|    3|     ap_fifo|                                l_dataA_0|       pointer|
+|l_dataA_0_fifo_cap            |   in|    3|     ap_fifo|                                l_dataA_0|       pointer|
+|l_dataA_0_full_n              |   in|    1|     ap_fifo|                                l_dataA_0|       pointer|
+|l_dataA_0_write               |  out|    1|     ap_fifo|                                l_dataA_0|       pointer|
+|l_dataA_1_din                 |  out|   34|     ap_fifo|                                l_dataA_1|       pointer|
+|l_dataA_1_num_data_valid      |   in|    3|     ap_fifo|                                l_dataA_1|       pointer|
+|l_dataA_1_fifo_cap            |   in|    3|     ap_fifo|                                l_dataA_1|       pointer|
+|l_dataA_1_full_n              |   in|    1|     ap_fifo|                                l_dataA_1|       pointer|
+|l_dataA_1_write               |  out|    1|     ap_fifo|                                l_dataA_1|       pointer|
+|l_Tb_m_Sreg_Array_1_address0  |  out|    1|   ap_memory|                      l_Tb_m_Sreg_Array_1|         array|
+|l_Tb_m_Sreg_Array_1_ce0       |  out|    1|   ap_memory|                      l_Tb_m_Sreg_Array_1|         array|
+|l_Tb_m_Sreg_Array_1_we0       |  out|    1|   ap_memory|                      l_Tb_m_Sreg_Array_1|         array|
+|l_Tb_m_Sreg_Array_1_d0        |  out|   32|   ap_memory|                      l_Tb_m_Sreg_Array_1|         array|
+|l_Tb_m_Sreg_Array_1_q0        |   in|   32|   ap_memory|                      l_Tb_m_Sreg_Array_1|         array|
+|l_Tb_m_Sreg_Array_address0    |  out|    1|   ap_memory|                        l_Tb_m_Sreg_Array|         array|
+|l_Tb_m_Sreg_Array_ce0         |  out|    1|   ap_memory|                        l_Tb_m_Sreg_Array|         array|
+|l_Tb_m_Sreg_Array_we0         |  out|    1|   ap_memory|                        l_Tb_m_Sreg_Array|         array|
+|l_Tb_m_Sreg_Array_d0          |  out|   32|   ap_memory|                        l_Tb_m_Sreg_Array|         array|
+|l_Tb_m_Sreg_Array_q0          |   in|   32|   ap_memory|                        l_Tb_m_Sreg_Array|         array|
++------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

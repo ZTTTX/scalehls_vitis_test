@@ -1,0 +1,1091 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'tz32' on host 'xacc-head-000-5.csl.illinois.edu' (Linux_x86_64 version 4.15.0-208-generic) on Mon Jun 12 16:49:48 CDT 2023
+INFO: [HLS 200-10] On os Ubuntu 18.04.6 LTS
+INFO: [HLS 200-10] In directory '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced'
+Sourcing Tcl script 'cemit_replaced.tcl'
+INFO: [HLS 200-1510] Running: open_project cemit_replaced 
+INFO: [HLS 200-10] Creating and opening project '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced'.
+INFO: [HLS 200-1510] Running: set_top cemit_replaced 
+INFO: [HLS 200-1510] Running: add_files /mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp -cflags  -I /mnt/shared/home/tz32/scalehls_vitis_test/src -I /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw 
+INFO: [HLS 200-10] Adding design file '/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname cemit_replaced 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.070 GB.
+INFO: [HLS 200-10] Analyzing design file '/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp' ... 
+WARNING: [HLS 207-5527] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:97:9)
+WARNING: [HLS 207-5527] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:100:9)
+WARNING: [HLS 207-5527] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:104:9)
+WARNING: [HLS 207-5527] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:106:9)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:74:67)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:65:9)
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file /mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5292] unused parameter 'p_Idx' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:230:32)
+WARNING: [HLS 207-5292] unused parameter 'p_Idx' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:238:38)
+WARNING: [HLS 207-5292] unused parameter 'p_n' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gbmv.hpp:38:30)
+WARNING: [HLS 207-5292] unused parameter 'p_k' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:178:30)
+WARNING: [HLS 207-5292] unused parameter 'p_k' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:199:30)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 29.55 seconds. CPU system time: 2.82 seconds. Elapsed time: 32.36 seconds; current allocated memory: 1.084 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::gemmMatAMover<float, 2u, 2u>(float*, unsigned int, unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:39:28)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::gemmMatAMover<float, 2u, 2u>(float*, unsigned int, unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:42:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::gemmMatBMover<float, 2u, 2u>(float*, unsigned int, unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:67:28)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::gemmMatBMover<float, 2u, 2u>(float*, unsigned int, unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:70:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::readVec2Stream<float, 2u>(float*, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:128:44)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::readVec2Stream<float, 2u>(float*, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:130:13)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::constructor(ap_uint<64> const&)' into 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:103:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int) const' into 'xf::blas::WideType<float, 2u, 32u, void>::constructor(xf::blas::WideType<float, 2u, 32u, void> const&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:97:13)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::constructor(xf::blas::WideType<float, 2u, 32u, void> const&)' into 'xf::blas::WideType<float, 2u, 32u, void>::WideType(xf::blas::WideType<float, 2u, 32u, void> const&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:90:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(xf::blas::WideType<float, 2u, 32u, void> const&)' into 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType(xf::blas::WideType<float, 2u, 32u, void>, bool, bool)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:576:11)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::constructor(float)' into 'xf::blas::WideType<float, 2u, 32u, void>::WideType(float)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:117:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:274:21)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(float)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:287:42)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(xf::blas::WideType<float, 2u, 32u, void> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:278:46)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<bool, 2u, 8u, void>::constructor(bool)' into 'xf::blas::WideType<bool, 2u, 8u, void>::WideType(bool)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:117:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType(ap_uint<66> const&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:562:5)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType(ap_uint<66> const&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:563:17)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::TriangSrl<float, 2u>::shift(xf::blas::WideType<float, 2u, 32u, void>)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:623:23)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::TriangSrl<float, 2u>::shift(xf::blas::WideType<float, 2u, 32u, void>)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:627:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::TriangSrl<float, 2u>::shift(xf::blas::WideType<float, 2u, 32u, void>)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:627:33)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::TaggedWideType<float, 2u>::operator[](unsigned int)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:584:10)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::TriangSrl()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:242:46)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<bool, 2u, 8u, void>::WideType(bool)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:243:34)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<bool, 2u, 8u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:263:37)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TaggedWideType<float, 2u>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:262:35)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::clear()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:244:14)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<bool, 2u, 8u, void>::shift(bool)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:256:18)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::shift(xf::blas::WideType<float, 2u, 32u, void>)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:255:38)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(xf::blas::WideType<float, 2u, 32u, void> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:255:44)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:251:29)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::shift(float)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:134:20)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::TriangSrl()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:93:49)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:127:17)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:127:28)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::shift(xf::blas::WideType<float, 2u, 32u, void>)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:124:27)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(xf::blas::WideType<float, 2u, 32u, void> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:124:33)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:121:17)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:121:61)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:121:49)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:110:26)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:109:26)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:108:26)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::clear()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:94:14)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:105:36)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(float)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:99:19)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:190:48)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(float)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:196:22)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:214:21)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:209:38)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:207:42)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:203:33)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:200:23)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::shift(float)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:185:20)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::TriangSrl()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:145:49)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:178:17)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:178:28)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::shift(xf::blas::WideType<float, 2u, 32u, void>)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:175:27)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(xf::blas::WideType<float, 2u, 32u, void> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:175:33)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:172:17)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:172:61)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:172:49)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:161:26)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:160:26)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:159:26)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:157:36)
+INFO: [HLS 214-131] Inlining function 'xf::blas::TriangSrl<float, 2u>::clear()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:146:14)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(float)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:151:19)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:96:36)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:124:2)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:121:28)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:99:47)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:112:21)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:111:59)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:108:43)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:107:36)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::scal<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:61:37)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::scal<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:62:44)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::scal<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:65:13)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::scal<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:65:35)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'void xf::blas::scal<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:63:18)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:64:43)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:72:13)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:70:34)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:69:23)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:66:44)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:65:50)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType()' into 'void xf::blas::writeStream2Vec<float, 2u>(hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, unsigned int, float*)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:157:44)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator[](unsigned int)' into 'void xf::blas::writeStream2Vec<float, 2u>(hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, unsigned int, float*)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:160:43)
+INFO: [HLS 214-131] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::WideType(ap_uint<64> const&)' into 'void xf::blas::writeStream2Vec<float, 2u>(hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, unsigned int, float*)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:158:17)
+INFO: [HLS 214-377] Adding 'l_A' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:250:24)
+INFO: [HLS 214-377] Adding 'l_taggedValA' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:278:33)
+INFO: [HLS 214-377] Adding 'l_taggedValA19' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:287:29)
+INFO: [HLS 214-377] Adding 'ref.tmp' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_val' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_y' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_r' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_x' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_valY' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_valX' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_out75' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_sum' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_aSlr' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:116:9)
+INFO: [HLS 214-377] Adding 'l_bWideVal' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_mul' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_cVec' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_mVec' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'agg.tmp' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:89:9)
+INFO: [HLS 214-377] Adding 'ref.tmp16' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_Tc' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:619:9)
+INFO: [HLS 214-377] Adding 'l_mul' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_mul16' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'ref.tmp' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:116:9)
+INFO: [HLS 214-377] Adding 'l_sum' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'ref.tmp17' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_B' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-377] Adding 'l_bvec1' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:84:9)
+INFO: [HLS 214-377] Adding 'l_Tf' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:116:9)
+INFO: [HLS 214-377] Adding 'l_Tb' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:619:9)
+INFO: [HLS 214-377] Adding 'agg.tmp20' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:116:9)
+INFO: [HLS 214-377] Adding 'l_valA' into disaggregation list because there's array-partition pragma applied on the struct field (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:102:9)
+INFO: [HLS 214-210] Disaggregating variable 'l_val' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:128:44)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_taggedValA19' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:287:29)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_taggedValA19.m_Val' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:287:29)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'agg.tmp'
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_taggedValA' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:278:33)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_taggedValA.m_Val' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:278:33)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_valA' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:274:12)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'ref.tmp'
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'agg.tmp' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:621:53)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_bvec1'
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_B' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:251:23)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_A' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:250:18)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_A.m_Val' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:250:18)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_Tf' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:243:27)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_Tb' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:242:46)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'ref.tmp17' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:623:23)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_mVec' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:110:26)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_cVec' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:109:26)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_mul' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:108:26)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_bWideVal' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:105:23)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_aSlr' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:99:19)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_Tc' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:93:49)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_mul16' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:207:34)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_mul' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:200:15)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_sum' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:190:48)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'ref.tmp16' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:623:23)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_mVec' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:161:26)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_cVec' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:160:26)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_mul' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:159:26)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_bWideVal' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:157:23)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_aSlr' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:151:19)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_Tc' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:145:49)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_out75' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:121:28)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_sum' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:96:28)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_valY' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:62:44)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_valX' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:61:37)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_r' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:66:44)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_y' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:65:44)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_x' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:64:37)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'l_val' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:157:44)
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'agg.tmp20'
+Resolution: For help on HLS 214-210 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-210.html
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_107_1' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_159_2' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:159:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_67_2' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:67:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_64_2' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:64:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_122_9' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:122:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_97_3' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:97:30)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_171_3' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:171:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_95_1' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:95:19)
+INFO: [HLS 214-291] Loop 'TRIANGSRL_SHIFT' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:625:9)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_177_4' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:177:31)
+INFO: [HLS 214-291] Loop 'WIDE_TYPE_SHIFT' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:150:9)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_202_3' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:202:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_206_4' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:206:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_208_5' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:208:39)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_213_6' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:213:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_120_3' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:120:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_126_4' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:126:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_259_2' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:259:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_129_2' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:129:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_129_1' is marked as complete unroll implied by the pipeline pragma (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:129:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::writeStream2Vec<float, 2u>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_159_2' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:159:27) in function 'xf::blas::writeStream2Vec<float, 2u>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:149:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::axpy<float, 2u, unsigned int>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:57:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_67_2' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:67:26) in function 'xf::blas::axpy<float, 2u, unsigned int>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:57:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::scal<float, 2u, unsigned int>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:54:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_64_2' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:64:26) in function 'xf::blas::scal<float, 2u, unsigned int>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:54:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_122_9' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:122:27) in function 'xf::blas::gemmBufferC<float, 2u, 2u, 10u>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:82:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::gemmBufferC<float, 2u, 2u, 10u>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:82:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_97_3' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:97:30) in function 'xf::blas::gemmBufferC<float, 2u, 2u, 10u>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:82:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_69_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:69:26) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::process' completely with a factor of 1 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:52:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_171_3' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:171:31) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_95_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:95:19) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'TRIANGSRL_SHIFT' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:625:9) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_177_4' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:177:31) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'WIDE_TYPE_SHIFT' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:150:9) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 1 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_121_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:121:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:189:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_202_3' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:202:35) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:189:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_206_4' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:206:35) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds' completely with a factor of 3 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:189:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_208_5' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:208:39) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:189:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_213_6' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:213:35) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:189:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_120_3' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:120:31) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_95_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:95:19) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'TRIANGSRL_SHIFT' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:625:9) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_126_4' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:126:31) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'WIDE_TYPE_SHIFT' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:150:9) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 1 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_121_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:121:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_95_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:95:19) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'TRIANGSRL_SHIFT' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:625:9) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'WIDE_TYPE_SHIFT' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:150:9) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray' completely with a factor of 1 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_259_2' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:259:31) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_121_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:121:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:562:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_107_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:107:20) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_95_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:95:19) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:270:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_95_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:95:19) in function 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:576:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_129_2' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:129:27) in function 'xf::blas::readVec2Stream<float, 2u>' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:120:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_129_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:129:27) in function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const' completely with a factor of 2 (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:127:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'void xf::blas::readVec2Stream<float, 2u>(float*, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:120:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'xf::blas::TaggedWideType<float, 2u>::operator ap_uint<66> const()' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:567:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType(xf::blas::WideType<float, 2u, 32u, void>, bool, bool) (.29)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:270:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::TaggedWideType<float, 2u>::operator ap_uint<66> const()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:270:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::TaggedWideType<float, 2u>::TaggedWideType(ap_uint<66> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::TaggedWideType<float, 2u>::getExit()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::TaggedWideType<float, 2u>::getFlush()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::DualTaggedType<float, 32u>::operator ap_uint<34> const()' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray(hls::stream<ap_uint<66>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<34>, 0>*, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:241:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::DualTaggedType<float, 32u>::DualTaggedType(ap_uint<34> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:87:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:189:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::DualTaggedType<float, 32u>::DualTaggedType(ap_uint<34> const&)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls(hls::stream<ap_uint<34>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:139:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::SystolicArray(unsigned int)' into 'xf::blas::Gemm<float, 1024u, 2u, 2u, float>::gemm(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<64>, 0>&, unsigned int)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:149:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'void xf::blas::gemmBufferC<float, 2u, 2u, 10u>(unsigned int, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:82:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'void xf::blas::scal<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp:54:0)
+INFO: [HLS 214-178] Inlining function 'xf::blas::WideType<float, 2u, 32u, void>::operator ap_uint<64> const() (.3)' into 'void xf::blas::axpy<float, 2u, unsigned int>(unsigned int, float, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp:57:0)
+INFO: [HLS 214-178] Inlining function 'void xf::blas::readVec2Stream<float, 2u>(float*, unsigned int, hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&)' into 'uut_top(unsigned int, unsigned int, unsigned int, float, float, float*, float*, float*, float*)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp:31:0)
+INFO: [HLS 214-178] Inlining function 'void xf::blas::writeStream2Vec<float, 2u>(hls::stream<xf::blas::WideType<float, 2u, (sizeof (float)) * (8), void>::t_TypeInt, 0>&, unsigned int, float*)' into 'uut_top(unsigned int, unsigned int, unsigned int, float, float, float*, float*, float*, float*)' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp:31:0)
+INFO: [HLS 214-178] Inlining function 'uut_top(unsigned int, unsigned int, unsigned int, float, float, float*, float*, float*, float*)' into 'forward_node1(float (*) [10], float (*) [1024], float (*) [10])' (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:48:0)
+INFO: [HLS 214-178] Inlining function 'forward_node2(float (*) [1][32][32], float (*) [1024])' into 'cemit_replaced(float (*) [1][32][32], float (*) [10], float (*) [10])' (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:88:0)
+INFO: [HLS 214-178] Inlining function 'forward_node0(float (*) [10], float*, float (*) [10])' into 'cemit_replaced(float (*) [1][32][32], float (*) [10], float (*) [10])' (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:88:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:99:45)
+WARNING: [HLS 214-167] The program may have out of bound array access (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:124:13)
+INFO: [HLS 214-248] Applying array_partition to 'l_Tb': Complete partitioning on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:242:46)
+INFO: [HLS 214-248] Applying array_partition to 'l_Tc': Complete partitioning on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:93:49)
+INFO: [HLS 214-248] Applying array_partition to 'l_Tc': Complete partitioning on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:145:49)
+INFO: [HLS 214-248] Applying array_partition to 'l_sum': Complete partitioning on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:54:24)
+INFO: [HLS 214-248] Applying array_partition to 'l_dataA': Complete partitioning on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:57:19)
+INFO: [HLS 214-248] Applying array_partition to 'l_dataB': Complete partitioning on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:61:22)
+INFO: [HLS 214-248] Applying array_partition to 'l_bufferC': Cyclic partitioning with factor 2 on dimension 1. (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:88:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'l_sum_0' with compact=bit mode in 64-bits (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:54:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'l_sum_1' with compact=bit mode in 64-bits (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:54:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'l_dataA_0' with compact=bit mode in 34-bits (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:57:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'l_dataA_1' with compact=bit mode in 34-bits (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:57:19)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'l_dataB_0' with compact=bit mode in 64-bits (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:61:22)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'l_dataB_1' with compact=bit mode in 64-bits (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:61:22)
+INFO: [HLS 214-115] Multiple burst writes of length 5 and bit width 64 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:33:22)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 7.3 seconds. CPU system time: 2.06 seconds. Elapsed time: 9.38 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.086 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.116 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.38 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.158 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_83_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/utils.hpp:83) in function 'xf::blas::Merge<hls::stream<ap_uint<64>, 0>, 2u>::merge' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_67_5' (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:67) in function 'forward_node1' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_33_2' (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:33) in function 'cemit_replaced' automatically.
+WARNING: [HLS 200-805] An internal stream 'l_sum' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:214) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_mat' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:214) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_betaC' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:214) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_aStr' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:53) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_sum_0' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_sum_1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_bStr' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:61) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_dataB_1' with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_mul' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:233) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_mul' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:226) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [XFORM 203-731] Internal stream variable 'l_strA' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp:32) is invalid: it has no data producer
+WARNING: [XFORM 203-731] Internal stream variable 'l_strB' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp:33) is invalid: it has no data producer
+WARNING: [HLS 200-805] An internal stream 'l_strC' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp:34) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'l_strSum' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp:35) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::macs' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:225:5), detected/extracted 2 process function(s): 
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls'
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::macs.1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:232:5), detected/extracted 2 process function(s): 
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls.2'
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds.3'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::process' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:53:5), detected/extracted 5 process function(s): 
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB'
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray'
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::macs'
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::macs.1'
+	 'xf::blas::Merge<hls::stream<ap_uint<64>, 0>, 2u>::merge'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::blas::Gemm<float, 1024u, 2u, 2u, float>::gemm' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:155:5), detected/extracted 1 process function(s): 
+	 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::process'.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::blas::gemm<float, 1024u, 2u, 10u, unsigned int>' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:214:1), detected/extracted 4 process function(s): 
+	 'xf::blas::Gemm<float, 1024u, 2u, 2u, float>::gemm'
+	 'xf::blas::gemmBufferC<float, 2u, 2u, 10u>'
+	 'xf::blas::scal<float, 2u, unsigned int>'
+	 'xf::blas::axpy<float, 2u, unsigned int>'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.74 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.79 seconds; current allocated memory: 1.222 GB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_93_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:93:31) in function 'xf::blas::gemmBufferC<float, 2u, 2u, 10u>'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_271_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271:45) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::tagAB'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_633_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634:49) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::systolicArray'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_633_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634:49) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls.2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_633_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634:49) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::muls'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_193_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:193:45) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds.3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_193_1' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:193:45) in function 'xf::blas::SystolicArray<float, 1024u, 2u, 2u, float>::adds'.
+INFO: [HLS 200-472] Inferring partial write operation for 'l_bufferC' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:99:45)
+INFO: [HLS 200-472] Inferring partial write operation for 'p_R' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/vecMoverB1.hpp:160:41)
+INFO: [HLS 200-472] Inferring partial write operation for 'v12' (/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:68:15)
+WARNING: [HLS 200-765] Process muls is made part of the output synchronization in its dataflow region, because it has an external FIFO output and no PIPO output
+Resolution: For help on HLS 200-765 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-765.html
+WARNING: [HLS 200-1450] Process muls has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+Resolution: For help on HLS 200-1450 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1450.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.48 seconds. CPU system time: 0.18 seconds. Elapsed time: 0.65 seconds; current allocated memory: 1.528 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cemit_replaced' ...
+WARNING: [SYN 201-103] Legalizing function name 'muls.2_Pipeline_VITIS_LOOP_141_1' to 'muls_2_Pipeline_VITIS_LOOP_141_1'.
+WARNING: [SYN 201-103] Legalizing function name 'muls.2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' to 'muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+WARNING: [SYN 201-103] Legalizing function name 'muls.2_Pipeline_VITIS_LOOP_153_2' to 'muls_2_Pipeline_VITIS_LOOP_153_2'.
+WARNING: [SYN 201-103] Legalizing function name 'muls.2' to 'muls_2'.
+WARNING: [SYN 201-103] Legalizing function name 'adds.3' to 'adds_3'.
+WARNING: [SYN 201-103] Legalizing function name 'macs.1' to 'macs_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gemmBufferC<float, 2u, 2u, 10u>_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2' to 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2'.
+WARNING: [SYN 201-103] Legalizing function name 'gemmBufferC<float, 2u, 2u, 10u>_Pipeline_VITIS_LOOP_119_8' to 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8'.
+WARNING: [SYN 201-103] Legalizing function name 'gemmBufferC<float, 2u, 2u, 10u>' to 'gemmBufferC_float_2u_2u_10u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'scal<float, 2u, unsigned int>' to 'scal_float_2u_unsigned_int_s'.
+WARNING: [SYN 201-103] Legalizing function name 'axpy<float, 2u, unsigned int>' to 'axpy_float_2u_unsigned_int_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gemm<float, 1024u, 2u, 10u, unsigned int>' to 'gemm_float_1024u_2u_10u_unsigned_int_s'.
+WARNING: [SYN 201-103] Legalizing function name 'process' to 'process_r'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward_node1_Pipeline_VITIS_LOOP_125_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_125_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_125_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.15 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.530 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.530 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_271_1_VITIS_LOOP_272_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_271_1_VITIS_LOOP_272_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.531 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.531 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tagAB_Pipeline_VITIS_LOOP_283_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_283_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_283_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.531 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.531 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'tagAB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.531 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.531 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolicArray_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.531 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.531 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolicArray_Pipeline_VITIS_LOOP_247_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_247_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_247_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.532 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.532 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'systolicArray' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.532 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.532 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_Pipeline_VITIS_LOOP_89_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_89_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_89_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.532 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.532 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.532 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.532 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_Pipeline_VITIS_LOOP_101_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_101_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_101_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.533 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.533 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.533 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.533 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'adds' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 31, loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.533 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.533 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'macs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.534 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.534 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_2_Pipeline_VITIS_LOOP_141_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_141_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_141_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.534 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.534 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_633_1_VITIS_LOOP_634_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.535 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.535 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_2_Pipeline_VITIS_LOOP_153_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_153_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_153_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.535 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.535 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'muls_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.535 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.535 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'adds_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 31, loop 'VITIS_LOOP_193_1_VITIS_LOOP_194_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.536 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.536 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'macs_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.536 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.536 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_83_1'.
+WARNING: [HLS 200-880] The II Violation in module 'merge' (loop 'VITIS_LOOP_83_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write operation ('l_sum3_write_ln85', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/utils.hpp:85) on port 'l_sum3' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/utils.hpp:85) and fifo write operation ('l_sum3_write_ln84', /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/utils.hpp:84) on port 'l_sum3' (/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/utils.hpp:84).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 3, loop 'VITIS_LOOP_83_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.536 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.536 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1018] Consider increasing the depth of FIFO l_sum_0 (from macs_U0 to merge_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.536 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.536 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.537 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.537 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_93_1_VITIS_LOOP_94_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_93_1_VITIS_LOOP_94_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.537 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.537 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_119_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_119_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.538 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.538 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemmBufferC_float_2u_2u_10u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.538 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.538 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'scal_float_2u_unsigned_int_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_59_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_59_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.538 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.538 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axpy_float_2u_unsigned_int_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_62_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'VITIS_LOOP_62_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.538 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.538 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gemm_float_1024u_2u_10u_unsigned_int_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1018] Consider increasing the depth of FIFO l_betaC (from scal_float_2u_unsigned_int_U0 to axpy_float_2u_unsigned_int_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.538 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.539 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward_node1_Pipeline_VITIS_LOOP_154_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_154_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_154_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.539 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.539 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward_node1_Pipeline_VITIS_LOOP_67_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_67_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.539 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.539 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'forward_node1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.540 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.540 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cemit_replaced_Pipeline_VITIS_LOOP_33_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_33_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'VITIS_LOOP_33_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.540 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.540 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cemit_replaced' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.540 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.540 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward_node1_Pipeline_VITIS_LOOP_125_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forward_node1_Pipeline_VITIS_LOOP_125_1' pipeline 'VITIS_LOOP_125_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward_node1_Pipeline_VITIS_LOOP_125_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.540 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2' pipeline 'VITIS_LOOP_271_1_VITIS_LOOP_272_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.541 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tagAB_Pipeline_VITIS_LOOP_283_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'tagAB_Pipeline_VITIS_LOOP_283_3' pipeline 'VITIS_LOOP_283_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tagAB_Pipeline_VITIS_LOOP_283_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.542 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'tagAB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'tagAB'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.543 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolicArray_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'systolicArray_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.543 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolicArray_Pipeline_VITIS_LOOP_247_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'systolicArray_Pipeline_VITIS_LOOP_247_1' pipeline 'VITIS_LOOP_247_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'systolicArray_Pipeline_VITIS_LOOP_247_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.544 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'systolicArray' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'systolicArray'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.545 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_Pipeline_VITIS_LOOP_89_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_Pipeline_VITIS_LOOP_89_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.546 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.546 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_Pipeline_VITIS_LOOP_101_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'muls_Pipeline_VITIS_LOOP_101_2' pipeline 'VITIS_LOOP_101_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_Pipeline_VITIS_LOOP_101_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.547 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.549 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'adds' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'adds' pipeline 'VITIS_LOOP_193_1_VITIS_LOOP_194_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'adds'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.550 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'macs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'macs'.
+INFO: [RTMG 210-285] Implementing FIFO 'l_mul_U(cemit_replaced_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_adds_U0_U(cemit_replaced_start_for_adds_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_2_Pipeline_VITIS_LOOP_141_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_2_Pipeline_VITIS_LOOP_141_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.552 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_2_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.553 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_2_Pipeline_VITIS_LOOP_153_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'muls_2_Pipeline_VITIS_LOOP_153_2' pipeline 'VITIS_LOOP_153_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_2_Pipeline_VITIS_LOOP_153_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.554 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'muls_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'muls_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.555 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'adds_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'adds_3' pipeline 'VITIS_LOOP_193_1_VITIS_LOOP_194_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'adds_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.556 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'macs_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d2_S' is changed to 'fifo_w64_d2_S_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'macs_1'.
+INFO: [RTMG 210-285] Implementing FIFO 'l_mul_U(cemit_replaced_fifo_w64_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_adds_3_U0_U(cemit_replaced_start_for_adds_3_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.558 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge' pipeline 'VITIS_LOOP_83_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.558 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d2_S' is changed to 'fifo_w64_d2_S_x0' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_r'.
+INFO: [RTMG 210-285] Implementing FIFO 'l_aStr_U(cemit_replaced_fifo_w66_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_bStr_U(cemit_replaced_fifo_w64_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_dataA_0_U(cemit_replaced_fifo_w34_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_dataA_1_U(cemit_replaced_fifo_w34_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_dataB_0_U(cemit_replaced_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_dataB_1_U(cemit_replaced_fifo_w64_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_sum_0_U(cemit_replaced_fifo_w64_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_sum_1_U(cemit_replaced_fifo_w64_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_systolicArray_U0_U(cemit_replaced_start_for_systolicArray_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_macs_U0_U(cemit_replaced_start_for_macs_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_macs_1_U0_U(cemit_replaced_start_for_macs_1_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_merge_U0_U(cemit_replaced_start_for_merge_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.560 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.560 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2' pipeline 'VITIS_LOOP_93_1_VITIS_LOOP_94_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.561 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8' pipeline 'VITIS_LOOP_119_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.562 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemmBufferC_float_2u_2u_10u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemmBufferC_float_2u_2u_10u_s'.
+INFO: [RTMG 210-278] Implementing memory 'cemit_replaced_gemmBufferC_float_2u_2u_10u_s_l_bufferC_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.563 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'scal_float_2u_unsigned_int_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'scal_float_2u_unsigned_int_s' pipeline 'VITIS_LOOP_59_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'scal_float_2u_unsigned_int_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.564 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axpy_float_2u_unsigned_int_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'axpy_float_2u_unsigned_int_s' pipeline 'VITIS_LOOP_62_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axpy_float_2u_unsigned_int_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.565 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gemm_float_1024u_2u_10u_unsigned_int_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d2_S' is changed to 'fifo_w64_d2_S_x1' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gemm_float_1024u_2u_10u_unsigned_int_s'.
+INFO: [RTMG 210-285] Implementing FIFO 'l_sum_U(cemit_replaced_fifo_w64_d2_S_x1)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_mat_U(cemit_replaced_fifo_w64_d2_S_x1)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'l_betaC_U(cemit_replaced_fifo_w64_d2_S_x1)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_gemmBufferC_float_2u_2u_10u_U0_U(cemit_replaced_start_for_gemmBufferC_float_2u_2u_10u_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_axpy_float_2u_unsigned_int_U0_U(cemit_replaced_start_for_axpy_float_2u_unsigned_int_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.566 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward_node1_Pipeline_VITIS_LOOP_154_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forward_node1_Pipeline_VITIS_LOOP_154_1' pipeline 'VITIS_LOOP_154_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward_node1_Pipeline_VITIS_LOOP_154_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.36 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.566 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward_node1_Pipeline_VITIS_LOOP_67_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'forward_node1_Pipeline_VITIS_LOOP_67_5' pipeline 'VITIS_LOOP_67_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward_node1_Pipeline_VITIS_LOOP_67_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.567 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'forward_node1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+ERROR: [RTGEN 206-102] Illegal connection is found on FIFO pin 'forward_node1|l_strA' connecting to 'call_ln40'('gemm_float_1024u_2u_10u_unsigned_int_s|l_strA4_i').
+ERROR: [RTGEN 206-102] Illegal connection is found on FIFO pin 'forward_node1|l_strB' connecting to 'call_ln40'('gemm_float_1024u_2u_10u_unsigned_int_s|l_strB5_i').
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d2_S' is changed to 'fifo_w64_d2_S_x2' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'forward_node1'.
+ERROR: [HLS 200-103] RTL generation terminated by exceptions!
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 50.6 seconds. CPU system time: 5.78 seconds. Elapsed time: 56.38 seconds; current allocated memory: 509.754 MB.
+Synthesis failed.
+    while executing
+"source cemit_replaced.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [HLS 200-112] Total CPU user time: 54.15 seconds. Total CPU system time: 6.83 seconds. Total elapsed time: 60.68 seconds; peak allocated memory: 1.568 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Jun 12 16:50:48 2023...

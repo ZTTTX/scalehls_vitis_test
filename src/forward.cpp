@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <string.h>
 
-using namespace std
+using namespace std;
 
 void forward_node0(
   float v0[1][10],
@@ -62,6 +62,7 @@ void forward_node2(
     v22[0][v23] = v24;	//
   }
 }
+
 
 /// This is top function.
 void forward(

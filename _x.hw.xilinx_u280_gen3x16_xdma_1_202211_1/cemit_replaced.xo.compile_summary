@@ -1,0 +1,169 @@
+<ENTRY>
+{
+ "thisFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced.xo.compile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Jun 12 16:49:41 2023",
+ "timestampMillis": "1686606581228",
+ "buildStep": {
+  "cmdId": "835589e8-cec4-46ce-9e3a-6676b842849b",
+  "name": "v++",
+  "logFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced.steps.log",
+  "commandLine": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm -k cemit_replaced --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -Isrc -o_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced.xo src/cemit_replaced.cpp -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw ",
+  "args": [
+   "-c",
+   "--save-temps",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "-k",
+   "cemit_replaced",
+   "--temp_dir",
+   "./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1",
+   "-Isrc",
+   "-o_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced.xo",
+   "src/cemit_replaced.cpp",
+   "-I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/shared/home/tz32/scalehls_vitis_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jun 12 16:49:41 2023",
+ "timestampMillis": "1686606581228",
+ "status": {
+  "cmdId": "835589e8-cec4-46ce-9e3a-6676b842849b",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Jun 12 16:49:44 2023",
+ "timestampMillis": "1686606584784",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "cemit_replaced",
+     "file": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.2. SW Build 3671529 on 2022-10-13-17:52:11"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jun 12 16:49:44 2023",
+ "timestampMillis": "1686606584788",
+ "buildStep": {
+  "cmdId": "794eacea-cb5c-4b4f-be40-6bb9c6fec1c5",
+  "name": "vitis_hls",
+  "logFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log",
+  "commandLine": "vitis_hls -f /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced.tcl -messageDb vitis_hls.pb",
+  "args": [
+   "vitis_hls",
+   "-f",
+   "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced.tcl",
+   "-messageDb",
+   "vitis_hls.pb"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/shared/home/tz32/scalehls_vitis_test"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jun 12 16:49:44 2023",
+ "timestampMillis": "1686606584789",
+ "status": {
+  "cmdId": "794eacea-cb5c-4b4f-be40-6bb9c6fec1c5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jun 12 16:50:49 2023",
+ "timestampMillis": "1686606649490",
+ "status": {
+  "cmdId": "794eacea-cb5c-4b4f-be40-6bb9c6fec1c5",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jun 12 16:50:49 2023",
+ "timestampMillis": "1686606649492",
+ "status": {
+  "cmdId": "835589e8-cec4-46ce-9e3a-6676b842849b",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jun 12 16:50:49 2023",
+ "timestampMillis": "1686606649660",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/cemit_replaced/v++_compile_cemit_replaced_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jun 12 16:50:49 2023",
+ "timestampMillis": "1686606649661",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/v++_compile_cemit_replaced_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
