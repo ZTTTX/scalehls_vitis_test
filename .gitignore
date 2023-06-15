@@ -1,6 +1,7 @@
 cemit_replaced_test.prj
 cemit_replaced_v2.prj
 forward.prj
-build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1
-_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1
+build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/
+_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/
+.ipcache/
 *.log
