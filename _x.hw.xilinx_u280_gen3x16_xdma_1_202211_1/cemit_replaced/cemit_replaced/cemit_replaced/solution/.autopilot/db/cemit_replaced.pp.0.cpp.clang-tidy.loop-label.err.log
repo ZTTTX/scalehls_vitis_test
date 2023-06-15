@@ -1,5 +1,5 @@
 4 warnings and 30 errors generated.
 Error while processing /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced/solution/.autopilot/db/cemit_replaced.pp.0.cpp.
-clang-tidy applied 407 of 407 suggested fixes.
+clang-tidy applied 406 of 406 suggested fixes.
 Suppressed 229 warnings (225 in non-user code, 4 with check filters).
 Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

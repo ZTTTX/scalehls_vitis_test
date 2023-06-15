@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gemmBufferC_float_2u_2u_10u_s'" level="0">
-<item name = "Date">Mon Jun 12 16:50:40 2023
+<item name = "Date">Wed Jun 14 16:04:38 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cemit_replaced</item>
@@ -31,8 +31,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30">gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
-<column name="grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40">gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
+<column name="grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30">gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
+<column name="grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40">gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -10,22 +10,22 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 117 \
-    name l_strC6_i \
+    id 133 \
+    name l_strC9 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strC6_i \
+    corename dc_l_strC9 \
     op interface \
-    ports { l_strC6_i_dout { I 64 vector } l_strC6_i_empty_n { I 1 bit } l_strC6_i_read { O 1 bit } } \
+    ports { l_strC9_dout { I 64 vector } l_strC9_num_data_valid { I 2 vector } l_strC9_fifo_cap { I 2 vector } l_strC9_empty_n { I 1 bit } l_strC9_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 118 \
+    id 134 \
     name l_betaC5 \
     type fifo \
     dir O \

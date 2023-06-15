@@ -21,12 +21,16 @@ port (
     ap_ready : OUT STD_LOGIC;
     start_out : OUT STD_LOGIC;
     start_write : OUT STD_LOGIC;
-    l_strA4_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strA4_i_empty_n : IN STD_LOGIC;
-    l_strA4_i_read : OUT STD_LOGIC;
-    l_strB5_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strB5_i_empty_n : IN STD_LOGIC;
-    l_strB5_i_read : OUT STD_LOGIC;
+    l_strA7_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strA7_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+    l_strA7_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+    l_strA7_empty_n : IN STD_LOGIC;
+    l_strA7_read : OUT STD_LOGIC;
+    l_strB8_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strB8_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+    l_strB8_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+    l_strB8_empty_n : IN STD_LOGIC;
+    l_strB8_read : OUT STD_LOGIC;
     l_aStr1_din : OUT STD_LOGIC_VECTOR (65 downto 0);
     l_aStr1_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
     l_aStr1_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
@@ -69,8 +73,8 @@ attribute shreg_extract : string;
     signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_done : STD_LOGIC;
     signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_idle : STD_LOGIC;
     signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_ready : STD_LOGIC;
-    signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read : STD_LOGIC;
-    signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read : STD_LOGIC;
+    signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read : STD_LOGIC;
+    signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read : STD_LOGIC;
     signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_aStr1_din : STD_LOGIC_VECTOR (65 downto 0);
     signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_aStr1_write : STD_LOGIC;
     signal grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_bStr2_din : STD_LOGIC_VECTOR (63 downto 0);
@@ -109,12 +113,16 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        l_strA4_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strA4_i_empty_n : IN STD_LOGIC;
-        l_strA4_i_read : OUT STD_LOGIC;
-        l_strB5_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strB5_i_empty_n : IN STD_LOGIC;
-        l_strB5_i_read : OUT STD_LOGIC;
+        l_strA7_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strA7_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strA7_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strA7_empty_n : IN STD_LOGIC;
+        l_strA7_read : OUT STD_LOGIC;
+        l_strB8_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strB8_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strB8_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strB8_empty_n : IN STD_LOGIC;
+        l_strB8_read : OUT STD_LOGIC;
         l_aStr1_din : OUT STD_LOGIC_VECTOR (65 downto 0);
         l_aStr1_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
         l_aStr1_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
@@ -159,12 +167,16 @@ begin
         ap_done => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_done,
         ap_idle => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_idle,
         ap_ready => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_ready,
-        l_strA4_i_dout => l_strA4_i_dout,
-        l_strA4_i_empty_n => l_strA4_i_empty_n,
-        l_strA4_i_read => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read,
-        l_strB5_i_dout => l_strB5_i_dout,
-        l_strB5_i_empty_n => l_strB5_i_empty_n,
-        l_strB5_i_read => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read,
+        l_strA7_dout => l_strA7_dout,
+        l_strA7_num_data_valid => ap_const_lv2_0,
+        l_strA7_fifo_cap => ap_const_lv2_0,
+        l_strA7_empty_n => l_strA7_empty_n,
+        l_strA7_read => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read,
+        l_strB8_dout => l_strB8_dout,
+        l_strB8_num_data_valid => ap_const_lv2_0,
+        l_strB8_fifo_cap => ap_const_lv2_0,
+        l_strB8_empty_n => l_strB8_empty_n,
+        l_strB8_read => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read,
         l_aStr1_din => grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_aStr1_din,
         l_aStr1_num_data_valid => ap_const_lv2_0,
         l_aStr1_fifo_cap => ap_const_lv2_0,
@@ -434,22 +446,22 @@ begin
     end process;
 
 
-    l_strA4_i_read_assign_proc : process(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read, ap_CS_fsm_state2)
+    l_strA7_read_assign_proc : process(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            l_strA4_i_read <= grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read;
+            l_strA7_read <= grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read;
         else 
-            l_strA4_i_read <= ap_const_logic_0;
+            l_strA7_read <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    l_strB5_i_read_assign_proc : process(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read, ap_CS_fsm_state2)
+    l_strB8_read_assign_proc : process(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            l_strB5_i_read <= grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read;
+            l_strB8_read <= grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read;
         else 
-            l_strB5_i_read <= ap_const_logic_0;
+            l_strB8_read <= ap_const_logic_0;
         end if; 
     end process;
 

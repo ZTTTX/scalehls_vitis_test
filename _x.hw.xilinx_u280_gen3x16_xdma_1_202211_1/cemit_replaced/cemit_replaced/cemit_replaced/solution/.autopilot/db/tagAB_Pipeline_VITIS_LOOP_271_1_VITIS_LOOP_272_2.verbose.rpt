@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2'
 ================================================================
-* Date:           Mon Jun 12 16:50:43 2023
+* Date:           Wed Jun 14 16:04:43 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cemit_replaced
@@ -25,12 +25,12 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+------+------+---------+
-    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
-    |   min   |   max   |    min   |    max   |  min |  max |   Type  |
-    +---------+---------+----------+----------+------+------+---------+
-    |     2050|     2050|  6.833 us|  6.833 us|  2050|  2050|       no|
-    +---------+---------+----------+----------+------+------+---------+
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     5122|     5122|  17.072 us|  17.072 us|  5122|  5122|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
         * Instance: 
@@ -41,7 +41,7 @@
         |                                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_271_1_VITIS_LOOP_272_2  |     2048|     2048|         2|          1|          1|  2048|       yes|
+        |- VITIS_LOOP_271_1_VITIS_LOOP_272_2  |     5120|     5120|         2|          1|          1|  5120|       yes|
         +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -54,14 +54,14 @@
 |         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
 +---------------------+---------+------+---------+---------+-----+
 |DSP                  |        -|     -|        -|        -|    -|
-|Expression           |        -|     -|        0|       89|    -|
+|Expression           |        -|     -|        0|       90|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
 |Instance             |        -|     -|        -|        -|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|       90|    -|
-|Register             |        -|     -|       37|        -|    -|
+|Register             |        -|     -|       38|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     0|       37|      179|    0|
+|Total                |        0|     0|       38|      180|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -89,17 +89,17 @@
     +----------------------------------+----------+----+---+----+------------+------------+
     |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |add_ln271_fu_108_p2               |         +|   0|  0|  19|          12|           1|
+    |add_ln271_fu_108_p2               |         +|   0|  0|  20|          13|           1|
     |k_1_fu_131_p2                     |         +|   0|  0|  18|          11|           1|
     |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
-    |icmp_ln271_fu_102_p2              |      icmp|   0|  0|  12|          12|          13|
+    |icmp_ln271_fu_102_p2              |      icmp|   0|  0|  12|          13|          13|
     |icmp_ln272_fu_117_p2              |      icmp|   0|  0|  12|          11|          12|
     |l_flush_fu_147_p2                 |      icmp|   0|  0|  11|          11|           1|
     |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
     |select_ln271_fu_123_p3            |    select|   0|  0|  11|           1|           1|
     |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
     +----------------------------------+----------+----+---+----+------------+------------+
-    |Total                             |          |   0|  0|  89|          61|          33|
+    |Total                             |          |   0|  0|  90|          63|          33|
     +----------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -108,16 +108,16 @@
     +--------------------------------------+----+-----------+-----+-----------+
     |ap_done_int                           |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1               |   9|          2|    1|          2|
-    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|   12|         24|
+    |ap_sig_allocacmp_indvar_flatten_load  |   9|          2|   13|         26|
     |ap_sig_allocacmp_k_load               |   9|          2|   11|         22|
-    |indvar_flatten_fu_58                  |   9|          2|   12|         24|
+    |indvar_flatten_fu_58                  |   9|          2|   13|         26|
     |k_fu_54                               |   9|          2|   11|         22|
     |l_aStr1_blk_n                         |   9|          2|    1|          2|
     |l_bStr2_blk_n                         |   9|          2|    1|          2|
-    |l_strA4_i_blk_n                       |   9|          2|    1|          2|
-    |l_strB5_i_blk_n                       |   9|          2|    1|          2|
+    |l_strA7_blk_n                         |   9|          2|    1|          2|
+    |l_strB8_blk_n                         |   9|          2|    1|          2|
     +--------------------------------------+----+-----------+-----+-----------+
-    |Total                                 |  90|         20|   52|        104|
+    |Total                                 |  90|         20|   54|        108|
     +--------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -127,11 +127,11 @@
     |ap_CS_fsm                |   1|   0|    1|          0|
     |ap_done_reg              |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
-    |indvar_flatten_fu_58     |  12|   0|   12|          0|
+    |indvar_flatten_fu_58     |  13|   0|   13|          0|
     |k_fu_54                  |  11|   0|   11|          0|
     |select_ln271_reg_180     |  11|   0|   11|          0|
     +-------------------------+----+----+-----+-----------+
-    |Total                    |  37|   0|   37|          0|
+    |Total                    |  38|   0|   38|          0|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -149,12 +149,16 @@
 |ap_done                 |  out|    1|  ap_ctrl_hs|  tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2|  return value|
 |ap_idle                 |  out|    1|  ap_ctrl_hs|  tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2|  return value|
 |ap_ready                |  out|    1|  ap_ctrl_hs|  tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2|  return value|
-|l_strA4_i_dout          |   in|   64|     ap_fifo|                                         l_strA4_i|       pointer|
-|l_strA4_i_empty_n       |   in|    1|     ap_fifo|                                         l_strA4_i|       pointer|
-|l_strA4_i_read          |  out|    1|     ap_fifo|                                         l_strA4_i|       pointer|
-|l_strB5_i_dout          |   in|   64|     ap_fifo|                                         l_strB5_i|       pointer|
-|l_strB5_i_empty_n       |   in|    1|     ap_fifo|                                         l_strB5_i|       pointer|
-|l_strB5_i_read          |  out|    1|     ap_fifo|                                         l_strB5_i|       pointer|
+|l_strA7_dout            |   in|   64|     ap_fifo|                                           l_strA7|       pointer|
+|l_strA7_num_data_valid  |   in|    2|     ap_fifo|                                           l_strA7|       pointer|
+|l_strA7_fifo_cap        |   in|    2|     ap_fifo|                                           l_strA7|       pointer|
+|l_strA7_empty_n         |   in|    1|     ap_fifo|                                           l_strA7|       pointer|
+|l_strA7_read            |  out|    1|     ap_fifo|                                           l_strA7|       pointer|
+|l_strB8_dout            |   in|   64|     ap_fifo|                                           l_strB8|       pointer|
+|l_strB8_num_data_valid  |   in|    2|     ap_fifo|                                           l_strB8|       pointer|
+|l_strB8_fifo_cap        |   in|    2|     ap_fifo|                                           l_strB8|       pointer|
+|l_strB8_empty_n         |   in|    1|     ap_fifo|                                           l_strB8|       pointer|
+|l_strB8_read            |  out|    1|     ap_fifo|                                           l_strB8|       pointer|
 |l_aStr1_din             |  out|   66|     ap_fifo|                                           l_aStr1|       pointer|
 |l_aStr1_num_data_valid  |   in|    2|     ap_fifo|                                           l_aStr1|       pointer|
 |l_aStr1_fifo_cap        |   in|    2|     ap_fifo|                                           l_aStr1|       pointer|
@@ -210,32 +214,32 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 2.03>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%k = alloca i32 1"   --->   Operation 5 'alloca' 'k' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 6 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strB5_i, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strA4_i, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %l_aStr1, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_bStr2, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%store_ln0 = store i12 0, i12 %indvar_flatten"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strB8, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strA7, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %l_aStr1, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_bStr2, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%store_ln0 = store i13 0, i13 %indvar_flatten"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 12 [1/1] (0.38ns)   --->   "%store_ln0 = store i11 0, i11 %k"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i.i20"   --->   Operation 13 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i12 %indvar_flatten" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 14 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.62ns)   --->   "%icmp_ln271 = icmp_eq  i12 %indvar_flatten_load, i12 2048" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 15 'icmp' 'icmp_ln271' <Predicate = true> <Delay = 0.62> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 16 [1/1] (0.74ns)   --->   "%add_ln271 = add i12 %indvar_flatten_load, i12 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 16 'add' 'add_ln271' <Predicate = true> <Delay = 0.74> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.74> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i13 %indvar_flatten" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 14 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.64ns)   --->   "%icmp_ln271 = icmp_eq  i13 %indvar_flatten_load, i13 5120" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 15 'icmp' 'icmp_ln271' <Predicate = true> <Delay = 0.64> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.64> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.75ns)   --->   "%add_ln271 = add i13 %indvar_flatten_load, i13 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 16 'add' 'add_ln271' <Predicate = true> <Delay = 0.75> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln271 = br i1 %icmp_ln271, void %for.inc8, void %for.inc23.preheader.exitStub" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 17 'br' 'br_ln271' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%k_load = load i11 %k" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 18 'load' 'k_load' <Predicate = (!icmp_ln271)> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.61ns)   --->   "%icmp_ln272 = icmp_eq  i11 %k_load, i11 1024" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 19 'icmp' 'icmp_ln272' <Predicate = (!icmp_ln271)> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.62> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 20 [1/1] (0.30ns)   --->   "%select_ln271 = select i1 %icmp_ln272, i11 0, i11 %k_load" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:271]   --->   Operation 20 'select' 'select_ln271' <Predicate = (!icmp_ln271)> <Delay = 0.30> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 21 [1/1] (0.73ns)   --->   "%k_1 = add i11 %select_ln271, i11 1" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 21 'add' 'k_1' <Predicate = (!icmp_ln271)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 22 [1/1] (0.38ns)   --->   "%store_ln272 = store i12 %add_ln271, i12 %indvar_flatten" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 22 'store' 'store_ln272' <Predicate = (!icmp_ln271)> <Delay = 0.38>
+ST_1 : Operation 22 [1/1] (0.38ns)   --->   "%store_ln272 = store i13 %add_ln271, i13 %indvar_flatten" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 22 'store' 'store_ln272' <Predicate = (!icmp_ln271)> <Delay = 0.38>
 ST_1 : Operation 23 [1/1] (0.38ns)   --->   "%store_ln272 = store i11 %k_1, i11 %k" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 23 'store' 'store_ln272' <Predicate = (!icmp_ln271)> <Delay = 0.38>
 ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 35 'ret' 'ret_ln0' <Predicate = (icmp_ln271)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 2.43>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_271_1_VITIS_LOOP_272_2_str"   --->   Operation 24 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 2048, i64 2048, i64 2048"   --->   Operation 25 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln273 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_26" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:273]   --->   Operation 26 'specpipeline' 'specpipeline_ln273' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specloopname_ln272 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 27 'specloopname' 'specloopname_ln272' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 28 [1/1] (1.21ns)   --->   "%p_Val2_s = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %l_strA4_i" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:274]   --->   Operation 28 'read' 'p_Val2_s' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
-ST_2 : Operation 29 [1/1] (1.21ns)   --->   "%l_valB = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %l_strB5_i" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:275]   --->   Operation 29 'read' 'l_valB' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 5120, i64 5120, i64 5120"   --->   Operation 25 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln273 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_33" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:273]   --->   Operation 26 'specpipeline' 'specpipeline_ln273' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specloopname_ln272 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:272]   --->   Operation 27 'specloopname' 'specloopname_ln272' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.21ns)   --->   "%p_Val2_s = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %l_strA7" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:274]   --->   Operation 28 'read' 'p_Val2_s' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_2 : Operation 29 [1/1] (1.21ns)   --->   "%l_valB = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %l_strB8" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:275]   --->   Operation 29 'read' 'l_valB' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
 ST_2 : Operation 30 [1/1] (0.61ns)   --->   "%l_flush = icmp_eq  i11 %select_ln271, i11 0" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:276]   --->   Operation 30 'icmp' 'l_flush' <Predicate = true> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%p_Result_s = bitconcatenate i66 @_ssdm_op_BitConcatenate.i66.i64.i1.i1, i64 %p_Val2_s, i1 %l_flush, i1 0"   --->   Operation 31 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 32 [1/1] (1.21ns)   --->   "%write_ln279 = write void @_ssdm_op_Write.ap_fifo.volatile.i66P0A, i66 %l_aStr1, i66 %p_Result_s" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:279]   --->   Operation 32 'write' 'write_ln279' <Predicate = true> <Delay = 1.21> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 66> <Depth = 2> <FIFO>
@@ -254,8 +258,8 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ l_strA4_i]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
-Port [ l_strB5_i]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ l_strA7]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ l_strB8]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
 Port [ l_aStr1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
 Port [ l_bStr2]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
 ---------------- STG Properties END ------------------
@@ -300,21 +304,21 @@ ret_ln0             (ret              ) [ 000]
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="l_strA4_i">
+<comp id="0" class="1000" name="l_strA7">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="l_strA4_i"/></StgValue>
+<StgValue><ssdm name="l_strA7"/></StgValue>
 </bind>
 </comp>
 
-<comp id="2" class="1000" name="l_strB5_i">
+<comp id="2" class="1000" name="l_strB8">
 <pin_list>
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="l_strB5_i"/></StgValue>
+<StgValue><ssdm name="l_strB8"/></StgValue>
 </bind>
 </comp>
 
@@ -359,7 +363,7 @@ ret_ln0             (ret              ) [ 000]
 <pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_23"/></StgValue>
 </bind>
 </comp>
 
@@ -377,7 +381,7 @@ ret_ln0             (ret              ) [ 000]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_26"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </bind>
 </comp>
 
@@ -494,7 +498,7 @@ ret_ln0             (ret              ) [ 000]
 <pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_20"/></StgValue>
+<StgValue><ssdm name="empty_12"/></StgValue>
 </bind>
 </comp>
 
@@ -557,7 +561,7 @@ ret_ln0             (ret              ) [ 000]
 <comp id="58" class="1004" name="indvar_flatten_fu_58">
 <pin_list>
 <pin id="59" dir="0" index="0" bw="1" slack="0"/>
-<pin id="60" dir="1" index="1" bw="12" slack="0"/>
+<pin id="60" dir="1" index="1" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -618,7 +622,7 @@ ret_ln0             (ret              ) [ 000]
 <comp id="89" class="1004" name="store_ln0_store_fu_89">
 <pin_list>
 <pin id="90" dir="0" index="0" bw="1" slack="0"/>
-<pin id="91" dir="0" index="1" bw="12" slack="0"/>
+<pin id="91" dir="0" index="1" bw="13" slack="0"/>
 <pin id="92" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -641,8 +645,8 @@ ret_ln0             (ret              ) [ 000]
 
 <comp id="99" class="1004" name="indvar_flatten_load_load_fu_99">
 <pin_list>
-<pin id="100" dir="0" index="0" bw="12" slack="0"/>
-<pin id="101" dir="1" index="1" bw="12" slack="0"/>
+<pin id="100" dir="0" index="0" bw="13" slack="0"/>
+<pin id="101" dir="1" index="1" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -652,8 +656,8 @@ ret_ln0             (ret              ) [ 000]
 
 <comp id="102" class="1004" name="icmp_ln271_fu_102">
 <pin_list>
-<pin id="103" dir="0" index="0" bw="12" slack="0"/>
-<pin id="104" dir="0" index="1" bw="12" slack="0"/>
+<pin id="103" dir="0" index="0" bw="13" slack="0"/>
+<pin id="104" dir="0" index="1" bw="13" slack="0"/>
 <pin id="105" dir="1" index="2" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -664,9 +668,9 @@ ret_ln0             (ret              ) [ 000]
 
 <comp id="108" class="1004" name="add_ln271_fu_108">
 <pin_list>
-<pin id="109" dir="0" index="0" bw="12" slack="0"/>
+<pin id="109" dir="0" index="0" bw="13" slack="0"/>
 <pin id="110" dir="0" index="1" bw="1" slack="0"/>
-<pin id="111" dir="1" index="2" bw="12" slack="0"/>
+<pin id="111" dir="1" index="2" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -724,8 +728,8 @@ ret_ln0             (ret              ) [ 000]
 
 <comp id="137" class="1004" name="store_ln272_store_fu_137">
 <pin_list>
-<pin id="138" dir="0" index="0" bw="12" slack="0"/>
-<pin id="139" dir="0" index="1" bw="12" slack="0"/>
+<pin id="138" dir="0" index="0" bw="13" slack="0"/>
+<pin id="139" dir="0" index="1" bw="13" slack="0"/>
 <pin id="140" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -784,8 +788,8 @@ ret_ln0             (ret              ) [ 000]
 
 <comp id="170" class="1005" name="indvar_flatten_reg_170">
 <pin_list>
-<pin id="171" dir="0" index="0" bw="12" slack="0"/>
-<pin id="172" dir="1" index="1" bw="12" slack="0"/>
+<pin id="171" dir="0" index="0" bw="13" slack="0"/>
+<pin id="172" dir="1" index="1" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opset="indvar_flatten "/>
@@ -896,13 +900,13 @@ ret_ln0             (ret              ) [ 000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: l_strA4_i | {}
-	Port: l_strB5_i | {}
+	Port: l_strA7 | {}
+	Port: l_strB8 | {}
 	Port: l_aStr1 | {2 }
 	Port: l_bStr2 | {2 }
  - Input state : 
-	Port: tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 : l_strA4_i | {2 }
-	Port: tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 : l_strB5_i | {2 }
+	Port: tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 : l_strA7 | {2 }
+	Port: tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 : l_strB8 | {2 }
 	Port: tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 : l_aStr1 | {}
 	Port: tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 : l_bStr2 | {}
   - Chain level:
@@ -932,7 +936,7 @@ ret_ln0             (ret              ) [ 000]
 |----------|-------------------------|---------|---------|
 | Operation|     Functional Unit     |    FF   |   LUT   |
 |----------|-------------------------|---------|---------|
-|    add   |     add_ln271_fu_108    |    0    |    19   |
+|    add   |     add_ln271_fu_108    |    0    |    20   |
 |          |        k_1_fu_131       |    0    |    18   |
 |----------|-------------------------|---------|---------|
 |          |    icmp_ln271_fu_102    |    0    |    12   |
@@ -949,7 +953,7 @@ ret_ln0             (ret              ) [ 000]
 |----------|-------------------------|---------|---------|
 |bitconcatenate|    p_Result_s_fu_152    |    0    |    0    |
 |----------|-------------------------|---------|---------|
-|   Total  |                         |    0    |    82   |
+|   Total  |                         |    0    |    83   |
 |----------|-------------------------|---------|---------|
 
 Memories:
@@ -959,11 +963,11 @@ N/A
 +----------------------+--------+
 |                      |   FF   |
 +----------------------+--------+
-|indvar_flatten_reg_170|   12   |
+|indvar_flatten_reg_170|   13   |
 |       k_reg_163      |   11   |
 | select_ln271_reg_180 |   11   |
 +----------------------+--------+
-|         Total        |   34   |
+|         Total        |   35   |
 +----------------------+--------+
 
 * Multiplexer (MUX) list: 
@@ -979,10 +983,10 @@ N/A
 +-----------+--------+--------+
 |           |   FF   |   LUT  |
 +-----------+--------+--------+
-|  Function |    0   |   82   |
+|  Function |    0   |   83   |
 |   Memory  |    -   |    -   |
 |Multiplexer|    -   |    -   |
-|  Register |   34   |    -   |
+|  Register |   35   |    -   |
 +-----------+--------+--------+
-|   Total   |   34   |   82   |
+|   Total   |   35   |   83   |
 +-----------+--------+--------+

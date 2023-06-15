@@ -128,15 +128,15 @@ reg   [0:0] p_Repl2_s_reg_121;
 reg   [0:0] p_Result_1_reg_239;
 reg    ap_block_pp0_stage0_11001;
 reg   [31:0] l_val_reg_245;
-reg   [31:0] l_val_4_reg_250;
+reg   [31:0] l_val_5_reg_250;
 reg   [0:0] p_Result_s_reg_255;
-wire   [31:0] l_val_2_fu_164_p1;
-reg   [31:0] l_val_2_reg_260;
-reg   [31:0] l_val_3_reg_265;
+wire   [31:0] l_val_3_fu_164_p1;
+reg   [31:0] l_val_3_reg_260;
+reg   [31:0] l_val_4_reg_265;
 wire    ap_loop_init;
 reg    ap_block_pp0_stage0_01001;
 wire   [31:0] bitcast_ln110_fu_178_p1;
-wire   [31:0] bitcast_ln110_1_fu_181_p1;
+wire   [31:0] bitcast_ln110_2_fu_181_p1;
 wire   [31:0] l_val_V_1_fu_208_p1;
 wire   [31:0] l_val_V_fu_204_p1;
 reg    ap_done_reg;
@@ -223,9 +223,9 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        l_val_2_reg_260 <= l_val_2_fu_164_p1;
-        l_val_3_reg_265 <= {{l_bStr2_dout[63:32]}};
-        l_val_4_reg_250 <= {{l_aStr1_dout[65:34]}};
+        l_val_3_reg_260 <= l_val_3_fu_164_p1;
+        l_val_4_reg_265 <= {{l_bStr2_dout[63:32]}};
+        l_val_5_reg_250 <= {{l_aStr1_dout[65:34]}};
         l_val_reg_245 <= {{l_aStr1_dout[33:2]}};
         p_Result_1_reg_239 <= p_Result_1_fu_132_p1;
     end
@@ -434,13 +434,13 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign bitcast_ln110_1_fu_181_p1 = l_val_3_reg_265;
+assign bitcast_ln110_2_fu_181_p1 = l_val_4_reg_265;
 
-assign bitcast_ln110_fu_178_p1 = l_val_2_reg_260;
+assign bitcast_ln110_fu_178_p1 = l_val_3_reg_260;
 
 assign l_Tb_m_Sreg_Array_1_address0 = 64'd1;
 
-assign l_Tb_m_Sreg_Array_1_d0 = bitcast_ln110_1_fu_181_p1;
+assign l_Tb_m_Sreg_Array_1_d0 = bitcast_ln110_2_fu_181_p1;
 
 assign l_Tb_m_Sreg_Array_address0 = 64'd0;
 
@@ -448,11 +448,11 @@ assign l_Tb_m_Sreg_Array_d0 = bitcast_ln110_fu_178_p1;
 
 assign l_dataA_0_din = {{{l_val_reg_245}, {p_Repl2_s_reg_121}}, {p_Result_1_reg_239}};
 
-assign l_dataA_1_din = {{{l_val_4_reg_250}, {p_Repl2_s_reg_121}}, {p_Result_1_reg_239}};
+assign l_dataA_1_din = {{{l_val_5_reg_250}, {p_Repl2_s_reg_121}}, {p_Result_1_reg_239}};
 
 assign l_dataB_0_din = {{l_val_V_1_fu_208_p1}, {l_val_V_fu_204_p1}};
 
-assign l_val_2_fu_164_p1 = l_bStr2_dout[31:0];
+assign l_val_3_fu_164_p1 = l_bStr2_dout[31:0];
 
 assign l_val_V_1_fu_208_p1 = l_Tb_m_Sreg_Array_1_q0;
 

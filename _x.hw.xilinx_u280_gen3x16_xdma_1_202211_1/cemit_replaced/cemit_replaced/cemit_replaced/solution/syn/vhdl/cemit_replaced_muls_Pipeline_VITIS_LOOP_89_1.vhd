@@ -50,9 +50,9 @@ attribute shreg_extract : string;
     signal ap_loop_exit_ready : STD_LOGIC;
     signal ap_ready_int : STD_LOGIC;
     signal i_fu_36 : STD_LOGIC_VECTOR (1 downto 0);
-    signal i_6_fu_62_p2 : STD_LOGIC_VECTOR (1 downto 0);
+    signal i_8_fu_62_p2 : STD_LOGIC_VECTOR (1 downto 0);
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_i_5 : STD_LOGIC_VECTOR (1 downto 0);
+    signal ap_sig_allocacmp_i_7 : STD_LOGIC_VECTOR (1 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -132,7 +132,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start_int = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                 if ((icmp_ln89_fu_56_p2 = ap_const_lv1_0)) then 
-                    i_fu_36 <= i_6_fu_62_p2;
+                    i_fu_36 <= i_8_fu_62_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
                     i_fu_36 <= ap_const_lv2_0;
                 end if;
@@ -208,17 +208,17 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_i_5_assign_proc : process(ap_CS_fsm_state1, i_fu_36, ap_loop_init)
+    ap_sig_allocacmp_i_7_assign_proc : process(ap_CS_fsm_state1, i_fu_36, ap_loop_init)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            ap_sig_allocacmp_i_5 <= ap_const_lv2_0;
+            ap_sig_allocacmp_i_7 <= ap_const_lv2_0;
         else 
-            ap_sig_allocacmp_i_5 <= i_fu_36;
+            ap_sig_allocacmp_i_7 <= i_fu_36;
         end if; 
     end process;
 
-    i_6_fu_62_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_5) + unsigned(ap_const_lv2_1));
-    icmp_ln89_fu_56_p2 <= "1" when (ap_sig_allocacmp_i_5 = ap_const_lv2_2) else "0";
+    i_8_fu_62_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_7) + unsigned(ap_const_lv2_1));
+    icmp_ln89_fu_56_p2 <= "1" when (ap_sig_allocacmp_i_7 = ap_const_lv2_2) else "0";
     l_flush_Array_address0 <= ap_const_lv64_1(1 - 1 downto 0);
 
     l_flush_Array_ce0_assign_proc : process(ap_CS_fsm_state1, icmp_ln89_fu_56_p2, ap_start_int)

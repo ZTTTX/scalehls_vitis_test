@@ -7241,7 +7241,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>38</integer>
+      <integer>44</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7257,7 +7257,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>41</integer>
+      <integer>47</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7273,7 +7273,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>66</integer>
+      <integer>78</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7289,7 +7289,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>69</integer>
+      <integer>81</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7305,7 +7305,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>89</integer>
+      <integer>101</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7321,39 +7321,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>95</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
-      <key>line</key>
-      <integer>98</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
-      <key>line</key>
-      <integer>106</integer>
+      <integer>107</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7385,7 +7353,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>120</integer>
+      <integer>118</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -7401,7 +7369,39 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
       <key>line</key>
-      <integer>123</integer>
+      <integer>122</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
+      <key>line</key>
+      <integer>132</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</string>
+      <key>line</key>
+      <integer>135</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8727,6 +8727,22 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
+      <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
+      <key>line</key>
+      <integer>124</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=forward_node1_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced.tcl</string>
       <key>line</key>
       <integer>23</integer>
@@ -8745,7 +8761,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>89</integer>
+      <integer>156</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8761,7 +8777,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>90</integer>
+      <integer>157</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8777,7 +8793,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>91</integer>
+      <integer>158</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8793,7 +8809,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>92</integer>
+      <integer>159</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8809,7 +8825,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>93</integer>
+      <integer>160</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8825,7 +8841,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>94</integer>
+      <integer>161</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8841,7 +8857,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>95</integer>
+      <integer>162</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8857,7 +8873,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>97</integer>
+      <integer>164</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8873,7 +8889,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>97</integer>
+      <integer>164</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8889,7 +8905,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>100</integer>
+      <integer>167</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8905,7 +8921,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>100</integer>
+      <integer>167</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8921,7 +8937,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>104</integer>
+      <integer>171</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8937,7 +8953,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>104</integer>
+      <integer>171</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8953,7 +8969,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>106</integer>
+      <integer>173</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -8969,7 +8985,7 @@
       <key>filename</key>
       <string>/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp</string>
       <key>line</key>
-      <integer>106</integer>
+      <integer>173</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

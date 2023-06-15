@@ -31,6 +31,12 @@ void gemmMatAMover(t_DataType* p_memA,
 #endif
     unsigned int l_iter = p_m / t_M;
     unsigned int l_repeat = p_n / t_N;
+    // if (l_iter == 0) {
+    //     l_iter = 1;
+    // }
+    // if (l_repeat == 0) {
+    //     l_repeat = 1;
+    // }
 
     for (int m = 0; m < l_iter; m++) {
         for (int r = 0; r < l_repeat; r++) {
@@ -59,6 +65,12 @@ void gemmMatBMover(t_DataType* p_memB,
 #endif
     unsigned int l_repeat = p_m / t_M;
     unsigned int l_iter = p_n / t_N;
+    // if (l_iter == 0) {
+    //     l_iter = 1;
+    // }
+    // if (l_repeat == 0) {
+    //     l_repeat = 1;
+    // }
 
     for (int r = 0; r < l_repeat; r++) {
         for (int n = 0; n < l_iter; n++) {

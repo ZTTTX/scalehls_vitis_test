@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 14 \
+    id 30 \
     name l_Tb_m_Sreg_Array_1 \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 15 \
+    id 31 \
     name l_Tb_m_Sreg_Array \
     reset_level 1 \
     sync_rst true \
@@ -48,7 +48,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 16 \
+    id 32 \
     name l_aStr1 \
     type fifo \
     dir I \
@@ -63,7 +63,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 17 \
+    id 33 \
     name l_bStr2 \
     type fifo \
     dir I \
@@ -78,7 +78,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 18 \
+    id 34 \
     name l_dataB_0 \
     type fifo \
     dir O \
@@ -93,7 +93,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 19 \
+    id 35 \
     name l_dataA_0 \
     type fifo \
     dir O \
@@ -108,7 +108,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 20 \
+    id 36 \
     name l_dataA_1 \
     type fifo \
     dir O \

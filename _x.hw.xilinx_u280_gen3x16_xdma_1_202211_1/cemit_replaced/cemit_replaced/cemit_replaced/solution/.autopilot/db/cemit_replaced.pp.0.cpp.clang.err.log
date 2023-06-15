@@ -1427,37 +1427,37 @@ In file included from /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Librar
 In file included from /mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:21:
 In file included from /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas.hpp:29:
 In file included from /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers.hpp:38:
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:38:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatAMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:44:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatAMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatAMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatAMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:66:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatBMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:78:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatBMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatBMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:81:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmMatBMover_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:89:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=variable = l_bufferC cyclic factor = t_N dim = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:101:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=variable = l_bufferC cyclic factor = t_N dim = 1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS ARRAY_PARTITION variable = l_bufferC cyclic factor = t_N dim = 1
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:95:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS PIPELINE
-        ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:98:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL
-        ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:106:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:107:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE
         ^
 /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:110:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:120:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:118:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:123:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:122:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:132:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp:135:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gemmBufferC_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL
         ^
 In file included from /mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:21:
@@ -1755,44 +1755,47 @@ In file included from /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Librar
 /mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm.hpp:199:30: warning: unused parameter 'p_k' [-Wunused-parameter]
           const unsigned int p_k,
                              ^
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:124:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=forward_node1_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
 /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced.tcl:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=name=cemit_replaced_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=cemit_replaced
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:89:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:156:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface s_axilite port=return bundle=ctrl
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:90:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=m_axi offset=slave port=v17_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=m_axi offset=slave port=v17_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface m_axi offset=slave port=v17
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:91:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=v17 bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:158:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=v17 bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface s_axilite port=v17 bundle=ctrl
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:92:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=m_axi offset=slave port=v18_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:159:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=m_axi offset=slave port=v18_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface m_axi offset=slave port=v18
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:93:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=v18 bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:160:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=v18 bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface s_axilite port=v18 bundle=ctrl
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:94:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=m_axi offset=slave port=v19_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:161:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=m_axi offset=slave port=v19_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface m_axi offset=slave port=v19
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:95:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=v19 bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:162:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=s_axilite port=v19 bundle=ctrl_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS interface s_axilite port=v19 bundle=ctrl
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:97:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:164:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v20 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:97:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v20 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:100:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:164:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v20 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:167:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v21 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:100:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v21 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:104:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v21 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:171:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v22 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:104:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v22 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:106:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:171:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v22 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:173:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v30 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:106:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v30 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
-561 warnings generated.
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:173:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=cemit_replaced_XLX_SEP_ PragmaOptions=variable=v30 core=ram_t2p_bram_XLX_SEP_ [-Wdump-hls-pragmas]
+562 warnings generated.

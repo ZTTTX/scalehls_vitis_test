@@ -22,21 +22,21 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>2050</Best-caseLatency>
-<Average-caseLatency>2050</Average-caseLatency>
-<Worst-caseLatency>2050</Worst-caseLatency>
-<Best-caseRealTimeLatency>6.833 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>6.833 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>6.833 us</Worst-caseRealTimeLatency>
-<Interval-min>2050</Interval-min>
-<Interval-max>2050</Interval-max>
+<Best-caseLatency>5122</Best-caseLatency>
+<Average-caseLatency>5122</Average-caseLatency>
+<Worst-caseLatency>5122</Worst-caseLatency>
+<Best-caseRealTimeLatency>17.072 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>17.072 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>17.072 us</Worst-caseRealTimeLatency>
+<Interval-min>5122</Interval-min>
+<Interval-max>5122</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_271_1_VITIS_LOOP_272_2>
 <Slack>2.43</Slack>
-<TripCount>2048</TripCount>
-<Latency>2048</Latency>
-<AbsoluteTimeLatency>6825</AbsoluteTimeLatency>
+<TripCount>5120</TripCount>
+<Latency>5120</Latency>
+<AbsoluteTimeLatency>17064</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
@@ -47,8 +47,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>37</FF>
-<LUT>179</LUT>
+<FF>38</FF>
+<LUT>180</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -130,8 +130,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strA4_i_dout</name>
-<Object>l_strA4_i</Object>
+<name>l_strA7_dout</name>
+<Object>l_strA7</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -141,8 +141,30 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strA4_i_empty_n</name>
-<Object>l_strA4_i</Object>
+<name>l_strA7_num_data_valid</name>
+<Object>l_strA7</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>l_strA7_fifo_cap</name>
+<Object>l_strA7</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>l_strA7_empty_n</name>
+<Object>l_strA7</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -152,8 +174,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strA4_i_read</name>
-<Object>l_strA4_i</Object>
+<name>l_strA7_read</name>
+<Object>l_strA7</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -163,8 +185,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strB5_i_dout</name>
-<Object>l_strB5_i</Object>
+<name>l_strB8_dout</name>
+<Object>l_strB8</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -174,8 +196,30 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strB5_i_empty_n</name>
-<Object>l_strB5_i</Object>
+<name>l_strB8_num_data_valid</name>
+<Object>l_strB8</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>l_strB8_fifo_cap</name>
+<Object>l_strB8</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>l_strB8_empty_n</name>
+<Object>l_strB8</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -185,8 +229,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strB5_i_read</name>
-<Object>l_strB5_i</Object>
+<name>l_strB8_read</name>
+<Object>l_strB8</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

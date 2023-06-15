@@ -35,60 +35,60 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 129 \
-    name l_strA4_i \
+    id 145 \
+    name l_strA7 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strA4_i \
+    corename dc_l_strA7 \
     op interface \
-    ports { l_strA4_i_dout { I 64 vector } l_strA4_i_empty_n { I 1 bit } l_strA4_i_read { O 1 bit } } \
+    ports { l_strA7_dout { I 64 vector } l_strA7_empty_n { I 1 bit } l_strA7_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 130 \
-    name l_strB5_i \
+    id 146 \
+    name l_strB8 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strB5_i \
+    corename dc_l_strB8 \
     op interface \
-    ports { l_strB5_i_dout { I 64 vector } l_strB5_i_empty_n { I 1 bit } l_strB5_i_read { O 1 bit } } \
+    ports { l_strB8_dout { I 64 vector } l_strB8_empty_n { I 1 bit } l_strB8_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 131 \
-    name l_strC6_i \
+    id 147 \
+    name l_strC9 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strC6_i \
+    corename dc_l_strC9 \
     op interface \
-    ports { l_strC6_i_dout { I 64 vector } l_strC6_i_empty_n { I 1 bit } l_strC6_i_read { O 1 bit } } \
+    ports { l_strC9_dout { I 64 vector } l_strC9_empty_n { I 1 bit } l_strC9_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 132 \
-    name l_strSum7_i \
+    id 148 \
+    name l_strSum10 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strSum7_i \
+    corename dc_l_strSum10 \
     op interface \
-    ports { l_strSum7_i_din { O 64 vector } l_strSum7_i_full_n { I 1 bit } l_strSum7_i_write { O 1 bit } } \
+    ports { l_strSum10_din { O 64 vector } l_strSum10_full_n { I 1 bit } l_strSum10_write { O 1 bit } } \
 } "
 }
 

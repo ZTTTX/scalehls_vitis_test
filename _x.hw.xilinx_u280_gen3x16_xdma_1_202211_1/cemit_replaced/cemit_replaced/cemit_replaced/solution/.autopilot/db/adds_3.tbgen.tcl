@@ -66,7 +66,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2076", "EstimateLatencyMax" : "2076",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "5148", "EstimateLatencyMax" : "5148",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -84,9 +84,9 @@ set RtlHierarchyInfo {[
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_193_1_VITIS_LOOP_194_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "4", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage2", "LastStateIter" : "ap_enable_reg_pp0_iter7", "LastStateBlock" : "ap_block_pp0_stage2_subdone", "QuitState" : "ap_ST_fsm_pp0_stage2", "QuitStateIter" : "ap_enable_reg_pp0_iter7", "QuitStateBlock" : "ap_block_pp0_stage2_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "1"}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_7_full_dsp_1_U75", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_7_full_dsp_1_U76", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_5_no_dsp_1_U77", "Parent" : "0"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_7_full_dsp_1_U91", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_7_full_dsp_1_U92", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fadd_32ns_32ns_32_5_no_dsp_1_U93", "Parent" : "0"},
 	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_U", "Parent" : "0"}]}
 
 
@@ -98,8 +98,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "2076", "Max" : "2076"}
-	, {"Name" : "Interval", "Min" : "2076", "Max" : "2076"}
+	{"Name" : "Latency", "Min" : "5148", "Max" : "5148"}
+	, {"Name" : "Interval", "Min" : "5148", "Max" : "5148"}
 ]}
 
 set PipelineEnableSignalInfo {[

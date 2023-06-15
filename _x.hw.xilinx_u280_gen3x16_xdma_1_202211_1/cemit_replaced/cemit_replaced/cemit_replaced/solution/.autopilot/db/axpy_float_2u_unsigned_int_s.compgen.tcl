@@ -10,7 +10,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 121 \
+    id 137 \
     name l_mat4 \
     type fifo \
     dir I \
@@ -25,7 +25,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 122 \
+    id 138 \
     name l_betaC5 \
     type fifo \
     dir I \
@@ -40,15 +40,15 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 123 \
-    name l_strSum7_i \
+    id 139 \
+    name l_strSum10 \
     type fifo \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strSum7_i \
+    corename dc_l_strSum10 \
     op interface \
-    ports { l_strSum7_i_din { O 64 vector } l_strSum7_i_full_n { I 1 bit } l_strSum7_i_write { O 1 bit } } \
+    ports { l_strSum10_din { O 64 vector } l_strSum10_num_data_valid { I 2 vector } l_strSum10_fifo_cap { I 2 vector } l_strSum10_full_n { I 1 bit } l_strSum10_write { O 1 bit } } \
 } "
 }
 

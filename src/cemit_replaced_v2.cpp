@@ -5,24 +5,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include <algorithm>
-#include <ap_axi_sdata.h>
-#include <ap_fixed.h>
-#include <ap_int.h>
-#include <hls_math.h>
-#include <hls_stream.h>
-#include <hls_vector.h>
-#include <math.h>
-#include <stdint.h>
-#include <string.h>
+#include "cemit_replaced_v2.hpp"
 
-#include "ap_int.h"
-#include "hls_stream.h"
-#include "xf_blas.hpp"
-#include "xf_blas/uut_top.hpp"
-
-using namespace xf;
-using namespace blas;
 
 void forward_node0(
   float v0[1][10],
@@ -46,26 +30,49 @@ void forward_node1(
   float v11[1][1024],
   float v12[1][10]
 ) {	
-  float p_A[1024];
-  float p_B[10240];
-  float p_C[10];
-  float p_R[10];
 
-  // Unroll v10 into p_A (1024 10)
+  float p_A[1024][2];
+  float p_B[1024][10];
+  float p_C[2][10];
+  float p_R[2][10];
   for (int i = 0; i < 1024; i++) {
     for (int j = 0; j < 10; j++) {
-      p_B[i * 10 + j] = v10[i][j];
+      p_B[i][j] = v10[i][j];
     }
   }
-  for (int i = 0; i < 1024; i++) {
-    p_A[i] = v11[0][i];
+  for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 1024; j++) {
+      if (i < 1) {
+        p_A[j][i] = v11[i][j];
+      } 
+      else {
+        p_A[j][i] = 0;
+      }
+    }
   }
-  for (int i = 0; i < 10; i++) {
-    p_C[i] = 0;
+  for (int i = 0; i < 2; i++) {
+    for (int j = 0; j < 10; j++) {
+      p_C[i][j] = 0;
+    }
   }
-  uut_top(1, 10, 1024, 1.00, 0.00, (float *)p_A, (float *)p_B, (float *)p_C, (float *)p_R);
+  
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strA;
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strB;
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strC;
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strSum;
+
+#pragma HLS DATAFLOW
+  gemmMatAMover<float, 2>((float *)p_A, 2, 10, 1024, l_strA);
+  gemmMatBMover<float, 2>((float *)p_B, 2, 10, 1024, l_strB);
+  readVec2Stream<float, 2>((float *)p_C, 2 * 10, l_strC);
+  gemm<float, 1024, 2, 20>(2, 10, 1024, 1.00, l_strA, l_strB, 0.00,
+                                                                  l_strC, l_strSum);
+  writeStream2Vec<float, 2>(l_strSum, 2 * 10, (float *)p_R);  
+
+
+  // gemm_test(1, 10, 1024, 1.00, 0.00, (float *)p_A, (float *)p_B, (float *)p_C, (float *)p_R);
   for (int i = 0; i < 10; i++) {
-    v12[0][i] = p_R[i];
+    v12[0][i] = p_R[0][i];
   }
 
 }
@@ -81,7 +88,7 @@ void forward_node2(
 }
 
 /// This is top function.
-void cemit_replaced(
+void cemit_replaced_v2(
   float v17[1][1][32][32],
   float v18[1][10],
   float v19[1024][10]

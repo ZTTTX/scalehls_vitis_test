@@ -68,9 +68,9 @@ wire   [0:0] l_exit_fu_83_p2;
 reg   [0:0] l_exit_reg_116;
 reg    ap_block_pp0_stage0_11001;
 reg   [2:0] i_fu_44;
-wire   [2:0] i_2_fu_77_p2;
+wire   [2:0] i_3_fu_77_p2;
 wire    ap_loop_init;
-reg   [2:0] ap_sig_allocacmp_i_1;
+reg   [2:0] ap_sig_allocacmp_i_2;
 reg    ap_block_pp0_stage0_01001;
 wire   [1:0] p_Result_s_fu_94_p3;
 reg    ap_done_reg;
@@ -138,7 +138,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln283_fu_71_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_44 <= i_2_fu_77_p2;
+            i_fu_44 <= i_3_fu_77_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_fu_44 <= 3'd0;
         end
@@ -193,9 +193,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_1 = 3'd0;
+        ap_sig_allocacmp_i_2 = 3'd0;
     end else begin
-        ap_sig_allocacmp_i_1 = i_fu_44;
+        ap_sig_allocacmp_i_2 = i_fu_44;
     end
 end
 
@@ -270,15 +270,15 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign i_2_fu_77_p2 = (ap_sig_allocacmp_i_1 + 3'd1);
+assign i_3_fu_77_p2 = (ap_sig_allocacmp_i_2 + 3'd1);
 
-assign icmp_ln283_fu_71_p2 = ((ap_sig_allocacmp_i_1 == 3'd5) ? 1'b1 : 1'b0);
+assign icmp_ln283_fu_71_p2 = ((ap_sig_allocacmp_i_2 == 3'd5) ? 1'b1 : 1'b0);
 
 assign l_aStr1_din = p_Result_s_fu_94_p3;
 
 assign l_bStr2_din = 64'd0;
 
-assign l_exit_fu_83_p2 = ((ap_sig_allocacmp_i_1 == 3'd4) ? 1'b1 : 1'b0);
+assign l_exit_fu_83_p2 = ((ap_sig_allocacmp_i_2 == 3'd4) ? 1'b1 : 1'b0);
 
 assign p_Result_s_fu_94_p3 = {{1'd0}, {l_exit_reg_116}};
 

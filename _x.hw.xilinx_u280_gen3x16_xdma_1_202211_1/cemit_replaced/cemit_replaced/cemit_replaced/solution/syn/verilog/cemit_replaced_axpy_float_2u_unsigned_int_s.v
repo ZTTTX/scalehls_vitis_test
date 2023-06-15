@@ -25,9 +25,11 @@ module cemit_replaced_axpy_float_2u_unsigned_int_s (
         l_betaC5_fifo_cap,
         l_betaC5_empty_n,
         l_betaC5_read,
-        l_strSum7_i_din,
-        l_strSum7_i_full_n,
-        l_strSum7_i_write
+        l_strSum10_din,
+        l_strSum10_num_data_valid,
+        l_strSum10_fifo_cap,
+        l_strSum10_full_n,
+        l_strSum10_write
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -49,14 +51,16 @@ input  [1:0] l_betaC5_num_data_valid;
 input  [1:0] l_betaC5_fifo_cap;
 input   l_betaC5_empty_n;
 output   l_betaC5_read;
-output  [63:0] l_strSum7_i_din;
-input   l_strSum7_i_full_n;
-output   l_strSum7_i_write;
+output  [63:0] l_strSum10_din;
+input  [1:0] l_strSum10_num_data_valid;
+input  [1:0] l_strSum10_fifo_cap;
+input   l_strSum10_full_n;
+output   l_strSum10_write;
 
 reg ap_idle;
 reg l_mat4_read;
 reg l_betaC5_read;
-reg l_strSum7_i_write;
+reg l_strSum10_write;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -90,7 +94,7 @@ reg    ap_ready_int;
 reg    l_mat4_blk_n;
 wire    ap_block_pp0_stage0;
 reg    l_betaC5_blk_n;
-reg    l_strSum7_i_blk_n;
+reg    l_strSum10_blk_n;
 reg    ap_block_pp0_stage0_11001;
 wire   [31:0] l_val_fu_102_p1;
 reg   [31:0] l_val_reg_172;
@@ -102,16 +106,16 @@ wire   [31:0] grp_fu_69_p2;
 reg   [31:0] l_result_reg_212;
 wire   [31:0] grp_fu_73_p2;
 reg   [31:0] l_result_1_reg_217;
-reg   [2:0] i_fu_46;
-wire   [2:0] i_12_fu_91_p2;
+reg   [3:0] i_fu_46;
+wire   [3:0] i_15_fu_91_p2;
 wire    ap_loop_init;
-reg   [2:0] ap_sig_allocacmp_i_11;
+reg   [3:0] ap_sig_allocacmp_i_14;
 reg    ap_block_pp0_stage0_01001;
 wire   [31:0] grp_fu_69_p0;
 wire   [31:0] grp_fu_69_p1;
 wire   [31:0] grp_fu_73_p0;
 wire   [31:0] grp_fu_73_p1;
-wire   [31:0] l_val_V_10_fu_149_p1;
+wire   [31:0] l_val_V_12_fu_149_p1;
 wire   [31:0] l_val_V_fu_146_p1;
 reg    grp_fu_69_ce;
 reg    grp_fu_73_ce;
@@ -128,7 +132,7 @@ reg    ap_loop_exit_ready_pp0_iter8_reg;
 reg   [0:0] ap_NS_fsm;
 wire    ap_enable_pp0;
 wire    ap_start_int;
-reg    ap_condition_183;
+reg    ap_condition_185;
 wire    ap_ce_reg;
 
 // power-on initialization
@@ -152,7 +156,7 @@ cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_7_full_dsp_1_U119(
+fadd_32ns_32ns_32_7_full_dsp_1_U135(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_69_p0),
@@ -167,7 +171,7 @@ cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_7_full_dsp_1_U120(
+fadd_32ns_32ns_32_7_full_dsp_1_U136(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_73_p0),
@@ -305,11 +309,11 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_condition_183)) begin
+    if ((1'b1 == ap_condition_185)) begin
         if ((icmp_ln62_fu_85_p2 == 1'd0)) begin
-            i_fu_46 <= i_12_fu_91_p2;
+            i_fu_46 <= i_15_fu_91_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_46 <= 3'd0;
+            i_fu_46 <= 4'd0;
         end
     end
 end
@@ -380,9 +384,9 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_i_11 = 3'd0;
+        ap_sig_allocacmp_i_14 = 4'd0;
     end else begin
-        ap_sig_allocacmp_i_11 = i_fu_46;
+        ap_sig_allocacmp_i_14 = i_fu_46;
     end
 end
 
@@ -436,17 +440,17 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter9 == 1'b1))) begin
-        l_strSum7_i_blk_n = l_strSum7_i_full_n;
+        l_strSum10_blk_n = l_strSum10_full_n;
     end else begin
-        l_strSum7_i_blk_n = 1'b1;
+        l_strSum10_blk_n = 1'b1;
     end
 end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter9 == 1'b1))) begin
-        l_strSum7_i_write = 1'b1;
+        l_strSum10_write = 1'b1;
     end else begin
-        l_strSum7_i_write = 1'b0;
+        l_strSum10_write = 1'b0;
     end
 end
 
@@ -466,19 +470,19 @@ assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((ap_done_reg == 1'b1) | ((l_strSum7_i_full_n == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((l_betaC5_empty_n == 1'b0) | (l_mat4_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_01001 = ((ap_done_reg == 1'b1) | ((l_strSum10_full_n == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((l_betaC5_empty_n == 1'b0) | (l_mat4_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_done_reg == 1'b1) | ((l_strSum7_i_full_n == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((l_betaC5_empty_n == 1'b0) | (l_mat4_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_11001 = ((ap_done_reg == 1'b1) | ((l_strSum10_full_n == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((l_betaC5_empty_n == 1'b0) | (l_mat4_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_done_reg == 1'b1) | ((l_strSum7_i_full_n == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((l_betaC5_empty_n == 1'b0) | (l_mat4_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
+    ap_block_pp0_stage0_subdone = ((ap_done_reg == 1'b1) | ((l_strSum10_full_n == 1'b0) & (ap_enable_reg_pp0_iter9 == 1'b1)) | ((ap_enable_reg_pp0_iter1 == 1'b1) & ((l_betaC5_empty_n == 1'b0) | (l_mat4_empty_n == 1'b0))) | ((ap_done_reg == 1'b1) & (ap_start_int == 1'b1)));
 end
 
 always @ (*) begin
-    ap_block_state10_pp0_stage0_iter9 = (l_strSum7_i_full_n == 1'b0);
+    ap_block_state10_pp0_stage0_iter9 = (l_strSum10_full_n == 1'b0);
 end
 
 always @ (*) begin
@@ -504,7 +508,7 @@ assign ap_block_state8_pp0_stage0_iter7 = ~(1'b1 == 1'b1);
 assign ap_block_state9_pp0_stage0_iter8 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_condition_183 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
+    ap_condition_185 = ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
@@ -521,15 +525,15 @@ assign grp_fu_73_p0 = l_val_11_reg_177;
 
 assign grp_fu_73_p1 = l_val_13_reg_187;
 
-assign i_12_fu_91_p2 = (ap_sig_allocacmp_i_11 + 3'd1);
+assign i_15_fu_91_p2 = (ap_sig_allocacmp_i_14 + 4'd1);
 
-assign icmp_ln62_fu_85_p2 = ((ap_sig_allocacmp_i_11 == 3'd5) ? 1'b1 : 1'b0);
+assign icmp_ln62_fu_85_p2 = ((ap_sig_allocacmp_i_14 == 4'd10) ? 1'b1 : 1'b0);
 
-assign l_strSum7_i_din = {{l_val_V_10_fu_149_p1}, {l_val_V_fu_146_p1}};
+assign l_strSum10_din = {{l_val_V_12_fu_149_p1}, {l_val_V_fu_146_p1}};
 
 assign l_val_12_fu_116_p1 = l_betaC5_dout[31:0];
 
-assign l_val_V_10_fu_149_p1 = l_result_1_reg_217;
+assign l_val_V_12_fu_149_p1 = l_result_1_reg_217;
 
 assign l_val_V_fu_146_p1 = l_result_reg_212;
 

@@ -1,7 +1,7 @@
 {
     "containers": [
         {
-            "name": "vadd", 
+            "name": "cemit_replaced", 
             "meet_system_timing": "true", 
             "accelerators": [
                 {

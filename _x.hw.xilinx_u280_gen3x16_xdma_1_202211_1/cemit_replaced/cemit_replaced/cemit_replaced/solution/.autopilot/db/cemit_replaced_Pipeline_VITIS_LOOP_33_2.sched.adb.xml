@@ -175,7 +175,7 @@ newFuncRoot:5 %specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %v2
 
 <Node id="11" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem, void @empty_27, i32 0, i32 0, void @empty_26, i32 64, i32 0, void @empty_25, void @empty_24, void @empty_26, i32 16, i32 16, i32 16, i32 16, void @empty_26, void @empty_26, i32 4294967295, i32 0
+newFuncRoot:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem, void @empty_34, i32 0, i32 0, void @empty_33, i32 64, i32 0, void @empty_32, void @empty_31, void @empty_33, i32 16, i32 16, i32 16, i32 16, void @empty_33, void @empty_33, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -296,10 +296,10 @@ for.body4.i:7 %br_ln33 = br i1 %icmp_ln33, void %for.body4.i.split, void %_Z13fo
 
 <Node id="26" bw="64" op_0_bw="4">
 <![CDATA[
-for.body4.i.split:1 %v4_cast1 = zext i4 %v4_1
+for.body4.i.split:1 %v4_cast2 = zext i4 %v4_1
 
 ]]></Node>
-<StgValue><ssdm name="v4_cast1"/></StgValue>
+<StgValue><ssdm name="v4_cast2"/></StgValue>
 </operation>
 
 <operation id="30" st_id="1" stage="1" lat="1">
@@ -312,7 +312,7 @@ for.body4.i.split:1 %v4_cast1 = zext i4 %v4_1
 
 <Node id="27" bw="4" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body4.i.split:2 %v22_addr = getelementptr i32 %v22, i64 0, i64 %v4_cast1
+for.body4.i.split:2 %v22_addr = getelementptr i32 %v22, i64 0, i64 %v4_cast2
 
 ]]></Node>
 <StgValue><ssdm name="v22_addr"/></StgValue>
@@ -328,10 +328,10 @@ for.body4.i.split:2 %v22_addr = getelementptr i32 %v22, i64 0, i64 %v4_cast1
 
 <Node id="28" bw="1" op_0_bw="4">
 <![CDATA[
-for.body4.i.split:3 %empty_63 = trunc i4 %v4_1
+for.body4.i.split:3 %empty_73 = trunc i4 %v4_1
 
 ]]></Node>
-<StgValue><ssdm name="empty_63"/></StgValue>
+<StgValue><ssdm name="empty_73"/></StgValue>
 </operation>
 
 <operation id="32" st_id="1" stage="2" lat="2">
@@ -360,7 +360,7 @@ for.body4.i.split:5 %v5 = load i4 %v22_addr
 
 <Node id="31" bw="4" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body4.i.split:6 %v20_addr = getelementptr i32 %v20, i64 0, i64 %v4_cast1
+for.body4.i.split:6 %v20_addr = getelementptr i32 %v20, i64 0, i64 %v4_cast2
 
 ]]></Node>
 <StgValue><ssdm name="v20_addr"/></StgValue>
@@ -392,7 +392,7 @@ for.body4.i.split:7 %v6 = load i4 %v20_addr
 
 <Node id="44" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-for.body4.i.split:19 %br_ln39 = br i1 %empty_63, void %for.body4.i.split._crit_edge, void
+for.body4.i.split:19 %br_ln39 = br i1 %empty_73, void %for.body4.i.split._crit_edge, void
 
 ]]></Node>
 <StgValue><ssdm name="br_ln39"/></StgValue>
@@ -595,10 +595,10 @@ for.body4.i.split:8 %v7 = fadd i32 %v5, i32 %v6
 
 <Node id="40" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body4.i.split:15 %tmp_2 = fcmp_ogt  i32 %v7, i32 0
+for.body4.i.split:15 %tmp_3 = fcmp_ogt  i32 %v7, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 </state>
 
@@ -690,10 +690,10 @@ for.body4.i.split:9 %bitcast_ln37 = bitcast i32 %v7
 
 <Node id="35" bw="8" op_0_bw="8" op_1_bw="32" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body4.i.split:10 %tmp = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln37, i32 23, i32 30
+for.body4.i.split:10 %tmp_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln37, i32 23, i32 30
 
 ]]></Node>
-<StgValue><ssdm name="tmp"/></StgValue>
+<StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
 <operation id="53" st_id="11" stage="1" lat="1">
@@ -722,7 +722,7 @@ for.body4.i.split:11 %trunc_ln37 = trunc i32 %bitcast_ln37
 
 <Node id="37" bw="1" op_0_bw="8" op_1_bw="8">
 <![CDATA[
-for.body4.i.split:12 %icmp_ln37 = icmp_ne  i8 %tmp, i8 255
+for.body4.i.split:12 %icmp_ln37 = icmp_ne  i8 %tmp_2, i8 255
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln37"/></StgValue>
@@ -770,10 +770,10 @@ for.body4.i.split:14 %or_ln37 = or i1 %icmp_ln37_1, i1 %icmp_ln37
 
 <Node id="40" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body4.i.split:15 %tmp_2 = fcmp_ogt  i32 %v7, i32 0
+for.body4.i.split:15 %tmp_3 = fcmp_ogt  i32 %v7, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
 <operation id="58" st_id="11" stage="1" lat="1">
@@ -786,7 +786,7 @@ for.body4.i.split:15 %tmp_2 = fcmp_ogt  i32 %v7, i32 0
 
 <Node id="41" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-for.body4.i.split:16 %v8 = and i1 %or_ln37, i1 %tmp_2
+for.body4.i.split:16 %v8 = and i1 %or_ln37, i1 %tmp_3
 
 ]]></Node>
 <StgValue><ssdm name="v8"/></StgValue>
@@ -851,7 +851,7 @@ for.body4.i.split:0 %phi_ln39_load = load i32 %phi_ln39
 
 <Node id="29" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body4.i.split:4 %specloopname_ln33 = specloopname void @_ssdm_op_SpecLoopName, void @empty
+for.body4.i.split:4 %specloopname_ln33 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln33"/></StgValue>
@@ -876,7 +876,7 @@ for.body4.i.split:18 %or_ln = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i3
 <core>m_axi</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="empty_63" val="1"/>
+<or_exp><and_exp><literal name="empty_73" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -892,7 +892,7 @@ for.body4.i.split:18 %or_ln = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i3
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
-<or_exp><and_exp><literal name="empty_63" val="1"/>
+<or_exp><and_exp><literal name="empty_73" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -913,7 +913,7 @@ for.body4.i.split:18 %or_ln = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i3
 
 <Node id="49" bw="32" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body4.i.split._crit_edge:0 %select_ln33 = select i1 %empty_63, i32 0, i32 %select_ln39
+for.body4.i.split._crit_edge:0 %select_ln33 = select i1 %empty_73, i32 0, i32 %select_ln39
 
 ]]></Node>
 <StgValue><ssdm name="select_ln33"/></StgValue>

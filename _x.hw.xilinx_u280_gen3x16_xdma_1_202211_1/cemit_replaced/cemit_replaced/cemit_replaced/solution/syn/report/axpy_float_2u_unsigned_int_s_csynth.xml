@@ -22,21 +22,21 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>15</Best-caseLatency>
-<Average-caseLatency>15</Average-caseLatency>
-<Worst-caseLatency>15</Worst-caseLatency>
-<Best-caseRealTimeLatency>49.995 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>49.995 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>49.995 ns</Worst-caseRealTimeLatency>
-<Interval-min>15</Interval-min>
-<Interval-max>15</Interval-max>
+<Best-caseLatency>20</Best-caseLatency>
+<Average-caseLatency>20</Average-caseLatency>
+<Worst-caseLatency>20</Worst-caseLatency>
+<Best-caseRealTimeLatency>66.660 ns</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>66.660 ns</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>66.660 ns</Worst-caseRealTimeLatency>
+<Interval-min>20</Interval-min>
+<Interval-max>20</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_62_1>
 <Slack>2.43</Slack>
-<TripCount>5</TripCount>
-<Latency>13</Latency>
-<AbsoluteTimeLatency>43</AbsoluteTimeLatency>
+<TripCount>10</TripCount>
+<Latency>18</Latency>
+<AbsoluteTimeLatency>59</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>10</PipelineDepth>
 <InstanceList>
@@ -48,8 +48,8 @@
 <AreaEstimates>
 <Resources>
 <DSP>4</DSP>
-<FF>850</FF>
-<LUT>485</LUT>
+<FF>851</FF>
+<LUT>488</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -251,8 +251,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strSum7_i_din</name>
-<Object>l_strSum7_i</Object>
+<name>l_strSum10_din</name>
+<Object>l_strSum10</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -262,8 +262,30 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strSum7_i_full_n</name>
-<Object>l_strSum7_i</Object>
+<name>l_strSum10_num_data_valid</name>
+<Object>l_strSum10</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>l_strSum10_fifo_cap</name>
+<Object>l_strSum10</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>ap_fifo</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>2</Bits>
+<Attribute>unknown</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>l_strSum10_full_n</name>
+<Object>l_strSum10</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -273,8 +295,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strSum7_i_write</name>
-<Object>l_strSum7_i</Object>
+<name>l_strSum10_write</name>
+<Object>l_strSum10</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

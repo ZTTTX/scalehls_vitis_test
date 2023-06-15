@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'process_r'
 ================================================================
-* Date:           Mon Jun 12 16:50:46 2023
+* Date:           Wed Jun 14 16:04:46 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cemit_replaced
@@ -38,11 +38,11 @@
         |                  |               |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
         |     Instance     |     Module    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
         +------------------+---------------+---------+---------+-----------+-----------+------+------+----------+
-        |tagAB_U0          |tagAB          |     2061|     2061|   6.869 us|   6.869 us|  2061|  2061|        no|
+        |tagAB_U0          |tagAB          |     5133|     5133|  17.108 us|  17.108 us|  5133|  5133|        no|
         |systolicArray_U0  |systolicArray  |        ?|        ?|          ?|          ?|     ?|     ?|        no|
         |macs_U0           |macs           |        ?|        ?|          ?|          ?|     ?|     ?|  dataflow|
         |macs_1_U0         |macs_1         |        ?|        ?|          ?|          ?|     ?|     ?|  dataflow|
-        |merge_U0          |merge          |        6|        6|  19.998 ns|  19.998 ns|     6|     6|        no|
+        |merge_U0          |merge          |       12|       12|  39.996 ns|  39.996 ns|    12|    12|        no|
         +------------------+---------------+---------+---------+-----------+-----------+------+------+----------+
 
         * Loop: 
@@ -60,12 +60,12 @@
 |DSP                  |        -|     -|        -|        -|    -|
 |Expression           |        -|     -|        0|        4|    -|
 |FIFO                 |        -|     -|      807|      553|    -|
-|Instance             |        -|    20|     5858|     5545|    -|
+|Instance             |        -|    20|     5865|     5551|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|        -|    -|
 |Register             |        -|     -|        -|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|    20|     6665|     6102|    0|
+|Total                |        0|    20|     6672|     6108|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -81,13 +81,13 @@
     +------------------+---------------+---------+----+------+------+-----+
     |     Instance     |     Module    | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +------------------+---------------+---------+----+------+------+-----+
-    |macs_U0           |macs           |        0|  10|  2727|  2299|    0|
-    |macs_1_U0         |macs_1         |        0|  10|  2726|  2268|    0|
-    |merge_U0          |merge          |        0|   0|    72|   136|    0|
+    |macs_U0           |macs           |        0|  10|  2728|  2300|    0|
+    |macs_1_U0         |macs_1         |        0|  10|  2727|  2269|    0|
+    |merge_U0          |merge          |        0|   0|    76|   139|    0|
     |systolicArray_U0  |systolicArray  |        0|   0|   280|   461|    0|
-    |tagAB_U0          |tagAB          |        0|   0|    53|   381|    0|
+    |tagAB_U0          |tagAB          |        0|   0|    54|   382|    0|
     +------------------+---------------+---------+----+------+------+-----+
-    |Total             |               |        0|  20|  5858|  5545|    0|
+    |Total             |               |        0|  20|  5865|  5551|    0|
     +------------------+---------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -134,24 +134,24 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+--------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+-------------------+-----+-----+------------+--------------+--------------+
-|l_strA4_i_dout     |   in|   64|     ap_fifo|     l_strA4_i|       pointer|
-|l_strA4_i_empty_n  |   in|    1|     ap_fifo|     l_strA4_i|       pointer|
-|l_strA4_i_read     |  out|    1|     ap_fifo|     l_strA4_i|       pointer|
-|l_strB5_i_dout     |   in|   64|     ap_fifo|     l_strB5_i|       pointer|
-|l_strB5_i_empty_n  |   in|    1|     ap_fifo|     l_strB5_i|       pointer|
-|l_strB5_i_read     |  out|    1|     ap_fifo|     l_strB5_i|       pointer|
-|l_sum3_din         |  out|   64|     ap_fifo|        l_sum3|       pointer|
-|l_sum3_full_n      |   in|    1|     ap_fifo|        l_sum3|       pointer|
-|l_sum3_write       |  out|    1|     ap_fifo|        l_sum3|       pointer|
-|ap_clk             |   in|    1|  ap_ctrl_hs|       process|  return value|
-|ap_rst             |   in|    1|  ap_ctrl_hs|       process|  return value|
-|ap_start           |   in|    1|  ap_ctrl_hs|       process|  return value|
-|ap_done            |  out|    1|  ap_ctrl_hs|       process|  return value|
-|ap_ready           |  out|    1|  ap_ctrl_hs|       process|  return value|
-|ap_idle            |  out|    1|  ap_ctrl_hs|       process|  return value|
-|ap_continue        |   in|    1|  ap_ctrl_hs|       process|  return value|
-+-------------------+-----+-----+------------+--------------+--------------+
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|l_strA7_dout     |   in|   64|     ap_fifo|       l_strA7|       pointer|
+|l_strA7_empty_n  |   in|    1|     ap_fifo|       l_strA7|       pointer|
+|l_strA7_read     |  out|    1|     ap_fifo|       l_strA7|       pointer|
+|l_strB8_dout     |   in|   64|     ap_fifo|       l_strB8|       pointer|
+|l_strB8_empty_n  |   in|    1|     ap_fifo|       l_strB8|       pointer|
+|l_strB8_read     |  out|    1|     ap_fifo|       l_strB8|       pointer|
+|l_sum3_din       |  out|   64|     ap_fifo|        l_sum3|       pointer|
+|l_sum3_full_n    |   in|    1|     ap_fifo|        l_sum3|       pointer|
+|l_sum3_write     |  out|    1|     ap_fifo|        l_sum3|       pointer|
+|ap_clk           |   in|    1|  ap_ctrl_hs|       process|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|       process|  return value|
+|ap_start         |   in|    1|  ap_ctrl_hs|       process|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|       process|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|       process|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|       process|  return value|
+|ap_continue      |   in|    1|  ap_ctrl_hs|       process|  return value|
++-----------------+-----+-----+------------+--------------+--------------+
 

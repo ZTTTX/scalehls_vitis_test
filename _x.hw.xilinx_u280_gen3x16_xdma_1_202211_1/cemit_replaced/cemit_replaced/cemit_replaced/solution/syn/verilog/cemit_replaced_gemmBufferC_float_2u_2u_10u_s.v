@@ -68,33 +68,33 @@ reg   [2:0] l_bufferC_1_address0;
 reg    l_bufferC_1_ce0;
 reg    l_bufferC_1_we0;
 wire   [31:0] l_bufferC_1_q0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_done;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_idle;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_ready;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_sum3_read;
-wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_address0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_ce0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_we0;
-wire   [31:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_d0;
-wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_address0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_ce0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_we0;
-wire   [31:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_d0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_idle;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_ready;
-wire   [63:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_mat4_din;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_mat4_write;
-wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_address0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_ce0;
-wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_1_address0;
-wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_1_ce0;
-reg    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_done;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_idle;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_ready;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_sum3_read;
+wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_address0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_ce0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_we0;
+wire   [31:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_d0;
+wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_address0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_ce0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_we0;
+wire   [31:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_d0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_idle;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_ready;
+wire   [63:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_mat4_din;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_mat4_write;
+wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_address0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_ce0;
+wire   [2:0] grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_1_address0;
+wire    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_1_ce0;
+reg    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg;
 reg    ap_block_state1_ignore_call5;
 wire    ap_CS_fsm_state2;
-reg    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg;
+reg    grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg;
 wire    ap_CS_fsm_state4;
 wire    ap_CS_fsm_state5;
 reg   [4:0] ap_NS_fsm;
@@ -110,8 +110,8 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 5'd1;
-#0 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg = 1'b0;
-#0 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg = 1'b0;
+#0 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg = 1'b0;
+#0 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg = 1'b0;
 end
 
 cemit_replaced_gemmBufferC_float_2u_2u_10u_s_l_bufferC_RAM_AUTO_1R1W #(
@@ -124,7 +124,7 @@ l_bufferC_U(
     .address0(l_bufferC_address0),
     .ce0(l_bufferC_ce0),
     .we0(l_bufferC_we0),
-    .d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_d0),
+    .d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_d0),
     .q0(l_bufferC_q0)
 );
 
@@ -138,49 +138,49 @@ l_bufferC_1_U(
     .address0(l_bufferC_1_address0),
     .ce0(l_bufferC_1_ce0),
     .we0(l_bufferC_1_we0),
-    .d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_d0),
+    .d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_d0),
     .q0(l_bufferC_1_q0)
 );
 
-cemit_replaced_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30(
+cemit_replaced_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start),
-    .ap_done(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_done),
-    .ap_idle(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_idle),
-    .ap_ready(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_ready),
+    .ap_start(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start),
+    .ap_done(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_done),
+    .ap_idle(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_idle),
+    .ap_ready(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_ready),
     .l_sum3_dout(l_sum3_dout),
     .l_sum3_num_data_valid(2'd0),
     .l_sum3_fifo_cap(2'd0),
     .l_sum3_empty_n(l_sum3_empty_n),
-    .l_sum3_read(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_sum3_read),
-    .l_bufferC_1_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_address0),
-    .l_bufferC_1_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_ce0),
-    .l_bufferC_1_we0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_we0),
-    .l_bufferC_1_d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_d0),
-    .l_bufferC_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_address0),
-    .l_bufferC_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_ce0),
-    .l_bufferC_we0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_we0),
-    .l_bufferC_d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_d0)
+    .l_sum3_read(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_sum3_read),
+    .l_bufferC_1_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_address0),
+    .l_bufferC_1_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_ce0),
+    .l_bufferC_1_we0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_we0),
+    .l_bufferC_1_d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_d0),
+    .l_bufferC_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_address0),
+    .l_bufferC_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_ce0),
+    .l_bufferC_we0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_we0),
+    .l_bufferC_d0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_d0)
 );
 
-cemit_replaced_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40(
+cemit_replaced_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8 grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start),
-    .ap_done(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done),
-    .ap_idle(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_idle),
-    .ap_ready(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_ready),
-    .l_mat4_din(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_mat4_din),
+    .ap_start(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start),
+    .ap_done(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done),
+    .ap_idle(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_idle),
+    .ap_ready(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_ready),
+    .l_mat4_din(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_mat4_din),
     .l_mat4_num_data_valid(2'd0),
     .l_mat4_fifo_cap(2'd0),
     .l_mat4_full_n(l_mat4_full_n),
-    .l_mat4_write(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_mat4_write),
-    .l_bufferC_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_address0),
-    .l_bufferC_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_ce0),
+    .l_mat4_write(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_mat4_write),
+    .l_bufferC_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_address0),
+    .l_bufferC_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_ce0),
     .l_bufferC_q0(l_bufferC_q0),
-    .l_bufferC_1_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_1_address0),
-    .l_bufferC_1_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_1_ce0),
+    .l_bufferC_1_address0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_1_address0),
+    .l_bufferC_1_ce0(grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_1_ce0),
     .l_bufferC_1_q0(l_bufferC_1_q0)
 );
 
@@ -198,7 +198,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+        end else if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -206,24 +206,24 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg <= 1'b0;
+        grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg <= 1'b0;
     end else begin
-        if ((1'b1 == ap_CS_fsm_state4)) begin
-            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg <= 1'b1;
-        end else if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_ready == 1'b1)) begin
-            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg <= 1'b0;
+        if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg <= 1'b1;
+        end else if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_ready == 1'b1)) begin
+            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg <= 1'b0;
+        grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg <= 1'b0;
     end else begin
-        if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg <= 1'b1;
-        end else if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_ready == 1'b1)) begin
-            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg <= 1'b0;
+        if ((1'b1 == ap_CS_fsm_state4)) begin
+            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg <= 1'b1;
+        end else if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_ready == 1'b1)) begin
+            grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -237,7 +237,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_done == 1'b0)) begin
+    if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -249,7 +249,7 @@ assign ap_ST_fsm_state3_blk = 1'b0;
 assign ap_ST_fsm_state4_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done == 1'b0)) begin
+    if ((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done == 1'b0)) begin
         ap_ST_fsm_state5_blk = 1'b1;
     end else begin
         ap_ST_fsm_state5_blk = 1'b0;
@@ -257,7 +257,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+    if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -273,7 +273,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+    if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -282,9 +282,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        l_bufferC_1_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_1_address0;
+        l_bufferC_1_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_1_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_bufferC_1_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_address0;
+        l_bufferC_1_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_address0;
     end else begin
         l_bufferC_1_address0 = 'bx;
     end
@@ -292,9 +292,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        l_bufferC_1_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_1_ce0;
+        l_bufferC_1_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_bufferC_1_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_ce0;
+        l_bufferC_1_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_ce0;
     end else begin
         l_bufferC_1_ce0 = 1'b0;
     end
@@ -302,7 +302,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_bufferC_1_we0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_1_we0;
+        l_bufferC_1_we0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_1_we0;
     end else begin
         l_bufferC_1_we0 = 1'b0;
     end
@@ -310,9 +310,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        l_bufferC_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_address0;
+        l_bufferC_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_bufferC_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_address0;
+        l_bufferC_address0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_address0;
     end else begin
         l_bufferC_address0 = 'bx;
     end
@@ -320,9 +320,9 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        l_bufferC_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_bufferC_ce0;
+        l_bufferC_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_bufferC_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_bufferC_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_ce0;
+        l_bufferC_ce0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_ce0;
     end else begin
         l_bufferC_ce0 = 1'b0;
     end
@@ -330,7 +330,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_bufferC_we0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_bufferC_we0;
+        l_bufferC_we0 = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_bufferC_we0;
     end else begin
         l_bufferC_we0 = 1'b0;
     end
@@ -338,7 +338,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        l_mat4_write = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_mat4_write;
+        l_mat4_write = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_mat4_write;
     end else begin
         l_mat4_write = 1'b0;
     end
@@ -346,7 +346,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_sum3_read = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_l_sum3_read;
+        l_sum3_read = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_l_sum3_read;
     end else begin
         l_sum3_read = 1'b0;
     end
@@ -362,7 +362,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -375,7 +375,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state5 : begin
-            if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+            if (((grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
@@ -403,10 +403,10 @@ always @ (*) begin
     ap_block_state1_ignore_call5 = ((ap_done_reg == 1'b1) | (ap_start == 1'b0));
 end
 
-assign grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg;
+assign grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg;
 
-assign grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg;
+assign grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg;
 
-assign l_mat4_din = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_l_mat4_din;
+assign l_mat4_din = grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_l_mat4_din;
 
 endmodule //cemit_replaced_gemmBufferC_float_2u_2u_10u_s

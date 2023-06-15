@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'systolicArray_Pipeline_VITIS_LOOP_247_1'" level="0">
-<item name = "Date">Mon Jun 12 16:50:44 2023
+<item name = "Date">Wed Jun 14 16:04:43 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cemit_replaced</item>
@@ -105,9 +105,9 @@
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="l_val_2_reg_260">32, 0, 32, 0</column>
-<column name="l_val_3_reg_265">32, 0, 32, 0</column>
-<column name="l_val_4_reg_250">32, 0, 32, 0</column>
+<column name="l_val_3_reg_260">32, 0, 32, 0</column>
+<column name="l_val_4_reg_265">32, 0, 32, 0</column>
+<column name="l_val_5_reg_250">32, 0, 32, 0</column>
 <column name="l_val_reg_245">32, 0, 32, 0</column>
 <column name="p_Repl2_s_reg_121">1, 0, 1, 0</column>
 <column name="p_Result_1_reg_239">1, 0, 1, 0</column>

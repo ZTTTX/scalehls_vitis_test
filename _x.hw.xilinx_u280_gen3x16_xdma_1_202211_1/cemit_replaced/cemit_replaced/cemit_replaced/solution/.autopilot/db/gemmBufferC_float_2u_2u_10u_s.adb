@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>791819130</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -95,7 +95,7 @@
               <name>l_bufferC</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>88</lineNumber>
+              <lineNumber>100</lineNumber>
               <contextFuncName>gemmBufferC&amp;lt;float, 2, 2, 10&amp;gt;</contextFuncName>
               <contextNormFuncName>gemmBufferC_float_2_2_10_s</contextNormFuncName>
               <inlineStackInfo>
@@ -111,7 +111,7 @@
                         <first>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</first>
                         <second>gemmBufferC&amp;lt;float, 2, 2, 10&amp;gt;</second>
                       </first>
-                      <second>88</second>
+                      <second>100</second>
                     </item>
                   </second>
                 </item>
@@ -151,7 +151,7 @@
               <name>l_bufferC_1</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>88</lineNumber>
+              <lineNumber>100</lineNumber>
               <contextFuncName>gemmBufferC&amp;lt;float, 2, 2, 10&amp;gt;</contextFuncName>
               <contextNormFuncName>gemmBufferC_float_2_2_10_s</contextNormFuncName>
               <inlineStackInfo>
@@ -167,7 +167,7 @@
                         <first>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</first>
                         <second>gemmBufferC&amp;lt;float, 2, 2, 10&amp;gt;</second>
                       </first>
-                      <second>88</second>
+                      <second>100</second>
                     </item>
                   </second>
                 </item>
@@ -257,14 +257,14 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30</rtlName>
+              <rtlName>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>543976559</coreId>
+              <coreId>1013280889</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -292,7 +292,7 @@
             <Obj>
               <type>0</type>
               <id>9</id>
-              <name>empty_55</name>
+              <name>empty_65</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -310,7 +310,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>794829184</coreId>
+              <coreId>2859499456</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -336,7 +336,7 @@
             <Obj>
               <type>0</type>
               <id>10</id>
-              <name>empty_56</name>
+              <name>empty_66</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -354,7 +354,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>794729432</coreId>
+              <coreId>1953724755</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -390,14 +390,14 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40</rtlName>
+              <rtlName>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>796099168</coreId>
+              <coreId>2855759216</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -427,10 +427,10 @@
             <Obj>
               <type>0</type>
               <id>12</id>
-              <name>_ln128</name>
+              <name>_ln140</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>128</lineNumber>
+              <lineNumber>140</lineNumber>
               <contextFuncName>gemmBufferC&amp;lt;float, 2, 2, 10&amp;gt;</contextFuncName>
               <contextNormFuncName>gemmBufferC_float_2_2_10_s</contextNormFuncName>
               <inlineStackInfo>
@@ -446,7 +446,7 @@
                         <first>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/dataMover/gemmMatMover.hpp</first>
                         <second>gemmBufferC&amp;lt;float, 2, 2, 10&amp;gt;</second>
                       </first>
-                      <second>128</second>
+                      <second>140</second>
                     </item>
                   </second>
                 </item>
@@ -459,7 +459,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2859499456</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -504,7 +504,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>796099168</coreId>
+              <coreId>1966224160</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -517,7 +517,7 @@
             <Obj>
               <type>2</type>
               <id>19</id>
-              <name>gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2</name>
+              <name>gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -535,20 +535,20 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1330007625</coreId>
+              <coreId>2859641376</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:gemmBufferC&lt;float, 2u, 2u, 10u&gt;_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2&gt;</content>
+          <content>&lt;constant:gemmBufferC&lt;float, 2u, 2u, 10u&gt;_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2&gt;</content>
         </item>
         <item class_id_reference="16" object_id="_13">
           <Value>
             <Obj>
               <type>2</type>
               <id>26</id>
-              <name>gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8</name>
+              <name>gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -566,13 +566,13 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1667853423</coreId>
+              <coreId>2859641376</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
           <const_type>6</const_type>
-          <content>&lt;constant:gemmBufferC&lt;float, 2u, 2u, 10u&gt;_Pipeline_VITIS_LOOP_119_8&gt;</content>
+          <content>&lt;constant:gemmBufferC&lt;float, 2u, 2u, 10u&gt;_Pipeline_VITIS_LOOP_131_8&gt;</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -600,7 +600,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>795581248</coreId>
+            <coreId>1818455657</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -938,32 +938,32 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="36" tracking_level="0" version="0">
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8)</first>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2)</first>
           <second class_id="37" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
-              <first>FF</first>
-              <second>7</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>70</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2)</first>
-          <second>
-            <count>2</count>
-            <item_version>0</item_version>
-            <item>
               <first>FF</first>
               <second>12</second>
             </item>
             <item>
               <first>LUT</first>
               <second>130</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8)</first>
+          <second>
+            <count>2</count>
+            <item_version>0</item_version>
+            <item>
+              <first>FF</first>
+              <second>7</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>70</second>
             </item>
           </second>
         </item>
@@ -1357,7 +1357,7 @@
           </second>
         </item>
         <item>
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40_ap_start_reg</first>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30_ap_start_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1376,7 +1376,7 @@
           </second>
         </item>
         <item>
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30_ap_start_reg</first>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40_ap_start_reg</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1399,14 +1399,14 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40</first>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30</first>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -1417,19 +1417,19 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="40" tracking_level="0" version="0">
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>11</item>
-          </second>
-        </item>
-        <item>
-          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2)</first>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>8</item>
+          </second>
+        </item>
+        <item>
+          <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40 (gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8)</first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>11</item>
           </second>
         </item>
       </dp_component_map>
@@ -1599,21 +1599,21 @@
       <count>2</count>
       <item_version>0</item_version>
       <item>
-        <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40</first>
+        <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>11</item>
-          <item>11</item>
+          <item>8</item>
+          <item>8</item>
         </second>
       </item>
       <item>
-        <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30</first>
+        <first>grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40</first>
         <second>
           <count>2</count>
           <item_version>0</item_version>
-          <item>8</item>
-          <item>8</item>
+          <item>11</item>
+          <item>11</item>
         </second>
       </item>
     </dp_fu_nodes_module>

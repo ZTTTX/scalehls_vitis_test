@@ -47,11 +47,11 @@ architecture behav of cemit_replaced_adds_3 is
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv9_0 : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
-    constant ap_const_lv10_0 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
+    constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
     constant ap_const_lv32_20 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000100000";
     constant ap_const_lv32_3F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111111";
-    constant ap_const_lv10_200 : STD_LOGIC_VECTOR (9 downto 0) := "1000000000";
-    constant ap_const_lv10_1 : STD_LOGIC_VECTOR (9 downto 0) := "0000000001";
+    constant ap_const_lv11_500 : STD_LOGIC_VECTOR (10 downto 0) := "10100000000";
+    constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
     constant ap_const_lv9_100 : STD_LOGIC_VECTOR (8 downto 0) := "100000000";
     constant ap_const_lv9_FF : STD_LOGIC_VECTOR (8 downto 0) := "011111111";
     constant ap_const_lv9_1 : STD_LOGIC_VECTOR (8 downto 0) := "000000001";
@@ -192,11 +192,11 @@ attribute shreg_extract : string;
     signal ap_sig_allocacmp_k_load : STD_LOGIC_VECTOR (8 downto 0);
     signal empty_fu_62 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_allocacmp_p_load13 : STD_LOGIC_VECTOR (31 downto 0);
-    signal empty_65_fu_66 : STD_LOGIC_VECTOR (31 downto 0);
+    signal empty_75_fu_66 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_sig_allocacmp_p_load : STD_LOGIC_VECTOR (31 downto 0);
-    signal indvar_flatten_fu_70 : STD_LOGIC_VECTOR (9 downto 0);
-    signal add_ln193_fu_128_p2 : STD_LOGIC_VECTOR (9 downto 0);
-    signal ap_sig_allocacmp_indvar_flatten_load : STD_LOGIC_VECTOR (9 downto 0);
+    signal indvar_flatten_fu_70 : STD_LOGIC_VECTOR (10 downto 0);
+    signal add_ln193_fu_128_p2 : STD_LOGIC_VECTOR (10 downto 0);
+    signal ap_sig_allocacmp_indvar_flatten_load : STD_LOGIC_VECTOR (10 downto 0);
     signal ap_block_pp0_stage2_01001 : BOOLEAN;
     signal grp_fu_87_p0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_87_p1 : STD_LOGIC_VECTOR (31 downto 0);
@@ -206,7 +206,7 @@ attribute shreg_extract : string;
     signal grp_fu_95_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal icmp_ln194_fu_190_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal select_ln193_fu_196_p3 : STD_LOGIC_VECTOR (8 downto 0);
-    signal l_val_V_11_fu_262_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal l_val_V_13_fu_262_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal l_val_V_fu_259_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_87_ce : STD_LOGIC;
     signal grp_fu_91_ce : STD_LOGIC;
@@ -283,7 +283,7 @@ attribute shreg_extract : string;
 
 
 begin
-    fadd_32ns_32ns_32_7_full_dsp_1_U75 : component cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1
+    fadd_32ns_32ns_32_7_full_dsp_1_U91 : component cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 7,
@@ -298,7 +298,7 @@ begin
         ce => grp_fu_87_ce,
         dout => grp_fu_87_p2);
 
-    fadd_32ns_32ns_32_7_full_dsp_1_U76 : component cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1
+    fadd_32ns_32ns_32_7_full_dsp_1_U92 : component cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 7,
@@ -313,7 +313,7 @@ begin
         ce => grp_fu_91_ce,
         dout => grp_fu_91_p2);
 
-    fadd_32ns_32ns_32_5_no_dsp_1_U77 : component cemit_replaced_fadd_32ns_32ns_32_5_no_dsp_1
+    fadd_32ns_32ns_32_5_no_dsp_1_U93 : component cemit_replaced_fadd_32ns_32ns_32_5_no_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -620,7 +620,7 @@ begin
                 if ((icmp_ln193_fu_122_p2 = ap_const_lv1_0)) then 
                     indvar_flatten_fu_70 <= add_ln193_fu_128_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    indvar_flatten_fu_70 <= ap_const_lv10_0;
+                    indvar_flatten_fu_70 <= ap_const_lv11_0;
                 end if;
             end if; 
         end if;
@@ -648,7 +648,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_pp0_stage1_11001) and (ap_enable_reg_pp0_iter7 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then
                 add40_1_reg_439 <= grp_fu_95_p2;
-                empty_65_fu_66 <= grp_fu_95_p2;
+                empty_75_fu_66 <= grp_fu_95_p2;
             end if;
         end if;
     end process;
@@ -802,7 +802,7 @@ begin
                 ap_NS_fsm <= "XXXX";
         end case;
     end process;
-    add_ln193_fu_128_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_indvar_flatten_load) + unsigned(ap_const_lv10_1));
+    add_ln193_fu_128_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_indvar_flatten_load) + unsigned(ap_const_lv11_1));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
     ap_CS_fsm_pp0_stage1 <= ap_CS_fsm(1);
     ap_CS_fsm_pp0_stage2 <= ap_CS_fsm(2);
@@ -1034,7 +1034,7 @@ begin
     ap_sig_allocacmp_indvar_flatten_load_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0, ap_loop_init, indvar_flatten_fu_70)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_loop_init = ap_const_logic_1) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            ap_sig_allocacmp_indvar_flatten_load <= ap_const_lv10_0;
+            ap_sig_allocacmp_indvar_flatten_load <= ap_const_lv11_0;
         else 
             ap_sig_allocacmp_indvar_flatten_load <= indvar_flatten_fu_70;
         end if; 
@@ -1051,12 +1051,12 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_p_load_assign_proc : process(ap_enable_reg_pp0_iter7, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage1, grp_fu_95_p2, empty_65_fu_66)
+    ap_sig_allocacmp_p_load_assign_proc : process(ap_enable_reg_pp0_iter7, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage1, grp_fu_95_p2, empty_75_fu_66)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage1) and (ap_enable_reg_pp0_iter7 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage1))) then 
             ap_sig_allocacmp_p_load <= grp_fu_95_p2;
         else 
-            ap_sig_allocacmp_p_load <= empty_65_fu_66;
+            ap_sig_allocacmp_p_load <= empty_75_fu_66;
         end if; 
     end process;
 
@@ -1196,7 +1196,7 @@ begin
         end if; 
     end process;
 
-    icmp_ln193_fu_122_p2 <= "1" when (ap_sig_allocacmp_indvar_flatten_load = ap_const_lv10_200) else "0";
+    icmp_ln193_fu_122_p2 <= "1" when (ap_sig_allocacmp_indvar_flatten_load = ap_const_lv11_500) else "0";
     icmp_ln194_fu_190_p2 <= "1" when (ap_sig_allocacmp_k_load = ap_const_lv9_100) else "0";
     icmp_ln196_fu_204_p2 <= "1" when (select_ln193_fu_196_p3 = ap_const_lv9_0) else "0";
     icmp_ln217_fu_210_p2 <= "1" when (select_ln193_fu_196_p3 = ap_const_lv9_FF) else "0";
@@ -1231,7 +1231,7 @@ begin
         end if; 
     end process;
 
-    l_sum_1_din <= (l_val_V_11_fu_262_p1 & l_val_V_fu_259_p1);
+    l_sum_1_din <= (l_val_V_13_fu_262_p1 & l_val_V_fu_259_p1);
 
     l_sum_1_write_assign_proc : process(ap_enable_reg_pp0_iter7, ap_CS_fsm_pp0_stage2, icmp_ln217_reg_420_pp0_iter6_reg, ap_block_pp0_stage2_11001)
     begin
@@ -1245,7 +1245,7 @@ begin
     l_val_15_fu_143_p1 <= l_mul1_dout(32 - 1 downto 0);
     l_val_17_fu_163_p1 <= l_mul1_dout(32 - 1 downto 0);
     l_val_19_fu_167_p1 <= l_mul1_dout(32 - 1 downto 0);
-    l_val_V_11_fu_262_p1 <= add40_1_reg_439;
+    l_val_V_13_fu_262_p1 <= add40_1_reg_439;
     l_val_V_fu_259_p1 <= add1_reg_434;
     l_val_fu_139_p1 <= l_mul1_dout(32 - 1 downto 0);
     select_ln193_fu_196_p3 <= 

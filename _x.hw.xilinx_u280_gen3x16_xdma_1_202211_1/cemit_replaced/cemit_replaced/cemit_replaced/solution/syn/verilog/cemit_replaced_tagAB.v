@@ -18,12 +18,16 @@ module cemit_replaced_tagAB (
         ap_ready,
         start_out,
         start_write,
-        l_strA4_i_dout,
-        l_strA4_i_empty_n,
-        l_strA4_i_read,
-        l_strB5_i_dout,
-        l_strB5_i_empty_n,
-        l_strB5_i_read,
+        l_strA7_dout,
+        l_strA7_num_data_valid,
+        l_strA7_fifo_cap,
+        l_strA7_empty_n,
+        l_strA7_read,
+        l_strB8_dout,
+        l_strB8_num_data_valid,
+        l_strB8_fifo_cap,
+        l_strB8_empty_n,
+        l_strB8_read,
         l_aStr1_din,
         l_aStr1_num_data_valid,
         l_aStr1_fifo_cap,
@@ -52,12 +56,16 @@ output   ap_idle;
 output   ap_ready;
 output   start_out;
 output   start_write;
-input  [63:0] l_strA4_i_dout;
-input   l_strA4_i_empty_n;
-output   l_strA4_i_read;
-input  [63:0] l_strB5_i_dout;
-input   l_strB5_i_empty_n;
-output   l_strB5_i_read;
+input  [63:0] l_strA7_dout;
+input  [1:0] l_strA7_num_data_valid;
+input  [1:0] l_strA7_fifo_cap;
+input   l_strA7_empty_n;
+output   l_strA7_read;
+input  [63:0] l_strB8_dout;
+input  [1:0] l_strB8_num_data_valid;
+input  [1:0] l_strB8_fifo_cap;
+input   l_strB8_empty_n;
+output   l_strB8_read;
 output  [65:0] l_aStr1_din;
 input  [1:0] l_aStr1_num_data_valid;
 input  [1:0] l_aStr1_fifo_cap;
@@ -72,8 +80,8 @@ output   l_bStr2_write;
 reg ap_done;
 reg ap_idle;
 reg start_write;
-reg l_strA4_i_read;
-reg l_strB5_i_read;
+reg l_strA7_read;
+reg l_strB8_read;
 reg[65:0] l_aStr1_din;
 reg l_aStr1_write;
 reg[63:0] l_bStr2_din;
@@ -89,8 +97,8 @@ wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_start;
 wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_done;
 wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_idle;
 wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_ready;
-wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read;
-wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read;
+wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read;
+wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read;
 wire   [65:0] grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_aStr1_din;
 wire    grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_aStr1_write;
 wire   [63:0] grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_bStr2_din;
@@ -134,12 +142,16 @@ cemit_replaced_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2 grp_tagAB_Pipeli
     .ap_done(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_done),
     .ap_idle(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_idle),
     .ap_ready(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_ap_ready),
-    .l_strA4_i_dout(l_strA4_i_dout),
-    .l_strA4_i_empty_n(l_strA4_i_empty_n),
-    .l_strA4_i_read(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read),
-    .l_strB5_i_dout(l_strB5_i_dout),
-    .l_strB5_i_empty_n(l_strB5_i_empty_n),
-    .l_strB5_i_read(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read),
+    .l_strA7_dout(l_strA7_dout),
+    .l_strA7_num_data_valid(2'd0),
+    .l_strA7_fifo_cap(2'd0),
+    .l_strA7_empty_n(l_strA7_empty_n),
+    .l_strA7_read(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read),
+    .l_strB8_dout(l_strB8_dout),
+    .l_strB8_num_data_valid(2'd0),
+    .l_strB8_fifo_cap(2'd0),
+    .l_strB8_empty_n(l_strB8_empty_n),
+    .l_strB8_read(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read),
     .l_aStr1_din(grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_aStr1_din),
     .l_aStr1_num_data_valid(2'd0),
     .l_aStr1_fifo_cap(2'd0),
@@ -321,17 +333,17 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_strA4_i_read = grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA4_i_read;
+        l_strA7_read = grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strA7_read;
     end else begin
-        l_strA4_i_read = 1'b0;
+        l_strA7_read = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        l_strB5_i_read = grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB5_i_read;
+        l_strB8_read = grp_tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2_fu_24_l_strB8_read;
     end else begin
-        l_strB5_i_read = 1'b0;
+        l_strB8_read = 1'b0;
     end
 end
 

@@ -20,7 +20,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 82 \
+    id 98 \
     name l_dataA_1 \
     type fifo \
     dir I \
@@ -35,7 +35,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 83 \
+    id 99 \
     name l_dataB_1 \
     type fifo \
     dir I \
@@ -50,7 +50,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 84 \
+    id 100 \
     name l_sum_1 \
     type fifo \
     dir O \

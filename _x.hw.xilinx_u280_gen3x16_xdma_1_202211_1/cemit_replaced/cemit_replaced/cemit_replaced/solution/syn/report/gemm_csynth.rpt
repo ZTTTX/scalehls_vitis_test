@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'gemm'
 ================================================================
-* Date:           Mon Jun 12 16:50:46 2023
+* Date:           Wed Jun 14 16:04:46 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cemit_replaced
@@ -56,12 +56,12 @@
 |DSP                  |        -|     -|        -|        -|    -|
 |Expression           |        -|     -|        -|        -|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
-|Instance             |        -|    20|     6665|     6102|    -|
+|Instance             |        -|    20|     6672|     6108|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|        9|    -|
 |Register             |        -|     -|        1|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|    20|     6666|     6111|    0|
+|Total                |        0|    20|     6673|     6117|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -77,9 +77,9 @@
     +------------+-----------+---------+----+------+------+-----+
     |  Instance  |   Module  | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +------------+-----------+---------+----+------+------+-----+
-    |process_U0  |process_r  |        0|  20|  6665|  6102|    0|
+    |process_U0  |process_r  |        0|  20|  6672|  6108|    0|
     +------------+-----------+---------+----+------+------+-----+
-    |Total       |           |        0|  20|  6665|  6102|    0|
+    |Total       |           |        0|  20|  6672|  6108|    0|
     +------------+-----------+---------+----+------+------+-----+
 
     * DSP: 
@@ -118,27 +118,27 @@
 == Interface
 ================================================================
 * Summary: 
-+-------------------+-----+-----+------------+--------------+--------------+
-|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
-+-------------------+-----+-----+------------+--------------+--------------+
-|ap_start           |   in|    1|  ap_ctrl_hs|          gemm|  return value|
-|start_full_n       |   in|    1|  ap_ctrl_hs|          gemm|  return value|
-|start_out          |  out|    1|  ap_ctrl_hs|          gemm|  return value|
-|start_write        |  out|    1|  ap_ctrl_hs|          gemm|  return value|
-|ap_clk             |   in|    1|  ap_ctrl_hs|          gemm|  return value|
-|ap_rst             |   in|    1|  ap_ctrl_hs|          gemm|  return value|
-|ap_done            |  out|    1|  ap_ctrl_hs|          gemm|  return value|
-|ap_ready           |  out|    1|  ap_ctrl_hs|          gemm|  return value|
-|ap_idle            |  out|    1|  ap_ctrl_hs|          gemm|  return value|
-|ap_continue        |   in|    1|  ap_ctrl_hs|          gemm|  return value|
-|l_strA4_i_dout     |   in|   64|     ap_fifo|     l_strA4_i|       pointer|
-|l_strA4_i_empty_n  |   in|    1|     ap_fifo|     l_strA4_i|       pointer|
-|l_strA4_i_read     |  out|    1|     ap_fifo|     l_strA4_i|       pointer|
-|l_strB5_i_dout     |   in|   64|     ap_fifo|     l_strB5_i|       pointer|
-|l_strB5_i_empty_n  |   in|    1|     ap_fifo|     l_strB5_i|       pointer|
-|l_strB5_i_read     |  out|    1|     ap_fifo|     l_strB5_i|       pointer|
-|l_sum3_din         |  out|   64|     ap_fifo|        l_sum3|       pointer|
-|l_sum3_full_n      |   in|    1|     ap_fifo|        l_sum3|       pointer|
-|l_sum3_write       |  out|    1|     ap_fifo|        l_sum3|       pointer|
-+-------------------+-----+-----+------------+--------------+--------------+
++-----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------+-----+-----+------------+--------------+--------------+
+|ap_start         |   in|    1|  ap_ctrl_hs|          gemm|  return value|
+|start_full_n     |   in|    1|  ap_ctrl_hs|          gemm|  return value|
+|start_out        |  out|    1|  ap_ctrl_hs|          gemm|  return value|
+|start_write      |  out|    1|  ap_ctrl_hs|          gemm|  return value|
+|ap_clk           |   in|    1|  ap_ctrl_hs|          gemm|  return value|
+|ap_rst           |   in|    1|  ap_ctrl_hs|          gemm|  return value|
+|ap_done          |  out|    1|  ap_ctrl_hs|          gemm|  return value|
+|ap_ready         |  out|    1|  ap_ctrl_hs|          gemm|  return value|
+|ap_idle          |  out|    1|  ap_ctrl_hs|          gemm|  return value|
+|ap_continue      |   in|    1|  ap_ctrl_hs|          gemm|  return value|
+|l_strA7_dout     |   in|   64|     ap_fifo|       l_strA7|       pointer|
+|l_strA7_empty_n  |   in|    1|     ap_fifo|       l_strA7|       pointer|
+|l_strA7_read     |  out|    1|     ap_fifo|       l_strA7|       pointer|
+|l_strB8_dout     |   in|   64|     ap_fifo|       l_strB8|       pointer|
+|l_strB8_empty_n  |   in|    1|     ap_fifo|       l_strB8|       pointer|
+|l_strB8_read     |  out|    1|     ap_fifo|       l_strB8|       pointer|
+|l_sum3_din       |  out|   64|     ap_fifo|        l_sum3|       pointer|
+|l_sum3_full_n    |   in|    1|     ap_fifo|        l_sum3|       pointer|
+|l_sum3_write     |  out|    1|     ap_fifo|        l_sum3|       pointer|
++-----------------+-----+-----+------------+--------------+--------------+
 

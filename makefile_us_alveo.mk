@@ -38,7 +38,7 @@ help:
 endif
 
 ############################## Setting up Project Variables ##############################
-TOP_FUNC_NAME ?= cemit_replaced
+TOP_FUNC_NAME ?= cemit_replaced_v2
 TARGET := hw
 VPP_LDFLAGS :=
 include ./utils.mk

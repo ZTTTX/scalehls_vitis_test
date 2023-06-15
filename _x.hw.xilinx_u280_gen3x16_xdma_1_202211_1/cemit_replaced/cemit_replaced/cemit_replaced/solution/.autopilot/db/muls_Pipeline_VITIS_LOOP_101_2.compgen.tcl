@@ -17,7 +17,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 33 \
+    id 49 \
     name l_Tc_m_Sreg_Array_2 \
     reset_level 1 \
     sync_rst true \
@@ -36,7 +36,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 34 \
+    id 50 \
     name l_Tc_m_Sreg_Array \
     reset_level 1 \
     sync_rst true \
@@ -55,7 +55,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 35 \
+    id 51 \
     name l_flush_Array \
     reset_level 1 \
     sync_rst true \
@@ -73,7 +73,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 36 \
+    id 52 \
     name l_dataA_0 \
     type fifo \
     dir I \
@@ -88,7 +88,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 37 \
+    id 53 \
     name l_dataB_0 \
     type fifo \
     dir I \
@@ -103,7 +103,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 38 \
+    id 54 \
     name l_dataB_1 \
     type fifo \
     dir O \
@@ -118,7 +118,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 39 \
+    id 55 \
     name l_mul1 \
     type fifo \
     dir O \

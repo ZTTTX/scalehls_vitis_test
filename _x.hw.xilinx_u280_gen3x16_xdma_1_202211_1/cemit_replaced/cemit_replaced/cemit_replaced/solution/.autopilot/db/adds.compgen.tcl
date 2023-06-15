@@ -22,7 +22,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 51 \
+    id 67 \
     name l_mul1 \
     type fifo \
     dir I \
@@ -37,7 +37,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 52 \
+    id 68 \
     name l_sum_0 \
     type fifo \
     dir O \

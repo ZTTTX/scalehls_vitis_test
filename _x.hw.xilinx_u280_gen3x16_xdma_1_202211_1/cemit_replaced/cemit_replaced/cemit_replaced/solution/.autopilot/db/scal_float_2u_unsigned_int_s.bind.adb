@@ -16,7 +16,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>l_strC6_i</name>
+						<name>l_strC9</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -70,7 +70,7 @@
 						<coreName>FIFO_SRL</coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>791819130</coreId>
+						<coreId>979793959</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -113,7 +113,7 @@
 						<coreId>1966219308</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -247,7 +247,7 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>i_3</name>
+						<name>i_4</name>
 						<fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp</fileName>
 						<fileDirectory>/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced</fileDirectory>
 						<lineNumber>59</lineNumber>
@@ -279,10 +279,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>543976559</coreId>
+						<coreId>1937010273</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -352,7 +352,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.49</m_delay>
+				<m_delay>0.65</m_delay>
 				<m_topoIndex>5</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -361,7 +361,7 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>i_4</name>
+						<name>i_5</name>
 						<fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/scal.hpp</fileName>
 						<fileDirectory>/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced</fileDirectory>
 						<lineNumber>59</lineNumber>
@@ -396,7 +396,7 @@
 						<coreId>1</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -409,7 +409,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.57</m_delay>
+				<m_delay>0.70</m_delay>
 				<m_topoIndex>6</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -450,7 +450,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796756352</coreId>
+						<coreId>2859808560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -565,7 +565,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1597584735</coreId>
+						<coreId>1953724755</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -621,7 +621,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796286384</coreId>
+						<coreId>2015830126</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -645,7 +645,7 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>l_val_5</name>
+						<name>l_val_6</name>
 						<fileName>/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</fileName>
 						<fileDirectory>/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced</fileDirectory>
 						<lineNumber>628</lineNumber>
@@ -677,7 +677,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>793684576</coreId>
+						<coreId>2860217712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -704,7 +704,7 @@
 					<Obj>
 						<type>0</type>
 						<id>21</id>
-						<name>bitcast_ln110_1</name>
+						<name>bitcast_ln110_2</name>
 						<fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp</fileName>
 						<fileDirectory>/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced</fileDirectory>
 						<lineNumber>110</lineNumber>
@@ -736,7 +736,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796286384</coreId>
+						<coreId>2858284112</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -906,7 +906,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2003316581</coreId>
+						<coreId>2856904896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -962,7 +962,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>797294960</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1018,7 +1018,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>256</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1134,7 +1134,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2855315968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1193,7 +1193,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1747936357</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1249,7 +1249,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>797292304</coreId>
+						<coreId>2856266448</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1328,7 +1328,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -1356,13 +1356,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796763632</coreId>
+						<coreId>2859295296</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>5</content>
+				<content>10</content>
 			</item>
 			<item class_id_reference="16" object_id="_27">
 				<Value>
@@ -1390,7 +1390,7 @@
 						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>3</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -1418,7 +1418,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>796764664</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1449,7 +1449,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>2858431632</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1480,7 +1480,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>797293504</coreId>
+						<coreId>2860440896</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1514,7 +1514,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>1818455657</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1547,7 +1547,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3834512688</coreId>
+					<coreId>1818455657</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1581,7 +1581,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967295</coreId>
+					<coreId>1818455657</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1624,7 +1624,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>796161104</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1935,8 +1935,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>11</mMinLatency>
-			<mMaxLatency>11</mMaxLatency>
+			<mMinLatency>16</mMinLatency>
+			<mMaxLatency>16</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -1980,10 +1980,10 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>6</mDepth>
-			<mMinTripCount>5</mMinTripCount>
-			<mMaxTripCount>5</mMaxTripCount>
-			<mMinLatency>9</mMinLatency>
-			<mMaxLatency>9</mMaxLatency>
+			<mMinTripCount>10</mMinTripCount>
+			<mMaxTripCount>10</mMaxTripCount>
+			<mMinLatency>14</mMinLatency>
+			<mMaxLatency>14</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -2657,7 +2657,7 @@
 		<count>10</count>
 		<item_version>0</item_version>
 		<item class_id="48" tracking_level="0" version="0">
-			<first>bitcast_ln110_1_fu_116</first>
+			<first>bitcast_ln110_2_fu_116</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2673,7 +2673,7 @@
 			</second>
 		</item>
 		<item>
-			<first>i_4_fu_87</first>
+			<first>i_5_fu_87</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2697,7 +2697,7 @@
 			</second>
 		</item>
 		<item>
-			<first>l_val_5_fu_97</first>
+			<first>l_val_6_fu_97</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2767,7 +2767,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>
-			<first>i_3_load_fu_78</first>
+			<first>i_4_load_fu_78</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2887,7 +2887,7 @@
 		<count>8</count>
 		<item_version>0</item_version>
 		<item>
-			<first>bitcast_ln110_1_reg_161</first>
+			<first>bitcast_ln110_2_reg_161</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2919,7 +2919,7 @@
 			</second>
 		</item>
 		<item>
-			<first>l_val_5_reg_151</first>
+			<first>l_val_6_reg_151</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -2978,7 +2978,7 @@
 			</second>
 		</item>
 		<item>
-			<first>l_strC6_i</first>
+			<first>l_strC9</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Mon Jun 12 16:49:41 2023",
- "timestampMillis": "1686606581228",
+ "dateTimestamp": "Wed Jun 14 16:03:29 2023",
+ "timestampMillis": "1686776609989",
  "buildStep": {
-  "cmdId": "835589e8-cec4-46ce-9e3a-6676b842849b",
+  "cmdId": "bf6605f1-a3ae-4628-a823-804e0c461a90",
   "name": "v++",
   "logFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced.steps.log",
   "commandLine": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -c --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm -k cemit_replaced --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -Isrc -o_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced.xo src/cemit_replaced.cpp -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw ",
@@ -40,10 +40,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Jun 12 16:49:41 2023",
- "timestampMillis": "1686606581228",
+ "dateTimestamp": "Wed Jun 14 16:03:29 2023",
+ "timestampMillis": "1686776609989",
  "status": {
-  "cmdId": "835589e8-cec4-46ce-9e3a-6676b842849b",
+  "cmdId": "bf6605f1-a3ae-4628-a823-804e0c461a90",
   "state": "CS_RUNNING"
  }
 }
@@ -51,8 +51,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Mon Jun 12 16:49:44 2023",
- "timestampMillis": "1686606584784",
+ "dateTimestamp": "Wed Jun 14 16:03:34 2023",
+ "timestampMillis": "1686776614254",
  "buildSummary": {
   "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
   "hardwareDsa": "",
@@ -87,10 +87,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "Mon Jun 12 16:49:44 2023",
- "timestampMillis": "1686606584788",
+ "dateTimestamp": "Wed Jun 14 16:03:34 2023",
+ "timestampMillis": "1686776614259",
  "buildStep": {
-  "cmdId": "794eacea-cb5c-4b4f-be40-6bb9c6fec1c5",
+  "cmdId": "495b4425-8910-4fde-996f-d5af86d75949",
   "name": "vitis_hls",
   "logFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/vitis_hls.log",
   "commandLine": "vitis_hls -f /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced.tcl -messageDb vitis_hls.pb",
@@ -109,10 +109,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Jun 12 16:49:44 2023",
- "timestampMillis": "1686606584789",
+ "dateTimestamp": "Wed Jun 14 16:03:34 2023",
+ "timestampMillis": "1686776614259",
  "status": {
-  "cmdId": "794eacea-cb5c-4b4f-be40-6bb9c6fec1c5",
+  "cmdId": "495b4425-8910-4fde-996f-d5af86d75949",
   "state": "CS_RUNNING"
  }
 }
@@ -120,30 +120,100 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Mon Jun 12 16:50:49 2023",
- "timestampMillis": "1686606649490",
+ "dateTimestamp": "Wed Jun 14 16:05:28 2023",
+ "timestampMillis": "1686776728663",
  "status": {
-  "cmdId": "794eacea-cb5c-4b4f-be40-6bb9c6fec1c5",
-  "state": "CS_FAILED"
- }
-}
-</ENTRY>
-<ENTRY>
-{
- "type": "ET_Status",
- "dateTimestamp": "Mon Jun 12 16:50:49 2023",
- "timestampMillis": "1686606649492",
- "status": {
-  "cmdId": "835589e8-cec4-46ce-9e3a-6676b842849b",
-  "state": "CS_FAILED"
+  "cmdId": "495b4425-8910-4fde-996f-d5af86d75949",
+  "state": "CS_PASSED"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Jun 12 16:50:49 2023",
- "timestampMillis": "1686606649660",
+ "dateTimestamp": "Wed Jun 14 16:05:28 2023",
+ "timestampMillis": "1686776728724",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced/solution/.autopilot/db/cemit_replaced.design.xml",
+  "name": "cemit_replaced",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_REPORT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 14 16:05:28 2023",
+ "timestampMillis": "1686776728725",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced/solution/.autopilot/db/.message_syn.xml",
+  "name": "cemit_replaced",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_DRC_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 14 16:05:28 2023",
+ "timestampMillis": "1686776728726",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/cemit_replaced/hls_reports/cemit_replaced_csynth.rpt",
+  "name": "cemit_replaced",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 14 16:05:28 2023",
+ "timestampMillis": "1686776728726",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced/solution/syn/report/cemit_replaced_csynth.xml",
+  "name": "cemit_replaced",
+  "fileType": "XML",
+  "reportType": "KERNEL_HLS_CSYNTH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 14 16:05:28 2023",
+ "timestampMillis": "1686776728749",
+ "report": {
+  "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/cemit_replaced/system_estimate_cemit_replaced.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jun 14 16:05:29 2023",
+ "timestampMillis": "1686776729219",
+ "status": {
+  "cmdId": "bf6605f1-a3ae-4628-a823-804e0c461a90",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jun 14 16:05:29 2023",
+ "timestampMillis": "1686776729386",
  "report": {
   "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/reports/cemit_replaced/v++_compile_cemit_replaced_guidance.html",
   "name": "",
@@ -156,8 +226,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Mon Jun 12 16:50:49 2023",
- "timestampMillis": "1686606649661",
+ "dateTimestamp": "Wed Jun 14 16:05:29 2023",
+ "timestampMillis": "1686776729387",
  "report": {
   "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/v++_compile_cemit_replaced_guidance.pb3",
   "name": "",

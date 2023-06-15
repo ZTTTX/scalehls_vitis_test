@@ -64,10 +64,10 @@ newFuncRoot:2 %br_ln0 = br void %for.inc
 
 <Node id="6" bw="2" op_0_bw="2" op_1_bw="0">
 <![CDATA[
-for.inc:0 %i_5 = load i2 %i
+for.inc:0 %i_7 = load i2 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_5"/></StgValue>
+<StgValue><ssdm name="i_7"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -94,7 +94,7 @@ for.inc:1 %l_flush_Array_addr = getelementptr i1 %l_flush_Array, i64 0, i64 1
 
 <Node id="8" bw="1" op_0_bw="2" op_1_bw="2">
 <![CDATA[
-for.inc:2 %icmp_ln89 = icmp_eq  i2 %i_5, i2 2
+for.inc:2 %icmp_ln89 = icmp_eq  i2 %i_7, i2 2
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln89"/></StgValue>
@@ -124,10 +124,10 @@ for.inc:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 2, i64
 
 <Node id="10" bw="2" op_0_bw="2" op_1_bw="2">
 <![CDATA[
-for.inc:4 %i_6 = add i2 %i_5, i2 1
+for.inc:4 %i_8 = add i2 %i_7, i2 1
 
 ]]></Node>
-<StgValue><ssdm name="i_6"/></StgValue>
+<StgValue><ssdm name="i_8"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -155,7 +155,7 @@ for.inc:5 %br_ln89 = br i1 %icmp_ln89, void %for.inc.split, void %for.end.exitSt
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.inc.split:0 %specpipeline_ln90 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_26
+for.inc.split:0 %specpipeline_ln90 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_33
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln90"/></StgValue>
@@ -171,7 +171,7 @@ for.inc.split:0 %specpipeline_ln90 = specpipeline void @_ssdm_op_SpecPipeline, i
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:1 %specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4
+for.inc.split:1 %specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln76"/></StgValue>
@@ -203,7 +203,7 @@ for.inc.split:2 %p_010 = memshiftread i1 @_ssdm_op_MemShiftRead.[2 x i1]P0A, i1 
 
 <Node id="16" bw="0" op_0_bw="2" op_1_bw="2" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.split:3 %store_ln89 = store i2 %i_6, i2 %i
+for.inc.split:3 %store_ln89 = store i2 %i_8, i2 %i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln89"/></StgValue>

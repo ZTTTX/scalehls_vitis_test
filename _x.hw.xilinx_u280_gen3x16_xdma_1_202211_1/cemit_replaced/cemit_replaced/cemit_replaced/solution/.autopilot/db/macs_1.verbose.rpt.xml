@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'macs_1'" level="0">
-<item name = "Date">Mon Jun 12 16:50:46 2023
+<item name = "Date">Wed Jun 14 16:04:45 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cemit_replaced</item>
@@ -32,7 +32,7 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="muls_2_U0">muls_2, ?, ?, ?, ?, ?, ?, no</column>
-<column name="adds_3_U0">adds_3, 2076, 2076, 6.919 us, 6.919 us, 2076, 2076, no</column>
+<column name="adds_3_U0">adds_3, 5148, 5148, 17.158 us, 17.158 us, 5148, 5148, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -51,7 +51,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, 133, 73, -</column>
-<column name="Instance">-, 10, 2593, 2193, -</column>
+<column name="Instance">-, 10, 2594, 2194, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, -, -</column>
 <column name="Register">-, -, -, -, -</column>
@@ -65,7 +65,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="adds_3_U0">adds_3, 0, 4, 1758, 1339, 0</column>
+<column name="adds_3_U0">adds_3, 0, 4, 1759, 1340, 0</column>
 <column name="muls_2_U0">muls_2, 0, 6, 835, 854, 0</column>
 </table>
 </item>

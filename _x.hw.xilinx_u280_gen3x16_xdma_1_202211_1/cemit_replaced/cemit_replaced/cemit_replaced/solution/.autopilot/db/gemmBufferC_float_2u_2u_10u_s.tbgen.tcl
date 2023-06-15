@@ -77,14 +77,14 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "l_sum3", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0","-1","-1"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30", "Port" : "l_sum3", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
+					{"ID" : "3", "SubInstance" : "grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30", "Port" : "l_sum3", "Inst_start_state" : "1", "Inst_end_state" : "2"}]},
 			{"Name" : "l_mat4", "Type" : "Fifo", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "2", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "5", "SubInstance" : "grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40", "Port" : "l_mat4", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}]},
+					{"ID" : "5", "SubInstance" : "grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40", "Port" : "l_mat4", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.l_bufferC_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.l_bufferC_1_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30", "Parent" : "0", "Child" : ["4"],
-		"CDFG" : "gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2",
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30", "Parent" : "0", "Child" : ["4"],
+		"CDFG" : "gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -104,11 +104,11 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "l_sum3_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_93_1_VITIS_LOOP_94_2", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_105_1_VITIS_LOOP_106_2", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2_fu_30.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40", "Parent" : "0", "Child" : ["6"],
-		"CDFG" : "gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8",
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2_fu_30.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40", "Parent" : "0", "Child" : ["6"],
+		"CDFG" : "gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -128,20 +128,20 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "l_mat4_blk_n", "Type" : "RtlSignal"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_119_8", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_131_8", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8_fu_40.flow_control_loop_pipe_sequential_init_U", "Parent" : "5"}]}
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8_fu_40.flow_control_loop_pipe_sequential_init_U", "Parent" : "5"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	gemmBufferC_float_2u_2u_10u_s {
 		l_sum3 {Type I LastRead 1 FirstWrite -1}
 		l_mat4 {Type O LastRead -1 FirstWrite 1}}
-	gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_93_1_VITIS_LOOP_94_2 {
+	gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_105_1_VITIS_LOOP_106_2 {
 		l_bufferC_1 {Type O LastRead -1 FirstWrite 1}
 		l_bufferC {Type O LastRead -1 FirstWrite 1}
 		l_sum3 {Type I LastRead 1 FirstWrite -1}}
-	gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_119_8 {
+	gemmBufferC_float_2u_2u_10u_Pipeline_VITIS_LOOP_131_8 {
 		l_bufferC {Type I LastRead 0 FirstWrite -1}
 		l_bufferC_1 {Type I LastRead 0 FirstWrite -1}
 		l_mat4 {Type O LastRead -1 FirstWrite 1}}}

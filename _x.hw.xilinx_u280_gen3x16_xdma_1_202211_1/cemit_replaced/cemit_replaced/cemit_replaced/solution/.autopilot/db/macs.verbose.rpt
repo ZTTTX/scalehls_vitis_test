@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'macs'
 ================================================================
-* Date:           Mon Jun 12 16:50:45 2023
+* Date:           Wed Jun 14 16:04:44 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cemit_replaced
@@ -34,13 +34,13 @@
 
     + Detail: 
         * Instance: 
-        +---------+-------+---------+---------+----------+----------+------+------+---------+
-        |         |       |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
-        | Instance| Module|   min   |   max   |    min   |    max   |  min |  max |   Type  |
-        +---------+-------+---------+---------+----------+----------+------+------+---------+
-        |muls_U0  |muls   |        ?|        ?|         ?|         ?|     ?|     ?|       no|
-        |adds_U0  |adds   |     2076|     2076|  6.919 us|  6.919 us|  2076|  2076|       no|
-        +---------+-------+---------+---------+----------+----------+------+------+---------+
+        +---------+-------+---------+---------+-----------+-----------+------+------+---------+
+        |         |       |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        | Instance| Module|   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +---------+-------+---------+---------+-----------+-----------+------+------+---------+
+        |muls_U0  |muls   |        ?|        ?|          ?|          ?|     ?|     ?|       no|
+        |adds_U0  |adds   |     5148|     5148|  17.158 us|  17.158 us|  5148|  5148|       no|
+        +---------+-------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
         N/A
@@ -57,12 +57,12 @@
 |DSP                  |        -|     -|        -|        -|    -|
 |Expression           |        -|     -|        0|        6|    -|
 |FIFO                 |        -|     -|      133|       73|    -|
-|Instance             |        -|    10|     2593|     2211|    -|
+|Instance             |        -|    10|     2594|     2212|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|        9|    -|
 |Register             |        -|     -|        1|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|    10|     2727|     2299|    0|
+|Total                |        0|    10|     2728|     2300|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -78,10 +78,10 @@
     +---------+-------+---------+----+------+------+-----+
     | Instance| Module| BRAM_18K| DSP|  FF  |  LUT | URAM|
     +---------+-------+---------+----+------+------+-----+
-    |adds_U0  |adds   |        0|   4|  1758|  1339|    0|
+    |adds_U0  |adds   |        0|   4|  1759|  1340|    0|
     |muls_U0  |muls   |        0|   6|   835|   872|    0|
     +---------+-------+---------+----+------+------+-----+
-    |Total    |       |        0|  10|  2593|  2211|    0|
+    |Total    |       |        0|  10|  2594|  2212|    0|
     +---------+-------+---------+----+------+------+-----+
 
     * DSP: 
@@ -211,13 +211,13 @@ State 3 <SV = 2> <Delay = 0.00>
 ST_3 : Operation 8 [2/2] (0.00ns)   --->   "%call_ln228 = call void @adds, i64 %l_mul, i64 %l_sum_0" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:228]   --->   Operation 8 'call' 'call_ln228' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln225 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_26" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:225]   --->   Operation 9 'specdataflowpipeline' 'specdataflowpipeline_ln225' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_dataB_1, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_dataB_0, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i34 %l_dataA_0, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_sum_0, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 9 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln225 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_33" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:225]   --->   Operation 9 'specdataflowpipeline' 'specdataflowpipeline_ln225' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_dataB_1, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_dataB_0, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i34 %l_dataA_0, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_sum_0, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @l_mul_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i64 %l_mul, i64 %l_mul"   --->   Operation 14 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_mul, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_mul, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln228 = call void @adds, i64 %l_mul, i64 %l_sum_0" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:228]   --->   Operation 16 'call' 'call_ln228' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln229 = ret" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:229]   --->   Operation 17 'ret' 'ret_ln229' <Predicate = true> <Delay = 0.00>
 
@@ -354,7 +354,7 @@ ret_ln229                  (ret                 ) [ 00000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_26"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </bind>
 </comp>
 
@@ -372,7 +372,7 @@ ret_ln229                  (ret                 ) [ 00000]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_23"/></StgValue>
 </bind>
 </comp>
 
@@ -522,9 +522,9 @@ ret_ln229                  (ret                 ) [ 00000]
 | Operation| Functional Unit|   DSP   |  Delay  |    FF   |   LUT   |
 |----------|----------------|---------|---------|---------|---------|
 |   call   | grp_muls_fu_40 |    6    |  1.548  |   874   |   439   |
-|          | grp_adds_fu_51 |    4    |  2.782  |   1797  |   1015  |
+|          | grp_adds_fu_51 |    4    |  2.782  |   1798  |   1016  |
 |----------|----------------|---------|---------|---------|---------|
-|   Total  |                |    10   |   4.33  |   2671  |   1454  |
+|   Total  |                |    10   |   4.33  |   2672  |   1455  |
 |----------|----------------|---------|---------|---------|---------|
 
 Memories:
@@ -552,10 +552,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           |   DSP  |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |   10   |    4   |  2671  |  1454  |
+|  Function |   10   |    4   |  2672  |  1455  |
 |   Memory  |    -   |    -   |    -   |    -   |
 |Multiplexer|    -   |    -   |    -   |    -   |
 |  Register |    -   |    -   |   64   |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |   10   |    4   |  2735  |  1454  |
+|   Total   |   10   |    4   |  2736  |  1455  |
 +-----------+--------+--------+--------+--------+

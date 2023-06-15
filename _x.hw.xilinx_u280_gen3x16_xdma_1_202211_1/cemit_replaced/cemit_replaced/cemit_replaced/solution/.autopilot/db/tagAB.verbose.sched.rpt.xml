@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tagAB'" level="0">
-<item name = "Date">Mon Jun 12 16:50:36 2023
+<item name = "Date">Wed Jun 14 16:04:33 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cemit_replaced</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">2061, 2061, 6.869 us, 6.869 us, 2061, 2061, no</column>
+<column name="">5133, 5133, 17.108 us, 17.108 us, 5133, 5133, no</column>
 </table>
 </item>
 <item name = "Detail">

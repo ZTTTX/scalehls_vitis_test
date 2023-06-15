@@ -20,7 +20,7 @@
 
 using namespace xf::blas;
 
-void uut_top(uint32_t p_m,
+void gemm_test(uint32_t p_m,
              uint32_t p_n,
              uint32_t p_k,
              BLAS_dataType p_alpha,

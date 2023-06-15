@@ -70,7 +70,7 @@
               <coreName>FIFO_SRL</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>791819130</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -88,7 +88,7 @@
             <Obj>
               <type>1</type>
               <id>3</id>
-              <name>l_strSum7_i</name>
+              <name>l_strSum10</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -106,7 +106,7 @@
               <coreName>FIFO_SRL</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>791819130</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -149,7 +149,7 @@
               <coreId>1966219308</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -283,7 +283,7 @@
             <Obj>
               <type>0</type>
               <id>11</id>
-              <name>i_11</name>
+              <name>i_14</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>62</lineNumber>
@@ -315,10 +315,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797732592</coreId>
+              <coreId>1937010273</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -388,7 +388,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.49</m_delay>
+          <m_delay>0.65</m_delay>
           <m_topoIndex>5</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -397,7 +397,7 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>i_12</name>
+              <name>i_15</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>62</lineNumber>
@@ -422,7 +422,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>i</originalName>
-              <rtlName>i_12_fu_91_p2</rtlName>
+              <rtlName>i_15_fu_91_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -432,7 +432,7 @@
               <coreId>1</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -445,7 +445,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>0.57</m_delay>
+          <m_delay>0.70</m_delay>
           <m_topoIndex>6</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -486,7 +486,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797755328</coreId>
+              <coreId>2861086448</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -601,7 +601,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797169664</coreId>
+              <coreId>2860052640</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -657,7 +657,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797082288</coreId>
+              <coreId>2860052032</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -713,7 +713,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>796141040</coreId>
+              <coreId>2860021408</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -772,7 +772,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>796134688</coreId>
+              <coreId>2860021408</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -885,7 +885,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797758432</coreId>
+              <coreId>2859386224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -941,7 +941,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797082288</coreId>
+              <coreId>1768713801</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -997,7 +997,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>797289448</coreId>
+              <coreId>1869833586</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1056,7 +1056,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1314013527</coreId>
+              <coreId>736</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1105,7 +1105,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>l_result</originalName>
-              <rtlName>fadd_32ns_32ns_32_7_full_dsp_1_U119</rtlName>
+              <rtlName>fadd_32ns_32ns_32_7_full_dsp_1_U135</rtlName>
               <control>auto</control>
               <opType>fadd</opType>
               <implIndex>fulldsp</implIndex>
@@ -1162,7 +1162,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>l_result</originalName>
-              <rtlName>fadd_32ns_32ns_32_7_full_dsp_1_U120</rtlName>
+              <rtlName>fadd_32ns_32ns_32_7_full_dsp_1_U136</rtlName>
               <control>auto</control>
               <opType>fadd</opType>
               <implIndex>fulldsp</implIndex>
@@ -1226,7 +1226,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>792706368</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1250,7 +1250,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>l_val_V_10</name>
+              <name>l_val_V_12</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>132</lineNumber>
@@ -1275,14 +1275,14 @@
                 </item>
               </inlineStackInfo>
               <originalName>l_val.V</originalName>
-              <rtlName>l_val_V_10_fu_149_p1</rtlName>
+              <rtlName>l_val_V_12_fu_149_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2858409936</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1331,14 +1331,14 @@
                 </item>
               </inlineStackInfo>
               <originalName>__Result__</originalName>
-              <rtlName>l_strSum7_i_din</rtlName>
+              <rtlName>l_strSum10_din</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>2860297808</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1364,7 +1364,7 @@
             <Obj>
               <type>0</type>
               <id>34</id>
-              <name>l_strSum7_i_write_ln74</name>
+              <name>l_strSum10_write_ln74</name>
               <fileName>/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/axpy.hpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>74</lineNumber>
@@ -1454,7 +1454,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>6775156</coreId>
+              <coreId>2858476256</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1513,7 +1513,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>793096064</coreId>
+              <coreId>1965059425</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1569,7 +1569,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>795848256</coreId>
+              <coreId>2860288960</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1614,7 +1614,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1645,10 +1645,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>796135936</coreId>
+              <coreId>1818639481</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -1676,13 +1676,13 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>796136048</coreId>
+              <coreId>176</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>5</content>
+          <content>10</content>
         </item>
         <item class_id_reference="16" object_id="_33">
           <Value>
@@ -1707,10 +1707,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>795767584</coreId>
+              <coreId>2861605456</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>3</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -1738,7 +1738,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>795769392</coreId>
+              <coreId>2858814688</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1769,7 +1769,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2015830126</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1803,7 +1803,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>796859168</coreId>
+            <coreId>1818455657</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1836,7 +1836,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>794777824</coreId>
+            <coreId>1818455657</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1870,7 +1870,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>794777824</coreId>
+            <coreId>1818455657</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -1918,7 +1918,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>793097392</coreId>
+            <coreId>859599982</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2278,8 +2278,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>15</mMinLatency>
-        <mMaxLatency>15</mMaxLatency>
+        <mMinLatency>20</mMinLatency>
+        <mMaxLatency>20</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -2323,10 +2323,10 @@
         </basic_blocks>
         <mII>1</mII>
         <mDepth>10</mDepth>
-        <mMinTripCount>5</mMinTripCount>
-        <mMaxTripCount>5</mMaxTripCount>
-        <mMinLatency>13</mMinLatency>
-        <mMaxLatency>13</mMaxLatency>
+        <mMinTripCount>10</mMinTripCount>
+        <mMaxTripCount>10</mMaxTripCount>
+        <mMinLatency>18</mMinLatency>
+        <mMaxLatency>18</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -2794,7 +2794,7 @@
         <count>3</count>
         <item_version>0</item_version>
         <item class_id="36" tracking_level="0" version="0">
-          <first>fadd_32ns_32ns_32_7_full_dsp_1_U119 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_7_full_dsp_1_U135 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
           <second class_id="37" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -2813,7 +2813,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_7_full_dsp_1_U120 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_7_full_dsp_1_U136 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2889,7 +2889,7 @@
           </second>
         </item>
         <item>
-          <first>ap_condition_183 ( and ) </first>
+          <first>ap_condition_185 ( and ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2935,13 +2935,13 @@
           </second>
         </item>
         <item>
-          <first>i_12_fu_91_p2 ( + ) </first>
+          <first>i_15_fu_91_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -2953,7 +2953,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>10</second>
+              <second>12</second>
             </item>
           </second>
         </item>
@@ -2964,11 +2964,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>FF</first>
@@ -2976,7 +2976,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>8</second>
+              <second>9</second>
             </item>
           </second>
         </item>
@@ -3039,7 +3039,7 @@
           </second>
         </item>
         <item>
-          <first>ap_sig_allocacmp_i_11</first>
+          <first>ap_sig_allocacmp_i_14</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3049,11 +3049,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>6</second>
+              <second>8</second>
             </item>
             <item>
               <first>LUT</first>
@@ -3072,11 +3072,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>6</second>
+              <second>8</second>
             </item>
             <item>
               <first>LUT</first>
@@ -3131,7 +3131,7 @@
           </second>
         </item>
         <item>
-          <first>l_strSum7_i_blk_n</first>
+          <first>l_strSum10_blk_n</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3525,7 +3525,7 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>3</second>
+              <second>4</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -3533,7 +3533,7 @@
             </item>
             <item>
               <first>FF</first>
-              <second>3</second>
+              <second>4</second>
             </item>
           </second>
         </item>
@@ -3656,14 +3656,14 @@
         <count>3</count>
         <item_version>0</item_version>
         <item>
-          <first>fadd_32ns_32ns_32_7_full_dsp_1_U119</first>
+          <first>fadd_32ns_32ns_32_7_full_dsp_1_U135</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_7_full_dsp_1_U120</first>
+          <first>fadd_32ns_32ns_32_7_full_dsp_1_U136</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -3681,7 +3681,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="40" tracking_level="0" version="0">
-          <first>fadd_32ns_32ns_32_7_full_dsp_1_U119 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_7_full_dsp_1_U135 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3689,7 +3689,7 @@
           </second>
         </item>
         <item>
-          <first>fadd_32ns_32ns_32_7_full_dsp_1_U120 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
+          <first>fadd_32ns_32ns_32_7_full_dsp_1_U136 (fadd_32ns_32ns_32_7_full_dsp_1)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3701,7 +3701,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>i_12_fu_91_p2 ( + ) </first>
+          <first>i_15_fu_91_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4165,7 +4165,7 @@
       <count>14</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>i_12_fu_91</first>
+        <first>i_15_fu_91</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4245,7 +4245,7 @@
         </second>
       </item>
       <item>
-        <first>l_val_V_10_fu_149</first>
+        <first>l_val_V_12_fu_149</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4313,7 +4313,7 @@
       <count>6</count>
       <item_version>0</item_version>
       <item>
-        <first>i_11_load_fu_82</first>
+        <first>i_14_load_fu_82</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4611,7 +4611,7 @@
         </second>
       </item>
       <item>
-        <first>l_strSum7_i</first>
+        <first>l_strSum10</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

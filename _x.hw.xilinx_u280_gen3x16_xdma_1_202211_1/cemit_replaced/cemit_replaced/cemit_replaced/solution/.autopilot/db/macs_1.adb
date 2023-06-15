@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>791819130</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -335,7 +335,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1667853423</coreId>
+              <coreId>2856718832</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -380,7 +380,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>448</coreId>
+              <coreId>2857771648</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -411,7 +411,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>2003316581</coreId>
+              <coreId>2856307568</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -442,7 +442,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1886999653</coreId>
+              <coreId>224</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -476,7 +476,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>793336544</coreId>
+            <coreId>1818455657</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -895,11 +895,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>1758</second>
+              <second>1759</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>1339</second>
+              <second>1340</second>
             </item>
           </second>
         </item>

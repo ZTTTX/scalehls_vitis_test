@@ -47,9 +47,9 @@ reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg   [1:0] i_fu_36;
-wire   [1:0] i_8_fu_62_p2;
+wire   [1:0] i_10_fu_62_p2;
 wire    ap_loop_init;
-reg   [1:0] ap_sig_allocacmp_i_7;
+reg   [1:0] ap_sig_allocacmp_i_9;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -102,7 +102,7 @@ end
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         if ((icmp_ln141_fu_56_p2 == 1'd0)) begin
-            i_fu_36 <= i_8_fu_62_p2;
+            i_fu_36 <= i_10_fu_62_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_fu_36 <= 2'd0;
         end
@@ -151,9 +151,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_i_7 = 2'd0;
+        ap_sig_allocacmp_i_9 = 2'd0;
     end else begin
-        ap_sig_allocacmp_i_7 = i_fu_36;
+        ap_sig_allocacmp_i_9 = i_fu_36;
     end
 end
 
@@ -192,9 +192,9 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign i_8_fu_62_p2 = (ap_sig_allocacmp_i_7 + 2'd1);
+assign i_10_fu_62_p2 = (ap_sig_allocacmp_i_9 + 2'd1);
 
-assign icmp_ln141_fu_56_p2 = ((ap_sig_allocacmp_i_7 == 2'd2) ? 1'b1 : 1'b0);
+assign icmp_ln141_fu_56_p2 = ((ap_sig_allocacmp_i_9 == 2'd2) ? 1'b1 : 1'b0);
 
 assign l_flush_Array_address0 = 64'd1;
 

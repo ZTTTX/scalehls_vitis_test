@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'tagAB'
 ================================================================
-* Date:           Mon Jun 12 16:50:36 2023
+* Date:           Wed Jun 14 16:04:33 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cemit_replaced
@@ -25,12 +25,12 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+------+------+---------+
-    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
-    |   min   |   max   |    min   |    max   |  min |  max |   Type  |
-    +---------+---------+----------+----------+------+------+---------+
-    |     2061|     2061|  6.869 us|  6.869 us|  2061|  2061|       no|
-    +---------+---------+----------+----------+------+------+---------+
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     5133|     5133|  17.108 us|  17.108 us|  5133|  5133|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
         * Instance: 
@@ -80,23 +80,23 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 6 'wait' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%call_ln0 = call void @tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2, i64 %l_strA4_i, i64 %l_strB5_i, i66 %l_aStr1, i64 %l_bStr2"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 7 [2/2] (0.00ns)   --->   "%call_ln0 = call void @tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2, i64 %l_strA7, i64 %l_strB8, i66 %l_aStr1, i64 %l_bStr2"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 2 <SV = 1> <Delay = 0.00>
-ST_2 : Operation 8 [1/2] (0.00ns)   --->   "%call_ln0 = call void @tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2, i64 %l_strA4_i, i64 %l_strB5_i, i66 %l_aStr1, i64 %l_bStr2"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 8 [1/2] (0.00ns)   --->   "%call_ln0 = call void @tagAB_Pipeline_VITIS_LOOP_271_1_VITIS_LOOP_272_2, i64 %l_strA7, i64 %l_strB8, i66 %l_aStr1, i64 %l_bStr2"   --->   Operation 8 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%empty_45 = wait i32 @_ssdm_op_Wait"   --->   Operation 9 'wait' 'empty_45' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%empty_52 = wait i32 @_ssdm_op_Wait"   --->   Operation 9 'wait' 'empty_52' <Predicate = true> <Delay = 0.00>
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%empty_46 = wait i32 @_ssdm_op_Wait"   --->   Operation 10 'wait' 'empty_46' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%empty_53 = wait i32 @_ssdm_op_Wait"   --->   Operation 10 'wait' 'empty_53' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 11 [2/2] (0.00ns)   --->   "%call_ln0 = call void @tagAB_Pipeline_VITIS_LOOP_283_3, i66 %l_aStr1, i64 %l_bStr2"   --->   Operation 11 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_bStr2, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %l_aStr1, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strA4_i, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strB5_i, void @empty_11, i32 0, i32 0, void @empty_26, i32 0, i32 0, void @empty_26, void @empty_26, void @empty_26, i32 0, i32 0, i32 0, i32 0, void @empty_26, void @empty_26, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_bStr2, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i66 %l_aStr1, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strA7, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %l_strB8, void @empty_23, i32 0, i32 0, void @empty_33, i32 0, i32 0, void @empty_33, void @empty_33, void @empty_33, i32 0, i32 0, i32 0, i32 0, void @empty_33, void @empty_33, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln0 = call void @tagAB_Pipeline_VITIS_LOOP_283_3, i66 %l_aStr1, i64 %l_bStr2"   --->   Operation 16 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln292 = ret" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/gemm/systolicArray.hpp:292]   --->   Operation 17 'ret' 'ret_ln292' <Predicate = true> <Delay = 0.00>
 

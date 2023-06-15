@@ -70,37 +70,37 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 100 \
-    name l_strA4_i \
+    id 116 \
+    name l_strA7 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strA4_i \
+    corename dc_l_strA7 \
     op interface \
-    ports { l_strA4_i_dout { I 64 vector } l_strA4_i_empty_n { I 1 bit } l_strA4_i_read { O 1 bit } } \
+    ports { l_strA7_dout { I 64 vector } l_strA7_empty_n { I 1 bit } l_strA7_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 101 \
-    name l_strB5_i \
+    id 117 \
+    name l_strB8 \
     type fifo \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_l_strB5_i \
+    corename dc_l_strB8 \
     op interface \
-    ports { l_strB5_i_dout { I 64 vector } l_strB5_i_empty_n { I 1 bit } l_strB5_i_read { O 1 bit } } \
+    ports { l_strB8_dout { I 64 vector } l_strB8_empty_n { I 1 bit } l_strB8_read { O 1 bit } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 102 \
+    id 118 \
     name l_sum3 \
     type fifo \
     dir O \

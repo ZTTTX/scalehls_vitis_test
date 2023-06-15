@@ -342,7 +342,7 @@ for.cond.cleanup4.i:6 %trunc_ln633 = trunc i2 %select_ln633
 
 <Node id="26" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.cond.cleanup4.i:7 %specpipeline_ln635 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_26
+for.cond.cleanup4.i:7 %specpipeline_ln635 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_33
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln635"/></StgValue>
@@ -358,7 +358,7 @@ for.cond.cleanup4.i:7 %specpipeline_ln635 = specpipeline void @_ssdm_op_SpecPipe
 
 <Node id="27" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.cond.cleanup4.i:8 %specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3
+for.cond.cleanup4.i:8 %specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_25
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln76"/></StgValue>

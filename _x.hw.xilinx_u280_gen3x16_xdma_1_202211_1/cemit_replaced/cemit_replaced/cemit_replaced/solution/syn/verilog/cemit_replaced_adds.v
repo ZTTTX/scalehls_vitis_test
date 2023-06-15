@@ -183,11 +183,11 @@ reg    ap_loop_init_pp0_iter5_reg;
 reg   [8:0] ap_sig_allocacmp_k_load;
 reg   [31:0] empty_fu_62;
 reg   [31:0] ap_sig_allocacmp_p_load13;
-reg   [31:0] empty_67_fu_66;
+reg   [31:0] empty_77_fu_66;
 reg   [31:0] ap_sig_allocacmp_p_load;
-reg   [9:0] indvar_flatten_fu_70;
-wire   [9:0] add_ln193_fu_128_p2;
-reg   [9:0] ap_sig_allocacmp_indvar_flatten_load;
+reg   [10:0] indvar_flatten_fu_70;
+wire   [10:0] add_ln193_fu_128_p2;
+reg   [10:0] ap_sig_allocacmp_indvar_flatten_load;
 reg    ap_block_pp0_stage2_01001;
 reg   [31:0] grp_fu_87_p0;
 reg   [31:0] grp_fu_87_p1;
@@ -197,7 +197,7 @@ reg   [31:0] grp_fu_95_p0;
 reg   [31:0] grp_fu_95_p1;
 wire   [0:0] icmp_ln194_fu_190_p2;
 wire   [8:0] select_ln193_fu_196_p3;
-wire   [31:0] l_val_V_12_fu_262_p1;
+wire   [31:0] l_val_V_14_fu_262_p1;
 wire   [31:0] l_val_V_fu_259_p1;
 reg    grp_fu_87_ce;
 reg    grp_fu_91_ce;
@@ -240,7 +240,7 @@ cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_7_full_dsp_1_U46(
+fadd_32ns_32ns_32_7_full_dsp_1_U62(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_87_p0),
@@ -255,7 +255,7 @@ cemit_replaced_fadd_32ns_32ns_32_7_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_7_full_dsp_1_U47(
+fadd_32ns_32ns_32_7_full_dsp_1_U63(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_91_p0),
@@ -270,7 +270,7 @@ cemit_replaced_fadd_32ns_32ns_32_5_no_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_5_no_dsp_1_U48(
+fadd_32ns_32ns_32_5_no_dsp_1_U64(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_95_p0),
@@ -492,7 +492,7 @@ always @ (posedge ap_clk) begin
         if ((icmp_ln193_fu_122_p2 == 1'd0)) begin
             indvar_flatten_fu_70 <= add_ln193_fu_128_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            indvar_flatten_fu_70 <= 10'd0;
+            indvar_flatten_fu_70 <= 11'd0;
         end
     end
 end
@@ -513,7 +513,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage1_11001) & (ap_enable_reg_pp0_iter7 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         add40_1_reg_439 <= grp_fu_95_p2;
-        empty_67_fu_66 <= grp_fu_95_p2;
+        empty_77_fu_66 <= grp_fu_95_p2;
     end
 end
 
@@ -683,7 +683,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_loop_init == 1'b1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_indvar_flatten_load = 10'd0;
+        ap_sig_allocacmp_indvar_flatten_load = 11'd0;
     end else begin
         ap_sig_allocacmp_indvar_flatten_load = indvar_flatten_fu_70;
     end
@@ -701,7 +701,7 @@ always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage1) & (ap_enable_reg_pp0_iter7 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage1))) begin
         ap_sig_allocacmp_p_load = grp_fu_95_p2;
     end else begin
-        ap_sig_allocacmp_p_load = empty_67_fu_66;
+        ap_sig_allocacmp_p_load = empty_77_fu_66;
     end
 end
 
@@ -883,7 +883,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln193_fu_128_p2 = (ap_sig_allocacmp_indvar_flatten_load + 10'd1);
+assign add_ln193_fu_128_p2 = (ap_sig_allocacmp_indvar_flatten_load + 11'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -1039,7 +1039,7 @@ assign bitcast_ln110_20_fu_183_p1 = l_val_27_reg_359_pp0_iter4_reg;
 
 assign bitcast_ln110_fu_147_p1 = l_val_reg_304;
 
-assign icmp_ln193_fu_122_p2 = ((ap_sig_allocacmp_indvar_flatten_load == 10'd512) ? 1'b1 : 1'b0);
+assign icmp_ln193_fu_122_p2 = ((ap_sig_allocacmp_indvar_flatten_load == 11'd1280) ? 1'b1 : 1'b0);
 
 assign icmp_ln194_fu_190_p2 = ((ap_sig_allocacmp_k_load == 9'd256) ? 1'b1 : 1'b0);
 
@@ -1049,7 +1049,7 @@ assign icmp_ln217_fu_210_p2 = ((select_ln193_fu_196_p3 == 9'd255) ? 1'b1 : 1'b0)
 
 assign k_3_fu_216_p2 = (select_ln193_fu_196_p3 + 9'd1);
 
-assign l_sum_0_din = {{l_val_V_12_fu_262_p1}, {l_val_V_fu_259_p1}};
+assign l_sum_0_din = {{l_val_V_14_fu_262_p1}, {l_val_V_fu_259_p1}};
 
 assign l_val_22_fu_143_p1 = l_mul1_dout[31:0];
 
@@ -1057,7 +1057,7 @@ assign l_val_24_fu_163_p1 = l_mul1_dout[31:0];
 
 assign l_val_26_fu_167_p1 = l_mul1_dout[31:0];
 
-assign l_val_V_12_fu_262_p1 = add40_1_reg_439;
+assign l_val_V_14_fu_262_p1 = add40_1_reg_439;
 
 assign l_val_V_fu_259_p1 = add2_reg_434;
 

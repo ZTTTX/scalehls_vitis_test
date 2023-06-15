@@ -11,21 +11,24 @@ use IEEE.numeric_std.all;
 
 entity cemit_replaced_gemm_float_1024u_2u_10u_unsigned_int_s is
 port (
-    l_strA4_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strA4_i_empty_n : IN STD_LOGIC;
-    l_strA4_i_read : OUT STD_LOGIC;
-    l_strB5_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strB5_i_empty_n : IN STD_LOGIC;
-    l_strB5_i_read : OUT STD_LOGIC;
-    l_strC6_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strC6_i_empty_n : IN STD_LOGIC;
-    l_strC6_i_read : OUT STD_LOGIC;
-    l_strSum7_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
-    l_strSum7_i_full_n : IN STD_LOGIC;
-    l_strSum7_i_write : OUT STD_LOGIC;
+    ap_start : IN STD_LOGIC;
+    start_full_n : IN STD_LOGIC;
+    start_out : OUT STD_LOGIC;
+    start_write : OUT STD_LOGIC;
+    l_strA7_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strA7_empty_n : IN STD_LOGIC;
+    l_strA7_read : OUT STD_LOGIC;
+    l_strB8_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strB8_empty_n : IN STD_LOGIC;
+    l_strB8_read : OUT STD_LOGIC;
+    l_strC9_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strC9_empty_n : IN STD_LOGIC;
+    l_strC9_read : OUT STD_LOGIC;
+    l_strSum10_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+    l_strSum10_full_n : IN STD_LOGIC;
+    l_strSum10_write : OUT STD_LOGIC;
     ap_clk : IN STD_LOGIC;
     ap_rst : IN STD_LOGIC;
-    ap_start : IN STD_LOGIC;
     ap_done : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
@@ -36,14 +39,18 @@ end;
 architecture behav of cemit_replaced_gemm_float_1024u_2u_10u_unsigned_int_s is 
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_const_logic_1 : STD_LOGIC := '1';
+    constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
 attribute shreg_extract : string;
+    signal real_start : STD_LOGIC;
+    signal start_once_reg : STD_LOGIC := '0';
+    signal internal_ap_ready : STD_LOGIC;
     signal gemm_U0_ap_start : STD_LOGIC;
     signal gemm_U0_start_out : STD_LOGIC;
     signal gemm_U0_start_write : STD_LOGIC;
-    signal gemm_U0_l_strA4_i_read : STD_LOGIC;
-    signal gemm_U0_l_strB5_i_read : STD_LOGIC;
+    signal gemm_U0_l_strA7_read : STD_LOGIC;
+    signal gemm_U0_l_strB8_read : STD_LOGIC;
     signal gemm_U0_l_sum3_din : STD_LOGIC_VECTOR (63 downto 0);
     signal gemm_U0_l_sum3_write : STD_LOGIC;
     signal gemm_U0_ap_done : STD_LOGIC;
@@ -63,7 +70,7 @@ attribute shreg_extract : string;
     signal scal_float_2u_unsigned_int_U0_ap_continue : STD_LOGIC;
     signal scal_float_2u_unsigned_int_U0_ap_idle : STD_LOGIC;
     signal scal_float_2u_unsigned_int_U0_ap_ready : STD_LOGIC;
-    signal scal_float_2u_unsigned_int_U0_l_strC6_i_read : STD_LOGIC;
+    signal scal_float_2u_unsigned_int_U0_l_strC9_read : STD_LOGIC;
     signal scal_float_2u_unsigned_int_U0_l_betaC5_din : STD_LOGIC_VECTOR (63 downto 0);
     signal scal_float_2u_unsigned_int_U0_l_betaC5_write : STD_LOGIC;
     signal scal_float_2u_unsigned_int_U0_start_out : STD_LOGIC;
@@ -75,8 +82,8 @@ attribute shreg_extract : string;
     signal axpy_float_2u_unsigned_int_U0_ap_ready : STD_LOGIC;
     signal axpy_float_2u_unsigned_int_U0_l_mat4_read : STD_LOGIC;
     signal axpy_float_2u_unsigned_int_U0_l_betaC5_read : STD_LOGIC;
-    signal axpy_float_2u_unsigned_int_U0_l_strSum7_i_din : STD_LOGIC_VECTOR (63 downto 0);
-    signal axpy_float_2u_unsigned_int_U0_l_strSum7_i_write : STD_LOGIC;
+    signal axpy_float_2u_unsigned_int_U0_l_strSum10_din : STD_LOGIC_VECTOR (63 downto 0);
+    signal axpy_float_2u_unsigned_int_U0_l_strSum10_write : STD_LOGIC;
     signal l_sum_full_n : STD_LOGIC;
     signal l_sum_dout : STD_LOGIC_VECTOR (63 downto 0);
     signal l_sum_num_data_valid : STD_LOGIC_VECTOR (1 downto 0);
@@ -113,12 +120,12 @@ attribute shreg_extract : string;
         start_full_n : IN STD_LOGIC;
         start_out : OUT STD_LOGIC;
         start_write : OUT STD_LOGIC;
-        l_strA4_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strA4_i_empty_n : IN STD_LOGIC;
-        l_strA4_i_read : OUT STD_LOGIC;
-        l_strB5_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strB5_i_empty_n : IN STD_LOGIC;
-        l_strB5_i_read : OUT STD_LOGIC;
+        l_strA7_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strA7_empty_n : IN STD_LOGIC;
+        l_strA7_read : OUT STD_LOGIC;
+        l_strB8_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strB8_empty_n : IN STD_LOGIC;
+        l_strB8_read : OUT STD_LOGIC;
         l_sum3_din : OUT STD_LOGIC_VECTOR (63 downto 0);
         l_sum3_full_n : IN STD_LOGIC;
         l_sum3_write : OUT STD_LOGIC;
@@ -163,9 +170,11 @@ attribute shreg_extract : string;
         ap_continue : IN STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        l_strC6_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strC6_i_empty_n : IN STD_LOGIC;
-        l_strC6_i_read : OUT STD_LOGIC;
+        l_strC9_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strC9_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strC9_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strC9_empty_n : IN STD_LOGIC;
+        l_strC9_read : OUT STD_LOGIC;
         l_betaC5_din : OUT STD_LOGIC_VECTOR (63 downto 0);
         l_betaC5_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
         l_betaC5_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
@@ -195,9 +204,11 @@ attribute shreg_extract : string;
         l_betaC5_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
         l_betaC5_empty_n : IN STD_LOGIC;
         l_betaC5_read : OUT STD_LOGIC;
-        l_strSum7_i_din : OUT STD_LOGIC_VECTOR (63 downto 0);
-        l_strSum7_i_full_n : IN STD_LOGIC;
-        l_strSum7_i_write : OUT STD_LOGIC );
+        l_strSum10_din : OUT STD_LOGIC_VECTOR (63 downto 0);
+        l_strSum10_num_data_valid : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strSum10_fifo_cap : IN STD_LOGIC_VECTOR (1 downto 0);
+        l_strSum10_full_n : IN STD_LOGIC;
+        l_strSum10_write : OUT STD_LOGIC );
     end component;
 
 
@@ -256,12 +267,12 @@ begin
         start_full_n => start_for_gemmBufferC_float_2u_2u_10u_U0_full_n,
         start_out => gemm_U0_start_out,
         start_write => gemm_U0_start_write,
-        l_strA4_i_dout => l_strA4_i_dout,
-        l_strA4_i_empty_n => l_strA4_i_empty_n,
-        l_strA4_i_read => gemm_U0_l_strA4_i_read,
-        l_strB5_i_dout => l_strB5_i_dout,
-        l_strB5_i_empty_n => l_strB5_i_empty_n,
-        l_strB5_i_read => gemm_U0_l_strB5_i_read,
+        l_strA7_dout => l_strA7_dout,
+        l_strA7_empty_n => l_strA7_empty_n,
+        l_strA7_read => gemm_U0_l_strA7_read,
+        l_strB8_dout => l_strB8_dout,
+        l_strB8_empty_n => l_strB8_empty_n,
+        l_strB8_read => gemm_U0_l_strB8_read,
         l_sum3_din => gemm_U0_l_sum3_din,
         l_sum3_full_n => l_sum_full_n,
         l_sum3_write => gemm_U0_l_sum3_write,
@@ -302,9 +313,11 @@ begin
         ap_continue => scal_float_2u_unsigned_int_U0_ap_continue,
         ap_idle => scal_float_2u_unsigned_int_U0_ap_idle,
         ap_ready => scal_float_2u_unsigned_int_U0_ap_ready,
-        l_strC6_i_dout => l_strC6_i_dout,
-        l_strC6_i_empty_n => l_strC6_i_empty_n,
-        l_strC6_i_read => scal_float_2u_unsigned_int_U0_l_strC6_i_read,
+        l_strC9_dout => l_strC9_dout,
+        l_strC9_num_data_valid => ap_const_lv2_0,
+        l_strC9_fifo_cap => ap_const_lv2_0,
+        l_strC9_empty_n => l_strC9_empty_n,
+        l_strC9_read => scal_float_2u_unsigned_int_U0_l_strC9_read,
         l_betaC5_din => scal_float_2u_unsigned_int_U0_l_betaC5_din,
         l_betaC5_num_data_valid => l_betaC_num_data_valid,
         l_betaC5_fifo_cap => l_betaC_fifo_cap,
@@ -332,9 +345,11 @@ begin
         l_betaC5_fifo_cap => l_betaC_fifo_cap,
         l_betaC5_empty_n => l_betaC_empty_n,
         l_betaC5_read => axpy_float_2u_unsigned_int_U0_l_betaC5_read,
-        l_strSum7_i_din => axpy_float_2u_unsigned_int_U0_l_strSum7_i_din,
-        l_strSum7_i_full_n => l_strSum7_i_full_n,
-        l_strSum7_i_write => axpy_float_2u_unsigned_int_U0_l_strSum7_i_write);
+        l_strSum10_din => axpy_float_2u_unsigned_int_U0_l_strSum10_din,
+        l_strSum10_num_data_valid => ap_const_lv2_0,
+        l_strSum10_fifo_cap => ap_const_lv2_0,
+        l_strSum10_full_n => l_strSum10_full_n,
+        l_strSum10_write => axpy_float_2u_unsigned_int_U0_l_strSum10_write);
 
     l_sum_U : component cemit_replaced_fifo_w64_d2_S_x1
     port map (
@@ -417,7 +432,7 @@ begin
             if (ap_rst = '1') then
                 ap_sync_reg_gemm_U0_ap_ready <= ap_const_logic_0;
             else
-                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
+                if (((real_start and ap_sync_ready) = ap_const_logic_1)) then 
                     ap_sync_reg_gemm_U0_ap_ready <= ap_const_logic_0;
                 else 
                     ap_sync_reg_gemm_U0_ap_ready <= ap_sync_gemm_U0_ap_ready;
@@ -433,10 +448,26 @@ begin
             if (ap_rst = '1') then
                 ap_sync_reg_scal_float_2u_unsigned_int_U0_ap_ready <= ap_const_logic_0;
             else
-                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
+                if (((real_start and ap_sync_ready) = ap_const_logic_1)) then 
                     ap_sync_reg_scal_float_2u_unsigned_int_U0_ap_ready <= ap_const_logic_0;
                 else 
                     ap_sync_reg_scal_float_2u_unsigned_int_U0_ap_ready <= ap_sync_scal_float_2u_unsigned_int_U0_ap_ready;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    start_once_reg_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                start_once_reg <= ap_const_logic_0;
+            else
+                if (((real_start = ap_const_logic_1) and (internal_ap_ready = ap_const_logic_0))) then 
+                    start_once_reg <= ap_const_logic_1;
+                elsif ((internal_ap_ready = ap_const_logic_1)) then 
+                    start_once_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -453,14 +484,36 @@ begin
     gemmBufferC_float_2u_2u_10u_U0_ap_continue <= ap_const_logic_1;
     gemmBufferC_float_2u_2u_10u_U0_ap_start <= start_for_gemmBufferC_float_2u_2u_10u_U0_empty_n;
     gemm_U0_ap_continue <= ap_const_logic_1;
-    gemm_U0_ap_start <= ((ap_sync_reg_gemm_U0_ap_ready xor ap_const_logic_1) and ap_start);
-    l_strA4_i_read <= gemm_U0_l_strA4_i_read;
-    l_strB5_i_read <= gemm_U0_l_strB5_i_read;
-    l_strC6_i_read <= scal_float_2u_unsigned_int_U0_l_strC6_i_read;
-    l_strSum7_i_din <= axpy_float_2u_unsigned_int_U0_l_strSum7_i_din;
-    l_strSum7_i_write <= axpy_float_2u_unsigned_int_U0_l_strSum7_i_write;
+    gemm_U0_ap_start <= (real_start and (ap_sync_reg_gemm_U0_ap_ready xor ap_const_logic_1));
+    internal_ap_ready <= ap_sync_ready;
+    l_strA7_read <= gemm_U0_l_strA7_read;
+    l_strB8_read <= gemm_U0_l_strB8_read;
+    l_strC9_read <= scal_float_2u_unsigned_int_U0_l_strC9_read;
+    l_strSum10_din <= axpy_float_2u_unsigned_int_U0_l_strSum10_din;
+    l_strSum10_write <= axpy_float_2u_unsigned_int_U0_l_strSum10_write;
+
+    real_start_assign_proc : process(ap_start, start_full_n, start_once_reg)
+    begin
+        if (((start_once_reg = ap_const_logic_0) and (start_full_n = ap_const_logic_0))) then 
+            real_start <= ap_const_logic_0;
+        else 
+            real_start <= ap_start;
+        end if; 
+    end process;
+
     scal_float_2u_unsigned_int_U0_ap_continue <= ap_const_logic_1;
-    scal_float_2u_unsigned_int_U0_ap_start <= ((ap_sync_reg_scal_float_2u_unsigned_int_U0_ap_ready xor ap_const_logic_1) and ap_start);
+    scal_float_2u_unsigned_int_U0_ap_start <= (real_start and (ap_sync_reg_scal_float_2u_unsigned_int_U0_ap_ready xor ap_const_logic_1));
     start_for_axpy_float_2u_unsigned_int_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_gemmBufferC_float_2u_2u_10u_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_out <= real_start;
+
+    start_write_assign_proc : process(real_start, start_once_reg)
+    begin
+        if (((start_once_reg = ap_const_logic_0) and (real_start = ap_const_logic_1))) then 
+            start_write <= ap_const_logic_1;
+        else 
+            start_write <= ap_const_logic_0;
+        end if; 
+    end process;
+
 end behav;

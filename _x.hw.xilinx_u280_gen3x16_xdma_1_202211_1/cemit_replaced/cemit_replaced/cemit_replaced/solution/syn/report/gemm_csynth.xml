@@ -37,8 +37,8 @@
 <AreaEstimates>
 <Resources>
 <DSP>20</DSP>
-<FF>6666</FF>
-<LUT>6111</LUT>
+<FF>6673</FF>
+<LUT>6117</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -163,8 +163,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strA4_i_dout</name>
-<Object>l_strA4_i</Object>
+<name>l_strA7_dout</name>
+<Object>l_strA7</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -174,8 +174,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strA4_i_empty_n</name>
-<Object>l_strA4_i</Object>
+<name>l_strA7_empty_n</name>
+<Object>l_strA7</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -185,8 +185,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strA4_i_read</name>
-<Object>l_strA4_i</Object>
+<name>l_strA7_read</name>
+<Object>l_strA7</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -196,8 +196,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strB5_i_dout</name>
-<Object>l_strB5_i</Object>
+<name>l_strB8_dout</name>
+<Object>l_strB8</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -207,8 +207,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strB5_i_empty_n</name>
-<Object>l_strB5_i</Object>
+<name>l_strB8_empty_n</name>
+<Object>l_strB8</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>
@@ -218,8 +218,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>l_strB5_i_read</name>
-<Object>l_strB5_i</Object>
+<name>l_strB8_read</name>
+<Object>l_strB8</Object>
 <Type>pointer</Type>
 <Scope></Scope>
 <IOProtocol>ap_fifo</IOProtocol>

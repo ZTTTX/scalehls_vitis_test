@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gemm_float_1024u_2u_10u_unsigned_int_s'" level="0">
-<item name = "Date">Mon Jun 12 16:50:41 2023
+<item name = "Date">Wed Jun 14 16:04:39 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cemit_replaced</item>
@@ -32,9 +32,9 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_gemm_fu_56">gemm, ?, ?, ?, ?, ?, ?, dataflow</column>
-<column name="grp_scal_float_2u_unsigned_int_s_fu_65">scal_float_2u_unsigned_int_s, 11, 11, 36.663 ns, 36.663 ns, 11, 11, no</column>
+<column name="grp_scal_float_2u_unsigned_int_s_fu_65">scal_float_2u_unsigned_int_s, 16, 16, 53.328 ns, 53.328 ns, 16, 16, no</column>
 <column name="grp_gemmBufferC_float_2u_2u_10u_s_fu_72">gemmBufferC_float_2u_2u_10u_s, 28, 28, 93.324 ns, 93.324 ns, 28, 28, no</column>
-<column name="grp_axpy_float_2u_unsigned_int_s_fu_78">axpy_float_2u_unsigned_int_s, 15, 15, 49.995 ns, 49.995 ns, 15, 15, no</column>
+<column name="grp_axpy_float_2u_unsigned_int_s_fu_78">axpy_float_2u_unsigned_int_s, 20, 20, 66.660 ns, 66.660 ns, 20, 20, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

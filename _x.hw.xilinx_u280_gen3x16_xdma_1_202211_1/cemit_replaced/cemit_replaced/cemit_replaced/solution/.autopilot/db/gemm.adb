@@ -16,7 +16,7 @@
             <Obj class_id="5" tracking_level="0" version="0">
               <type>1</type>
               <id>1</id>
-              <name>l_strA4_i</name>
+              <name>l_strA7</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -52,7 +52,7 @@
             <Obj>
               <type>1</type>
               <id>2</id>
-              <name>l_strB5_i</name>
+              <name>l_strB8</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -70,7 +70,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>791819130</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1936618847</coreId>
+              <coreId>979793959</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -264,7 +264,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>795714736</coreId>
+              <coreId>2857981952</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -298,7 +298,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>793977328</coreId>
+            <coreId>1818455657</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -371,7 +371,7 @@
             <count>3</count>
             <item_version>0</item_version>
             <item class_id="25" tracking_level="1" version="0" object_id="_14">
-              <name>l_strA4_i</name>
+              <name>l_strA7</name>
               <dir>0</dir>
               <type>0</type>
               <need_hs>0</need_hs>
@@ -379,7 +379,7 @@
               <chan class_id="-1"/>
             </item>
             <item class_id_reference="25" object_id="_15">
-              <name>l_strB5_i</name>
+              <name>l_strB8</name>
               <dir>0</dir>
               <type>0</type>
               <need_hs>0</need_hs>
@@ -407,7 +407,7 @@
                 <item_version>0</item_version>
                 <item class_id="30" tracking_level="1" version="0" object_id="_18">
                   <port class_id_reference="25" object_id="_19">
-                    <name>l_strA4_i</name>
+                    <name>l_strA7</name>
                     <dir>0</dir>
                     <type>0</type>
                     <need_hs>0</need_hs>
@@ -422,7 +422,7 @@
                 </item>
                 <item class_id_reference="30" object_id="_21">
                   <port class_id_reference="25" object_id="_22">
-                    <name>l_strB5_i</name>
+                    <name>l_strB8</name>
                     <dir>0</dir>
                     <type>0</type>
                     <need_hs>0</need_hs>
@@ -548,11 +548,11 @@
             </item>
             <item>
               <first>FF</first>
-              <second>6665</second>
+              <second>6672</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>6102</second>
+              <second>6108</second>
             </item>
           </second>
         </item>
@@ -776,7 +776,7 @@
       <count>3</count>
       <item_version>0</item_version>
       <item class_id="67" tracking_level="0" version="0">
-        <first>l_strA4_i</first>
+        <first>l_strA7</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -791,7 +791,7 @@
         </second>
       </item>
       <item>
-        <first>l_strB5_i</first>
+        <first>l_strB8</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

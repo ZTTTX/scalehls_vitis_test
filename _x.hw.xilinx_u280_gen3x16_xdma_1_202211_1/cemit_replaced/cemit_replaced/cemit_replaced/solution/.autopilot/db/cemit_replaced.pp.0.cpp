@@ -72205,12 +72205,18 @@ void gemmMatAMover(t_DataType* p_memA,
     unsigned int l_iter = p_m / t_M;
     unsigned int l_repeat = p_n / t_N;
 
-    VITIS_LOOP_35_1: for (int m = 0; m < l_iter; m++) {
-        VITIS_LOOP_36_2: for (int r = 0; r < l_repeat; r++) {
-            VITIS_LOOP_37_3: for (int k = 0; k < p_k; k++) {
+
+
+
+
+
+
+    VITIS_LOOP_41_1: for (int m = 0; m < l_iter; m++) {
+        VITIS_LOOP_42_2: for (int r = 0; r < l_repeat; r++) {
+            VITIS_LOOP_43_3: for (int k = 0; k < p_k; k++) {
 #pragma HLS PIPELINE
  WideType<t_DataType, t_M> l_A;
-                VITIS_LOOP_40_4: for (int i = 0; i < t_M; i++) {
+                VITIS_LOOP_46_4: for (int i = 0; i < t_M; i++) {
 #pragma HLS UNROLL
  l_A[i] = p_memA[(k * l_iter + m) * t_M + i];
                 }
@@ -72233,12 +72239,18 @@ void gemmMatBMover(t_DataType* p_memB,
     unsigned int l_repeat = p_m / t_M;
     unsigned int l_iter = p_n / t_N;
 
-    VITIS_LOOP_63_1: for (int r = 0; r < l_repeat; r++) {
-        VITIS_LOOP_64_2: for (int n = 0; n < l_iter; n++) {
-            VITIS_LOOP_65_3: for (int k = 0; k < p_k; k++) {
+
+
+
+
+
+
+    VITIS_LOOP_75_1: for (int r = 0; r < l_repeat; r++) {
+        VITIS_LOOP_76_2: for (int n = 0; n < l_iter; n++) {
+            VITIS_LOOP_77_3: for (int k = 0; k < p_k; k++) {
 #pragma HLS PIPELINE
  WideType<t_DataType, t_N> l_B;
-                VITIS_LOOP_68_4: for (int i = 0; i < t_N; i++) {
+                VITIS_LOOP_80_4: for (int i = 0; i < t_N; i++) {
 #pragma HLS UNROLL
  l_B[i] = p_memB[(k * l_iter + n) * t_N + i];
                 }
@@ -72263,23 +72275,23 @@ void gemmBufferC(unsigned int p_m,
  unsigned int l_iterM = p_m / t_M;
     unsigned int l_iterN = p_n / t_N;
     unsigned int index = 0;
-    VITIS_LOOP_93_1: for (int n = 0; n < l_iterN; n++) {
-        VITIS_LOOP_94_2: for (int j = 0; j < t_M; j++) {
+    VITIS_LOOP_105_1: for (int n = 0; n < l_iterN; n++) {
+        VITIS_LOOP_106_2: for (int j = 0; j < t_M; j++) {
 #pragma HLS PIPELINE
  WideType<t_DataType, t_N> l_sum = p_sum.read();
-            VITIS_LOOP_97_3: for (int i = 0; i < t_N; i++) {
+            VITIS_LOOP_109_3: for (int i = 0; i < t_N; i++) {
 #pragma HLS UNROLL
  l_bufferC[j * l_iterN * t_N + n * t_N + i] = l_sum[i];
             }
         }
     }
-    VITIS_LOOP_103_4: for (int m = 1; m < l_iterM; m++) {
-        VITIS_LOOP_104_5: for (int n = 0; n < l_iterN; n++) {
-            VITIS_LOOP_105_6: for (int j = 0; j < t_M; j++) {
+    VITIS_LOOP_115_4: for (int m = 1; m < l_iterM; m++) {
+        VITIS_LOOP_116_5: for (int n = 0; n < l_iterN; n++) {
+            VITIS_LOOP_117_6: for (int j = 0; j < t_M; j++) {
 #pragma HLS PIPELINE
  WideType<t_DataType, t_N> l_sum = p_sum.read();
                 WideType<t_DataType, t_N> l_out;
-                VITIS_LOOP_109_7: for (int i = 0; i < t_N; i++) {
+                VITIS_LOOP_121_7: for (int i = 0; i < t_N; i++) {
 #pragma HLS UNROLL
  l_bufferC[(m * t_M + j) * l_iterN * t_N + n * t_N + i] = l_sum[i];
                     l_out[i] = l_bufferC[index * t_N + i];
@@ -72289,10 +72301,10 @@ void gemmBufferC(unsigned int p_m,
             }
         }
     }
-    VITIS_LOOP_119_8: for (int n = 0; n < l_iterN * t_M; n++) {
+    VITIS_LOOP_131_8: for (int n = 0; n < l_iterN * t_M; n++) {
 #pragma HLS PIPELINE
  WideType<t_DataType, t_N> l_out;
-        VITIS_LOOP_122_9: for (int i = 0; i < t_N; i++) {
+        VITIS_LOOP_134_9: for (int i = 0; i < t_N; i++) {
 #pragma HLS UNROLL
  l_out[i] = l_bufferC[(n + index) * t_N + i];
         }
@@ -73866,39 +73878,7 @@ void gemm(const unsigned int p_m,
 }
 # 56 "/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas.hpp" 2
 # 22 "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp" 2
-# 1 "/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp" 1
-# 16 "/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp"
-# 1 "/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/params.hpp" 1
-# 17 "/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp" 2
-# 1 "/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h" 1
-# 18 "/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/uut_top.hpp" 2
 
-
-
-using namespace xf::blas;
-
-void uut_top(uint32_t p_m,
-             uint32_t p_n,
-             uint32_t p_k,
-             float p_alpha,
-             float p_beta,
-             float p_A[1 * 1024],
-             float p_B[1024 * 10],
-             float p_C[1 * 10],
-             float p_R[1 * 10]) {
-    hls::stream<typename WideType<float, 2>::t_TypeInt> l_strA;
-    hls::stream<typename WideType<float, 2>::t_TypeInt> l_strB;
-    hls::stream<typename WideType<float, 2>::t_TypeInt> l_strC;
-    hls::stream<typename WideType<float, 2>::t_TypeInt> l_strSum;
-
-    gemmMatAMover<float, 2>(p_A, p_m, p_n, p_k, l_strA);
-    gemmMatBMover<float, 2>(p_B, p_m, p_n, p_k, l_strB);
-    readVec2Stream<float, 2>(p_C, p_m * p_n, l_strC);
-    gemm<float, 1024, 2, 1 * 10>(p_m, p_n, p_k, p_alpha, l_strA, l_strB, p_beta,
-                                                                   l_strC, l_strSum);
-    writeStream2Vec<float, 2>(l_strSum, p_m * p_n, p_R);
-}
-# 23 "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp" 2
 
 using namespace xf;
 using namespace blas;
@@ -73925,25 +73905,44 @@ void forward_node1(
   float v11[1][1024],
   float v12[1][10]
 ) {
-  float p_A[1024];
-  float p_B[10240];
-  float p_C[10];
-  float p_R[10];
+  float p_A[1024 * 2];
+  float p_B[10 * 1024];
+  float p_C[10 * 2];
+  float p_R[10 * 2];
+
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strA;
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strB;
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strC;
+  hls::stream<typename WideType<float, 2>::t_TypeInt> l_strSum;
 
 
-  VITIS_LOOP_55_1: for (int i = 0; i < 1024; i++) {
-    VITIS_LOOP_56_2: for (int j = 0; j < 10; j++) {
+  VITIS_LOOP_60_1: for (int i = 0; i < 1024; i++) {
+    VITIS_LOOP_61_2: for (int j = 0; j < 10; j++) {
       p_B[i * 10 + j] = v10[i][j];
+
     }
   }
-  VITIS_LOOP_60_3: for (int i = 0; i < 1024; i++) {
-    p_A[i] = v11[0][i];
+  VITIS_LOOP_66_3: for (int i = 0; i < 1024 * 2; i++) {
+    if (i < 1024) {
+      p_A[i] = v11[0][i];
+    }
+    else {
+      p_A[i] = 0;
+    }
+
   }
-  VITIS_LOOP_63_4: for (int i = 0; i < 10; i++) {
-    p_C[i] = 0;
-  }
-  uut_top(1, 10, 1024, 1.00, 0.00, (float *)p_A, (float *)p_B, (float *)p_C, (float *)p_R);
-  VITIS_LOOP_67_5: for (int i = 0; i < 10; i++) {
+# 124 "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp"
+#pragma HLS DATAFLOW
+ gemmMatAMover<float, 2>(p_A, 2, 10, 1024, l_strA);
+  gemmMatBMover<float, 2>(p_B, 2, 10, 1024, l_strB);
+  readVec2Stream<float, 2>(p_C, 2 * 10, l_strC);
+  gemm<float, 1024, 2, 10>(2, 10, 1024, 1.00, l_strA, l_strB, 0.00,
+                                                                  l_strC, l_strSum);
+  writeStream2Vec<float, 2>(l_strSum, 2 * 10, p_R);
+
+
+
+  VITIS_LOOP_134_4: for (int i = 0; i < 10; i++) {
     v12[0][i] = p_R[i];
   }
 
@@ -73953,7 +73952,7 @@ void forward_node2(
   float v13[1][1][32][32],
   float v14[1][1024]
 ) {
-  VITIS_LOOP_77_1: for (int v15 = 0; v15 < 1024; v15 += 1) {
+  VITIS_LOOP_144_1: for (int v15 = 0; v15 < 1024; v15 += 1) {
     float v16 = v13[0][0][(v15 / 32)][(v15 % 32)];
     v14[0][v15] = v16;
   }
@@ -73967,7 +73966,7 @@ __attribute__((sdx_kernel("cemit_replaced", 0))) void cemit_replaced(
 ) {
 #line 23 "/mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced/cemit_replaced/cemit_replaced.tcl"
 #pragma HLSDIRECTIVE TOP name=cemit_replaced
-# 88 "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp"
+# 155 "/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp"
 
 #pragma HLS interface s_axilite port=return bundle=ctrl
 #pragma HLS interface m_axi offset=slave port=v17

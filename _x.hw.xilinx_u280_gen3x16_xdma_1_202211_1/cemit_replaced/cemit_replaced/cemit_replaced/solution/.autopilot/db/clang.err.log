@@ -1,13 +1,13 @@
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:97:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:164:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v20 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:100:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:167:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v21 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:104:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:171:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v22 core=ram_t2p_bram
         ^
-/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:106:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+/mnt/shared/home/tz32/scalehls_vitis_test/src/cemit_replaced.cpp:173:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
 #pragma HLS resource variable=v30 core=ram_t2p_bram
         ^
 4 warnings generated.

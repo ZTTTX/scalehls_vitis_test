@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'muls_Pipeline_VITIS_LOOP_633_1_VITIS_LOOP_634_2'
 ================================================================
-* Date:           Mon Jun 12 16:50:44 2023
+* Date:           Wed Jun 14 16:04:43 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        cemit_replaced
@@ -216,8 +216,8 @@ ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ss
 ST_1 : Operation 22 [1/1] (0.34ns)   --->   "%icmp_ln634 = icmp_eq  i2 %col_4, i2 2" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:634]   --->   Operation 22 'icmp' 'icmp_ln634' <Predicate = (!icmp_ln633)> <Delay = 0.34> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 23 [1/1] (0.27ns)   --->   "%select_ln633 = select i1 %icmp_ln634, i2 %add_ln633, i2 %row_load" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 23 'select' 'select_ln633' <Predicate = (!icmp_ln633)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln633 = trunc i2 %select_ln633" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:633]   --->   Operation 24 'trunc' 'trunc_ln633' <Predicate = (!icmp_ln633)> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln635 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_26" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:635]   --->   Operation 25 'specpipeline' 'specpipeline_ln635' <Predicate = (!icmp_ln633)> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3"   --->   Operation 26 'specloopname' 'specloopname_ln76' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specpipeline_ln635 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_33" [/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils/types.hpp:635]   --->   Operation 25 'specpipeline' 'specpipeline_ln635' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln76 = specloopname void @_ssdm_op_SpecLoopName, void @empty_25"   --->   Operation 26 'specloopname' 'specloopname_ln76' <Predicate = (!icmp_ln633)> <Delay = 0.00>
 ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln85 = br i1 %trunc_ln633, void %arrayidx2.i.i3052.case.0, void %arrayidx2.i.i3052.case.1"   --->   Operation 27 'br' 'br_ln85' <Predicate = (!icmp_ln633)> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (0.61ns)   --->   "%p_07 = memshiftread i32 @_ssdm_op_MemShiftRead.[2 x float]P0A, i1 %l_Tc_m_Sreg_Array_addr, i32 0, i1 1"   --->   Operation 28 'memshiftread' 'p_07' <Predicate = (!icmp_ln633 & !trunc_ln633)> <Delay = 0.61> <CoreInst = "ShiftReg">   --->   Core 77 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'memshiftread' 'load'> <Ports = 1> <Width = 32> <Depth = 2> <ShiftMem>
 ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln85 = br void %arrayidx2.i.i3052.exit"   --->   Operation 29 'br' 'br_ln85' <Predicate = (!icmp_ln633 & !trunc_ln633)> <Delay = 0.00>
@@ -451,7 +451,7 @@ ret_ln0                  (ret              ) [ 00]
 <pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_26"/></StgValue>
+<StgValue><ssdm name="empty_33"/></StgValue>
 </bind>
 </comp>
 
@@ -460,7 +460,7 @@ ret_ln0                  (ret              ) [ 00]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_3"/></StgValue>
+<StgValue><ssdm name="empty_25"/></StgValue>
 </bind>
 </comp>
 

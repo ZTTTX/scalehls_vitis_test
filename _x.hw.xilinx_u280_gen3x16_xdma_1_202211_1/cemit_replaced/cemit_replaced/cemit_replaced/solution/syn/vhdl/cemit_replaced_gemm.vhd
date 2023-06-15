@@ -15,12 +15,12 @@ port (
     start_full_n : IN STD_LOGIC;
     start_out : OUT STD_LOGIC;
     start_write : OUT STD_LOGIC;
-    l_strA4_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strA4_i_empty_n : IN STD_LOGIC;
-    l_strA4_i_read : OUT STD_LOGIC;
-    l_strB5_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-    l_strB5_i_empty_n : IN STD_LOGIC;
-    l_strB5_i_read : OUT STD_LOGIC;
+    l_strA7_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strA7_empty_n : IN STD_LOGIC;
+    l_strA7_read : OUT STD_LOGIC;
+    l_strB8_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+    l_strB8_empty_n : IN STD_LOGIC;
+    l_strB8_read : OUT STD_LOGIC;
     l_sum3_din : OUT STD_LOGIC_VECTOR (63 downto 0);
     l_sum3_full_n : IN STD_LOGIC;
     l_sum3_write : OUT STD_LOGIC;
@@ -42,8 +42,8 @@ attribute shreg_extract : string;
     signal real_start : STD_LOGIC;
     signal start_once_reg : STD_LOGIC := '0';
     signal internal_ap_ready : STD_LOGIC;
-    signal process_U0_l_strA4_i_read : STD_LOGIC;
-    signal process_U0_l_strB5_i_read : STD_LOGIC;
+    signal process_U0_l_strA7_read : STD_LOGIC;
+    signal process_U0_l_strB8_read : STD_LOGIC;
     signal process_U0_l_sum3_din : STD_LOGIC_VECTOR (63 downto 0);
     signal process_U0_l_sum3_write : STD_LOGIC;
     signal process_U0_ap_start : STD_LOGIC;
@@ -56,12 +56,12 @@ attribute shreg_extract : string;
 
     component cemit_replaced_process_r IS
     port (
-        l_strA4_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strA4_i_empty_n : IN STD_LOGIC;
-        l_strA4_i_read : OUT STD_LOGIC;
-        l_strB5_i_dout : IN STD_LOGIC_VECTOR (63 downto 0);
-        l_strB5_i_empty_n : IN STD_LOGIC;
-        l_strB5_i_read : OUT STD_LOGIC;
+        l_strA7_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strA7_empty_n : IN STD_LOGIC;
+        l_strA7_read : OUT STD_LOGIC;
+        l_strB8_dout : IN STD_LOGIC_VECTOR (63 downto 0);
+        l_strB8_empty_n : IN STD_LOGIC;
+        l_strB8_read : OUT STD_LOGIC;
         l_sum3_din : OUT STD_LOGIC_VECTOR (63 downto 0);
         l_sum3_full_n : IN STD_LOGIC;
         l_sum3_write : OUT STD_LOGIC;
@@ -79,12 +79,12 @@ attribute shreg_extract : string;
 begin
     process_U0 : component cemit_replaced_process_r
     port map (
-        l_strA4_i_dout => l_strA4_i_dout,
-        l_strA4_i_empty_n => l_strA4_i_empty_n,
-        l_strA4_i_read => process_U0_l_strA4_i_read,
-        l_strB5_i_dout => l_strB5_i_dout,
-        l_strB5_i_empty_n => l_strB5_i_empty_n,
-        l_strB5_i_read => process_U0_l_strB5_i_read,
+        l_strA7_dout => l_strA7_dout,
+        l_strA7_empty_n => l_strA7_empty_n,
+        l_strA7_read => process_U0_l_strA7_read,
+        l_strB8_dout => l_strB8_dout,
+        l_strB8_empty_n => l_strB8_empty_n,
+        l_strB8_read => process_U0_l_strB8_read,
         l_sum3_din => process_U0_l_sum3_din,
         l_sum3_full_n => l_sum3_full_n,
         l_sum3_write => process_U0_l_sum3_write,
@@ -120,8 +120,8 @@ begin
     ap_ready <= process_U0_ap_ready;
     ap_sync_ready <= process_U0_ap_ready;
     internal_ap_ready <= ap_sync_ready;
-    l_strA4_i_read <= process_U0_l_strA4_i_read;
-    l_strB5_i_read <= process_U0_l_strB5_i_read;
+    l_strA7_read <= process_U0_l_strA7_read;
+    l_strB8_read <= process_U0_l_strB8_read;
     l_sum3_din <= process_U0_l_sum3_din;
     l_sum3_write <= process_U0_l_sum3_write;
     process_U0_ap_continue <= ap_continue;

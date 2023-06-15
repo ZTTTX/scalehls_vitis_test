@@ -115,7 +115,7 @@ attribute shreg_extract : string;
     signal p_Result_s_reg_345_pp0_iter3_reg : STD_LOGIC_VECTOR (0 downto 0);
     signal l_val_fu_184_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal l_val_reg_350 : STD_LOGIC_VECTOR (31 downto 0);
-    signal l_val_7_reg_355 : STD_LOGIC_VECTOR (31 downto 0);
+    signal l_val_8_reg_355 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_139_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal DataIn_assign_5_reg_380 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_fu_143_p2 : STD_LOGIC_VECTOR (31 downto 0);
@@ -185,7 +185,7 @@ attribute shreg_extract : string;
 
 
 begin
-    fmul_32ns_32ns_32_4_max_dsp_1_U30 : component cemit_replaced_fmul_32ns_32ns_32_4_max_dsp_1
+    fmul_32ns_32ns_32_4_max_dsp_1_U46 : component cemit_replaced_fmul_32ns_32ns_32_4_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -200,7 +200,7 @@ begin
         ce => grp_fu_139_ce,
         dout => grp_fu_139_p2);
 
-    fmul_32ns_32ns_32_4_max_dsp_1_U31 : component cemit_replaced_fmul_32ns_32ns_32_4_max_dsp_1
+    fmul_32ns_32ns_32_4_max_dsp_1_U47 : component cemit_replaced_fmul_32ns_32ns_32_4_max_dsp_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -403,7 +403,7 @@ begin
             if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
                 ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
                 ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-                l_val_7_reg_355 <= l_dataB_0_dout(63 downto 32);
+                l_val_8_reg_355 <= l_dataB_0_dout(63 downto 32);
                 l_val_reg_350 <= l_val_fu_184_p1;
                 p_Result_s_reg_345 <= l_dataA_0_dout(1 downto 1);
                 p_Result_s_reg_345_pp0_iter1_reg <= p_Result_s_reg_345;
@@ -532,7 +532,7 @@ begin
         end if; 
     end process;
 
-    grp_fu_143_p1 <= l_val_7_reg_355;
+    grp_fu_143_p1 <= l_val_8_reg_355;
     icmp_ln130_fu_257_p2 <= "1" when (tmp_fu_247_p4 = ap_const_lv22_0) else "0";
     l_Tc_m_Sreg_Array_2_address0 <= ap_const_lv64_1(1 - 1 downto 0);
 

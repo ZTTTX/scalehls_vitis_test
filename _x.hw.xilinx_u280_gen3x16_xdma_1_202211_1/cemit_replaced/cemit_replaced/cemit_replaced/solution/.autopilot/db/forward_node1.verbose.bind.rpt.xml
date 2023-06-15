@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'forward_node1'" level="0">
-<item name = "Date">Mon Jun 12 16:50:42 2023
+<item name = "Date">Wed Jun 14 16:04:40 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">cemit_replaced</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
+<column name="ap_clk">3.33 ns, 3.681 ns, 0.90 ns</column>
 </table>
 </item>
 </section>
@@ -24,17 +24,21 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, no</column>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_forward_node1_Pipeline_VITIS_LOOP_125_1_fu_64">forward_node1_Pipeline_VITIS_LOOP_125_1, 7, 7, 23.331 ns, 23.331 ns, 7, 7, no</column>
-<column name="grp_gemm_float_1024u_2u_10u_unsigned_int_s_fu_69">gemm_float_1024u_2u_10u_unsigned_int_s, ?, ?, ?, ?, ?, ?, dataflow</column>
-<column name="grp_forward_node1_Pipeline_VITIS_LOOP_154_1_fu_77">forward_node1_Pipeline_VITIS_LOOP_154_1, 7, 7, 23.331 ns, 23.331 ns, 7, 7, no</column>
-<column name="grp_forward_node1_Pipeline_VITIS_LOOP_67_5_fu_83">forward_node1_Pipeline_VITIS_LOOP_67_5, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
+<column name="grp_forward_node1_Loop_VITIS_LOOP_60_1_proc_fu_108">forward_node1_Loop_VITIS_LOOP_60_1_proc, 10314, 10314, 34.377 us, 34.377 us, 10314, 10314, no</column>
+<column name="grp_forward_node1_Loop_VITIS_LOOP_66_3_proc_fu_118">forward_node1_Loop_VITIS_LOOP_66_3_proc, 2051, 2051, 6.836 us, 6.836 us, 2051, 2051, no</column>
+<column name="grp_readVec2Stream_float_2u_s_fu_126">readVec2Stream_float_2u_s, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
+<column name="grp_gemmMatAMover_float_2u_2u_s_fu_131">gemmMatAMover_float_2u_2u_s, 5122, 5122, 17.072 us, 17.072 us, 5122, 5122, no</column>
+<column name="grp_gemmMatBMover_float_2u_2u_s_fu_137">gemmMatBMover_float_2u_2u_s, 5124, 5124, 17.078 us, 17.078 us, 5124, 5124, no</column>
+<column name="grp_gemm_float_1024u_2u_10u_unsigned_int_s_fu_143">gemm_float_1024u_2u_10u_unsigned_int_s, ?, ?, ?, ?, ?, ?, dataflow</column>
+<column name="grp_writeStream2Vec_float_2u_s_fu_151">writeStream2Vec_float_2u_s, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
+<column name="grp_forward_node1_Loop_VITIS_LOOP_134_4_proc_fu_157">forward_node1_Loop_VITIS_LOOP_134_4_proc, 12, 12, 39.996 ns, 39.996 ns, 12, 12, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

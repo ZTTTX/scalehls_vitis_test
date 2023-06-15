@@ -8,12 +8,12 @@
 `timescale 1 ns / 1 ps 
 
 module cemit_replaced_process_r (
-        l_strA4_i_dout,
-        l_strA4_i_empty_n,
-        l_strA4_i_read,
-        l_strB5_i_dout,
-        l_strB5_i_empty_n,
-        l_strB5_i_read,
+        l_strA7_dout,
+        l_strA7_empty_n,
+        l_strA7_read,
+        l_strB8_dout,
+        l_strB8_empty_n,
+        l_strB8_read,
         l_sum3_din,
         l_sum3_full_n,
         l_sum3_write,
@@ -27,12 +27,12 @@ module cemit_replaced_process_r (
 );
 
 
-input  [63:0] l_strA4_i_dout;
-input   l_strA4_i_empty_n;
-output   l_strA4_i_read;
-input  [63:0] l_strB5_i_dout;
-input   l_strB5_i_empty_n;
-output   l_strB5_i_read;
+input  [63:0] l_strA7_dout;
+input   l_strA7_empty_n;
+output   l_strA7_read;
+input  [63:0] l_strB8_dout;
+input   l_strB8_empty_n;
+output   l_strB8_read;
 output  [63:0] l_sum3_din;
 input   l_sum3_full_n;
 output   l_sum3_write;
@@ -51,8 +51,8 @@ wire    tagAB_U0_ap_idle;
 wire    tagAB_U0_ap_ready;
 wire    tagAB_U0_start_out;
 wire    tagAB_U0_start_write;
-wire    tagAB_U0_l_strA4_i_read;
-wire    tagAB_U0_l_strB5_i_read;
+wire    tagAB_U0_l_strA7_read;
+wire    tagAB_U0_l_strB8_read;
 wire   [65:0] tagAB_U0_l_aStr1_din;
 wire    tagAB_U0_l_aStr1_write;
 wire   [63:0] tagAB_U0_l_bStr2_din;
@@ -172,12 +172,16 @@ cemit_replaced_tagAB tagAB_U0(
     .ap_ready(tagAB_U0_ap_ready),
     .start_out(tagAB_U0_start_out),
     .start_write(tagAB_U0_start_write),
-    .l_strA4_i_dout(l_strA4_i_dout),
-    .l_strA4_i_empty_n(l_strA4_i_empty_n),
-    .l_strA4_i_read(tagAB_U0_l_strA4_i_read),
-    .l_strB5_i_dout(l_strB5_i_dout),
-    .l_strB5_i_empty_n(l_strB5_i_empty_n),
-    .l_strB5_i_read(tagAB_U0_l_strB5_i_read),
+    .l_strA7_dout(l_strA7_dout),
+    .l_strA7_num_data_valid(2'd0),
+    .l_strA7_fifo_cap(2'd0),
+    .l_strA7_empty_n(l_strA7_empty_n),
+    .l_strA7_read(tagAB_U0_l_strA7_read),
+    .l_strB8_dout(l_strB8_dout),
+    .l_strB8_num_data_valid(2'd0),
+    .l_strB8_fifo_cap(2'd0),
+    .l_strB8_empty_n(l_strB8_empty_n),
+    .l_strB8_read(tagAB_U0_l_strB8_read),
     .l_aStr1_din(tagAB_U0_l_aStr1_din),
     .l_aStr1_num_data_valid(l_aStr_num_data_valid),
     .l_aStr1_fifo_cap(l_aStr_fifo_cap),
@@ -475,9 +479,9 @@ assign ap_idle = (tagAB_U0_ap_idle & systolicArray_U0_ap_idle & merge_U0_ap_idle
 
 assign ap_ready = tagAB_U0_ap_ready;
 
-assign l_strA4_i_read = tagAB_U0_l_strA4_i_read;
+assign l_strA7_read = tagAB_U0_l_strA7_read;
 
-assign l_strB5_i_read = tagAB_U0_l_strB5_i_read;
+assign l_strB8_read = tagAB_U0_l_strB8_read;
 
 assign l_sum3_din = merge_U0_l_sum3_din;
 

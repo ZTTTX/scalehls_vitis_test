@@ -142,7 +142,7 @@ reg   [0:0] p_Result_s_reg_345_pp0_iter2_reg;
 reg   [0:0] p_Result_s_reg_345_pp0_iter3_reg;
 wire   [31:0] l_val_fu_184_p1;
 reg   [31:0] l_val_reg_350;
-reg   [31:0] l_val_7_reg_355;
+reg   [31:0] l_val_8_reg_355;
 wire   [31:0] grp_fu_139_p2;
 reg   [31:0] DataIn_assign_5_reg_380;
 wire   [31:0] grp_fu_143_p2;
@@ -193,7 +193,7 @@ cemit_replaced_fmul_32ns_32ns_32_4_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_4_max_dsp_1_U30(
+fmul_32ns_32ns_32_4_max_dsp_1_U46(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(l_aVal_fu_84),
@@ -208,7 +208,7 @@ cemit_replaced_fmul_32ns_32ns_32_4_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_4_max_dsp_1_U31(
+fmul_32ns_32ns_32_4_max_dsp_1_U47(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(empty_fu_80),
@@ -358,7 +358,7 @@ always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-        l_val_7_reg_355 <= {{l_dataB_0_dout[63:32]}};
+        l_val_8_reg_355 <= {{l_dataB_0_dout[63:32]}};
         l_val_reg_350 <= l_val_fu_184_p1;
         p_Result_s_reg_345 <= l_dataA_0_dout[32'd1];
         p_Result_s_reg_345_pp0_iter1_reg <= p_Result_s_reg_345;
@@ -586,7 +586,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign grp_fu_139_p1 = l_val_reg_350;
 
-assign grp_fu_143_p1 = l_val_7_reg_355;
+assign grp_fu_143_p1 = l_val_8_reg_355;
 
 assign icmp_ln130_fu_257_p2 = ((tmp_fu_247_p4 == 22'd0) ? 1'b1 : 1'b0);
 
