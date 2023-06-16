@@ -519,8 +519,8 @@
     "time_stamp": "2022-10-13-17:52:11",
     "options": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -l --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.xo -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw ",
     "xclbin_name": "cemit_replaced_v2.link",
-    "uuid": "a1fec58c-6ce0-4c4d-8a43-e0ccf42ec28f",
-    "link_uuid": "a1fec58c-6ce0-4c4d-8a43-e0ccf42ec28f",
+    "uuid": "1b44d62e-cc7c-4ec4-bc50-e8295277812e",
+    "link_uuid": "1b44d62e-cc7c-4ec4-bc50-e8295277812e",
     "package_uuid": "",
     "system_compile_flow": false
    },
@@ -644,24 +644,24 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "7179",
-         "REG": "11272",
+         "LUT": "7199",
+         "REG": "11211",
          "BRAM": "31",
          "DSP": "32",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "7868",
-         "REG": "11439",
+         "LUT": "7885",
+         "REG": "11422",
          "BRAM": "31",
          "DSP": "32",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "7179",
-         "REG": "11272",
+         "LUT": "7199",
+         "REG": "11211",
          "BRAM": "31",
          "DSP": "32",
          "URAM": "0"
@@ -686,12 +686,12 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "7179",
+           "used": "7199",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "6515",
+           "used": "6535",
            "available": "439680"
           },
           {
@@ -701,7 +701,7 @@
           },
           {
            "resource_name": "REG",
-           "used": "11272",
+           "used": "11211",
            "available": "879360"
           },
           {

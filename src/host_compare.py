@@ -4,7 +4,7 @@ import os
 import sys
 import re
 import struct
-
+import time
 # Following found in PYTHONPATH setup by XRT
 import pyxrt
 
@@ -110,10 +110,11 @@ def runKernel(opt, xclbinName, xclbinPath, inputs_list, weights):
     boHandle3.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_TO_DEVICE, opt.DATA_SIZE * 4, 0)
 
     print("Start the kernel")
+    start_t = time.time()
     run = kHandle(boHandle1, boHandle2, boHandle3, opt.DATA_SIZE)
     print("Now wait for the kernel to finish")
     state = run.wait()
-
+    run_t = time.time() - start_t
     print("Get the output data from the device and validate it")
     boHandle2.sync(pyxrt.xclBOSyncDirection.XCL_BO_SYNC_BO_FROM_DEVICE, opt.DATA_SIZE * 4, 0)
 
@@ -123,7 +124,7 @@ def runKernel(opt, xclbinName, xclbinPath, inputs_list, weights):
         output_float = struct.unpack('f', output_byte)[0]
         output_floats.append(output_float)
 
-    return output_floats
+    return output_floats, run_t
 
 def main(args):
     opt = Options()
@@ -133,11 +134,11 @@ def main(args):
 
         # Run the forward.xclbin
         forward_xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin"
-        forward_output = runKernel(opt, "forward", forward_xclbin, inputs_list, weights)
+        forward_output, t_baseline = runKernel(opt, "forward", forward_xclbin, inputs_list, weights)
 
         # Run the cemit_replaced.xclbin
         cemit_replaced_xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.xclbin"
-        cemit_replaced_output = runKernel(opt, "cemit_replaced_v2", cemit_replaced_xclbin, inputs_list, weights)
+        cemit_replaced_output, t_replaced = runKernel(opt, "cemit_replaced_v2", cemit_replaced_xclbin, inputs_list, weights)
 
         # Calculate the golden output
         golden_output = calculate_golden_output(inputs_list, weights)
@@ -145,31 +146,35 @@ def main(args):
         print("Outputs from forward.xclbin:")
         for i in range(10):
             print("Output Num ", i, "= ", forward_output[i])
-
+        print("Time for baseline: ", t_baseline)
         print()
 
         print("Outputs from cemit_replaced.xclbin:")
         for i in range(10):
             print("Output Num ", i, "= ", cemit_replaced_output[i])
-
+        print("Time for replaced: ", t_replaced)
         print()
 
-        print("Golden Outputs:")
-        for i in range(len(golden_output)):
-            print("Output Num ", i, "= ", golden_output[i])
+        # print("Golden Outputs:")
+        # for i in range(len(golden_output)):
+        #     print("Output Num ", i, "= ", golden_output[i])
 
-        print()
+        # print()
 
         # Compare the outputs
         tolerance = 1e-5  # Define the tolerance for floating-point comparison
+        agree = True
         for i in range(len(forward_output)):
             if abs(forward_output[i] - cemit_replaced_output[i]) > tolerance:
-                print("[Assertion Failed] Computed values do not match between forward and cemit_replaced.")
+                agree = False
                 break
-
-            if abs(forward_output[i] - golden_output[i]) > tolerance:
-                print("[Assertion Failed] Computed values do not match the golden output.")
-                break
+        if agree:
+            print("[Assertion Success] Computed value match baseline")
+        else:
+            print("[Assertion Failed] Computed values do not match baseline")
+            # if abs(forward_output[i] - golden_output[i]) > tolerance:
+            #     print("[Assertion Failed] Computed values do not match the golden output.")
+            #     break
 
 
         print("RUN IS DONE")

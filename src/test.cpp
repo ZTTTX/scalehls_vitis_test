@@ -65,7 +65,8 @@ void expected_forward(
   float e_v26[1][10],
   float e_v27[1024][10]
 ) {
-  float e_v28[10] =  {(float)0.026317, (float)0.030492, (float)-0.031115, (float)-0.007248, (float)-0.004217, (float)-0.028796, (float)0.023664, (float)0.030820, (float)-0.019262, (float)0.025696};
+//   float e_v28[10] =  {(float)0.026317, (float)0.030492, (float)-0.031115, (float)-0.007248, (float)-0.004217, (float)-0.028796, (float)0.023664, (float)0.030820, (float)-0.019262, (float)0.025696};
+  float e_v28[10] = {(float)-0.006301, (float)0.029061, (float)-0.006143, (float)-0.016538, (float)0.003510, (float)-0.016316, (float)-0.029194, (float)-0.002508, (float)-0.028033, (float)0.000132};
   float e_v29[1][1024];
   expected_forward_node2(e_v25, e_v29);
   float e_v30[1][10];
