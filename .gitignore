@@ -1,7 +1,6 @@
 cemit_replaced_test.prj
 cemit_replaced_v2.prj
 forward.prj
-build_dir*
 _x*
 .ipcache/
 *.log
