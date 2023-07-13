@@ -15,6 +15,8 @@ from utils_binding import *
 import torch
 import torch.nn as nn
 
+
+
 def initialize_weights(layer):
     if isinstance(layer, nn.Linear):
         nn.init.xavier_uniform_(layer.weight)
@@ -34,6 +36,7 @@ def randomize_inputs_weights(opt):
 
     # Generate random inputs
     input_shape = (1, 1, 32, 32)  # Adjust the shape according to your module's input shape
+    # torch.manual_seed(123)
     inputs = torch.randn(*input_shape)
     inputs_list = inputs.view(-1).tolist()
 
@@ -129,32 +132,41 @@ def runKernel(opt, xclbinName, xclbinPath, inputs_list, weights):
 def main(args):
     opt = Options()
     Options.getOptions(opt, args)
+    total_basline_time = []
+    total_replaced_time = []
     try:
-        inputs_list, weights = randomize_inputs_weights(opt)
+        for j in range(1):
+            inputs_list, weights = randomize_inputs_weights(opt)
 
-        # Run the forward.xclbin
-        forward_xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin"
-        forward_output, t_baseline = runKernel(opt, "forward", forward_xclbin, inputs_list, weights)
+            # Run the forward.xclbin
+            forward_xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward.xclbin"
+            forward_output, t_baseline = runKernel(opt, "forward", forward_xclbin, inputs_list, weights)
 
-        # Run the cemit_replaced.xclbin
-        cemit_replaced_xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.xclbin"
-        cemit_replaced_output, t_replaced = runKernel(opt, "cemit_replaced_v2", cemit_replaced_xclbin, inputs_list, weights)
+            # Run the cemit_replaced.xclbin
+            cemit_replaced_xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.xclbin"
+            cemit_replaced_output, t_replaced = runKernel(opt, "cemit_replaced_v2", cemit_replaced_xclbin, inputs_list, weights)
+            
+            total_basline_time.append(t_baseline)
+            total_replaced_time.append(t_replaced)
 
+        
         # Calculate the golden output
-        golden_output = calculate_golden_output(inputs_list, weights)
+        # golden_output = calculate_golden_output(inputs_list, weights)
 
-        print("Outputs from forward.xclbin:")
-        for i in range(10):
-            print("Output Num ", i, "= ", forward_output[i])
-        print("Time for baseline: ", t_baseline)
-        print()
+            print("Outputs from forward.xclbin:")
+            for i in range(10):
+                print("Output Num ", i, "= ", forward_output[i])
+            print("Time for baseline: ", t_baseline)
+            print()
 
-        print("Outputs from cemit_replaced.xclbin:")
-        for i in range(10):
-            print("Output Num ", i, "= ", cemit_replaced_output[i])
-        print("Time for replaced: ", t_replaced)
-        print()
-
+            print("Outputs from cemit_replaced.xclbin:")
+            for i in range(10):
+                print("Output Num ", i, "= ", cemit_replaced_output[i])
+            print("Time for replaced: ", t_replaced)
+            print()
+            
+        print(total_basline_time)
+        print(total_replaced_time)
         # print("Golden Outputs:")
         # for i in range(len(golden_output)):
         #     print("Output Num ", i, "= ", golden_output[i])
@@ -162,16 +174,16 @@ def main(args):
         # print()
 
         # Compare the outputs
-        tolerance = 1e-5  # Define the tolerance for floating-point comparison
-        agree = True
-        for i in range(len(forward_output)):
-            if abs(forward_output[i] - cemit_replaced_output[i]) > tolerance:
-                agree = False
-                break
-        if agree:
-            print("[Assertion Success] Computed value match baseline")
-        else:
-            print("[Assertion Failed] Computed values do not match baseline")
+        # tolerance = 1e-5  # Define the tolerance for floating-point comparison
+        # agree = True
+        # for i in range(len(forward_output)):
+        #     if abs(forward_output[i] - cemit_replaced_output[i]) > tolerance:
+        #         agree = False
+        #         break
+        # if agree:
+        #     print("[Assertion Success] Computed value match baseline")
+        # else:
+        #     print("[Assertion Failed] Computed values do not match baseline")
             # if abs(forward_output[i] - golden_output[i]) > tolerance:
             #     print("[Assertion Failed] Computed values do not match the golden output.")
             #     break

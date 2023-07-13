@@ -38,7 +38,7 @@ help:
 endif
 
 ############################## Setting up Project Variables ##############################
-TOP_FUNC_NAME ?= combined
+TOP_FUNC_NAME ?= largeNet
 TARGET := hw
 VPP_LDFLAGS :=
 include ./utils.mk
@@ -84,6 +84,7 @@ build: check-vitis check-device $(BUILD_DIR)/$(TOP_FUNC_NAME).xclbin
 
 .PHONY: xclbin
 xclbin: build
+
 
 ############################## Setting Rules for Binary Containers (Building Kernels) ##############################
 $(TEMP_DIR)/$(TOP_FUNC_NAME).xo: src/$(TOP_FUNC_NAME).cpp

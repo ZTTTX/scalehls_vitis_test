@@ -517,11 +517,11 @@
     "version": "2022.2",
     "cl": "3671529",
     "time_stamp": "2022-10-13-17:52:11",
-    "options": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -l --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/cemit_replaced_v2.xo -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw ",
-    "xclbin_name": "cemit_replaced_v2.link",
-    "uuid": "1b44d62e-cc7c-4ec4-bc50-e8295277812e",
-    "link_uuid": "1b44d62e-cc7c-4ec4-bc50-e8295277812e",
-    "package_uuid": "75a86757-09e0-4a36-8ce8-ebb06f260600",
+    "options": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -l --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet.xo -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src ",
+    "xclbin_name": "largeNet.link",
+    "uuid": "873adca2-8c47-4ced-80ce-8e63ea868547",
+    "link_uuid": "873adca2-8c47-4ced-80ce-8e63ea868547",
+    "package_uuid": "301928a3-24bf-4bf0-b9ae-dd893324601b",
     "system_compile_flow": false
    },
    "user_regions": [
@@ -564,10 +564,10 @@
      },
      "kernels": [
       {
-       "name": "cemit_replaced_v2",
+       "name": "largeNet",
        "estimated_resources": {
-        "LUT": "383",
-        "REG": "359",
+        "LUT": "2375",
+        "REG": "835",
         "BRAM": "",
         "DSP": "",
         "URAM": ""
@@ -577,7 +577,7 @@
          "name": "M_AXI_GMEM",
          "mode": "master",
          "range": "0xFFFFFFFF",
-         "data_width": "64",
+         "data_width": "512",
          "port_type": "addressable",
          "base": "0x0",
          "direction": "DirUnknown"
@@ -595,7 +595,7 @@
        "arguments": [
         {
          "id": "0",
-         "name": "v17",
+         "name": "v15",
          "address_qualifier": "1",
          "port": "M_AXI_GMEM",
          "size": "0x8",
@@ -607,7 +607,7 @@
         },
         {
          "id": "1",
-         "name": "v18",
+         "name": "v16",
          "address_qualifier": "1",
          "port": "M_AXI_GMEM",
          "size": "0x8",
@@ -619,7 +619,7 @@
         },
         {
          "id": "2",
-         "name": "v19",
+         "name": "v17",
          "address_qualifier": "1",
          "port": "M_AXI_GMEM",
          "size": "0x8",
@@ -638,32 +638,32 @@
      "compute_units": [
       {
        "id": "0",
-       "kernel_name": "cemit_replaced_v2",
-       "cu_name": "cemit_replaced_v2_1",
+       "kernel_name": "largeNet",
+       "cu_name": "largeNet_1",
        "base_address": "0x800000",
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "7199",
-         "REG": "11211",
-         "BRAM": "31",
-         "DSP": "32",
+         "LUT": "177684",
+         "REG": "286509",
+         "BRAM": "80",
+         "DSP": "1234",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "7885",
-         "REG": "11422",
-         "BRAM": "31",
-         "DSP": "32",
+         "LUT": "208192",
+         "REG": "293805",
+         "BRAM": "80",
+         "DSP": "1234",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "7199",
-         "REG": "11211",
-         "BRAM": "31",
-         "DSP": "32",
+         "LUT": "177673",
+         "REG": "286507",
+         "BRAM": "80",
+         "DSP": "1234",
          "URAM": "0"
         }
        ],
@@ -686,37 +686,37 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "7199",
+           "used": "177673",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "6535",
+           "used": "155252",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsMem",
-           "used": "664",
+           "used": "22421",
            "available": "205440"
           },
           {
            "resource_name": "REG",
-           "used": "11211",
+           "used": "286507",
            "available": "879360"
           },
           {
            "resource_name": "CARRY8",
-           "used": "202",
+           "used": "3961",
            "available": "54960"
           },
           {
            "resource_name": "F7MUX",
-           "used": "193",
+           "used": "231",
            "available": "219840"
           },
           {
            "resource_name": "F8MUX",
-           "used": "2",
+           "used": "72",
            "available": "109920"
           },
           {
@@ -726,7 +726,7 @@
           },
           {
            "resource_name": "BRAM",
-           "used": "31",
+           "used": "80.5",
            "available": "672"
           },
           {
@@ -736,7 +736,7 @@
           },
           {
            "resource_name": "DSPs",
-           "used": "32",
+           "used": "1234",
            "available": "2880"
           }
          ]
@@ -871,7 +871,7 @@
         "type": "compute_unit",
         "id": "0",
         "kernel_argument_id": "0",
-        "arg_name": "v17",
+        "arg_name": "v15",
         "mode": "Master",
         "name": "",
         "port_name": ""
@@ -892,7 +892,7 @@
         "type": "compute_unit",
         "id": "0",
         "kernel_argument_id": "1",
-        "arg_name": "v18",
+        "arg_name": "v16",
         "mode": "Master",
         "name": "",
         "port_name": ""
@@ -913,7 +913,7 @@
         "type": "compute_unit",
         "id": "0",
         "kernel_argument_id": "2",
-        "arg_name": "v19",
+        "arg_name": "v17",
         "mode": "Master",
         "name": "",
         "port_name": ""
@@ -936,7 +936,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "cemit_replaced_v2_1",
+        "name": "largeNet_1",
         "port_name": "m_axi_gmem"
        },
        "node2": {
@@ -966,7 +966,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "cemit_replaced_v2_1",
+        "name": "largeNet_1",
         "port_name": "s_axi_ctrl"
        }
       },
@@ -987,7 +987,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "cemit_replaced_v2_1",
+        "name": "largeNet_1",
         "port_name": "ap_clk"
        }
       },
@@ -1008,7 +1008,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "cemit_replaced_v2_1",
+        "name": "largeNet_1",
         "port_name": "ap_rst_n"
        }
       },
