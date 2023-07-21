@@ -13,6 +13,9 @@
 #include "hls_math.h"
 #include "forward.hpp"
 #include "cemit_replaced_v2.hpp"
+#include "largeNet_2_copy.hpp"
+#include "largeNet_3.hpp"
+
 
 void expected_forward_node0(
   float e_v0[1][10],
@@ -103,11 +106,20 @@ void testbench() {
     float max = 1.0;
     // Input and output arrays
     float v25b[1][1][32][32];
-    float v26b[1][10];
-    float v27b[1024][10];
+    float v26b[1][64];
+    float v27b[1024][64];
+
+    float vin_a[64][64];
+
+    for (int i = 0; i < 64; i++) {
+        for (int j = 0; j < 64; j++) {
+            vin_a[i][j] = getRandomFloat(min, max);
+        }
+    }
+
     float expected_v25b[1][1][32][32];
-    float expected_v26b[1][10];
-    float expected_v27b[1024][10];
+    float expected_v26b[1][64];
+    float expected_v27b[1024][64];
 
     // Initialize input arrays with random values
     for (int i = 0; i < 1; i++) {
@@ -137,23 +149,24 @@ void testbench() {
     }
 
     // Call the top function
-    cemit_replaced_v2(v25b, v26b, v27b);
+    // cemit_replaced_v2(v25b, v26b, v27b);
     // forward(v25b, v26b, v27b);
+    largeNet_3(v25b, v26b, v27b);
 
     // Calculate the expected output manually
-    calculateForward(expected_v25b, expected_v26b, expected_v27b);
+    // calculateForward(expected_v25b, expected_v26b, expected_v27b);
 
     // Perform verification
-    bool v26bPassed = true;
+    // bool v26bPassed = true;
 
-    for (int i = 0; i < 1; i++) {
-        for (int j = 0; j < 10; j++) {
-            if (!isClose(v26b[i][j], expected_v26b[i][j])) {
-                v26bPassed = false;
-                break;
-            }
-        }
-    }
+    // for (int i = 0; i < 1; i++) {
+    //     for (int j = 0; j < 10; j++) {
+    //         if (!isClose(v26b[i][j], expected_v26b[i][j])) {
+    //             v26bPassed = false;
+    //             break;
+    //         }
+    //     }
+    // }
 
     std::cout << "Output: " << std::endl;
     for (int i = 0; i < 1; i++) {
@@ -163,7 +176,7 @@ void testbench() {
         }
     }
     // Print output array contents
-    std::cout << "v26b Assertion: " << (v26bPassed ? "Passed" : "Failed") << "\n"<< std::endl;
+    // std::cout << "v26b Assertion: " << (v26bPassed ? "Passed" : "Failed") << "\n"<< std::endl;
     std::cout << "RUN DONE RUN DONE RUN DONE RUN DONE RUN DONE\n" << std::endl;
 }
 

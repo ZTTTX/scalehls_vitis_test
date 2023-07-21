@@ -473,7 +473,7 @@
      "spec_frequency": 300,
      "spec_period": 3.333333,
      "requested_frequency": 300,
-     "achieved_frequency": 300,
+     "achieved_frequency": 265.1,
      "clock_domain": "",
      "inst_ref": "",
      "comp_ref": "",
@@ -517,11 +517,11 @@
     "version": "2022.2",
     "cl": "3671529",
     "time_stamp": "2022-10-13-17:52:11",
-    "options": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -l --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet.xo -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src ",
-    "xclbin_name": "largeNet.link",
-    "uuid": "873adca2-8c47-4ced-80ce-8e63ea868547",
-    "link_uuid": "873adca2-8c47-4ced-80ce-8e63ea868547",
-    "package_uuid": "301928a3-24bf-4bf0-b9ae-dd893324601b",
+    "options": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -l --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_3.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_3.xo -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src ",
+    "xclbin_name": "largeNet_3.link",
+    "uuid": "10aea46e-bc70-45b3-affb-682a51458e49",
+    "link_uuid": "10aea46e-bc70-45b3-affb-682a51458e49",
+    "package_uuid": "1a7cd180-b0c7-45ad-951e-aa7a081ffd8a",
     "system_compile_flow": false
    },
    "user_regions": [
@@ -564,7 +564,7 @@
      },
      "kernels": [
       {
-       "name": "largeNet",
+       "name": "largeNet_3",
        "estimated_resources": {
         "LUT": "2375",
         "REG": "835",
@@ -638,31 +638,31 @@
      "compute_units": [
       {
        "id": "0",
-       "kernel_name": "largeNet",
-       "cu_name": "largeNet_1",
+       "kernel_name": "largeNet_3",
+       "cu_name": "largeNet_3_1",
        "base_address": "0x800000",
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "177684",
-         "REG": "286509",
-         "BRAM": "80",
+         "LUT": "193127",
+         "REG": "296292",
+         "BRAM": "251",
          "DSP": "1234",
          "URAM": "0"
         },
         {
          "design_state": "synthesized",
-         "LUT": "208192",
-         "REG": "293805",
-         "BRAM": "80",
-         "DSP": "1234",
+         "LUT": "628393",
+         "REG": "890520",
+         "BRAM": "595",
+         "DSP": "3698",
          "URAM": "0"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "177673",
-         "REG": "286507",
-         "BRAM": "80",
+         "LUT": "193127",
+         "REG": "296292",
+         "BRAM": "251",
          "DSP": "1234",
          "URAM": "0"
         }
@@ -686,37 +686,37 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "177673",
+           "used": "4",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "155252",
+           "used": "4",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsMem",
-           "used": "22421",
+           "used": "0",
            "available": "205440"
           },
           {
            "resource_name": "REG",
-           "used": "286507",
+           "used": "4",
            "available": "879360"
           },
           {
            "resource_name": "CARRY8",
-           "used": "3961",
+           "used": "0",
            "available": "54960"
           },
           {
            "resource_name": "F7MUX",
-           "used": "231",
+           "used": "0",
            "available": "219840"
           },
           {
            "resource_name": "F8MUX",
-           "used": "72",
+           "used": "0",
            "available": "109920"
           },
           {
@@ -726,7 +726,67 @@
           },
           {
            "resource_name": "BRAM",
-           "used": "80.5",
+           "used": "0",
+           "available": "672"
+          },
+          {
+           "resource_name": "URAM",
+           "used": "0",
+           "available": "320"
+          },
+          {
+           "resource_name": "DSPs",
+           "used": "0",
+           "available": "2880"
+          }
+         ]
+        },
+        {
+         "slr_name": "SLR1",
+         "resource_utilization": [
+          {
+           "resource_name": "LUT",
+           "used": "193123",
+           "available": "432000"
+          },
+          {
+           "resource_name": "LUTAsLogic",
+           "used": "170304",
+           "available": "432000"
+          },
+          {
+           "resource_name": "LUTAsMem",
+           "used": "22819",
+           "available": "197760"
+          },
+          {
+           "resource_name": "REG",
+           "used": "296288",
+           "available": "864000"
+          },
+          {
+           "resource_name": "CARRY8",
+           "used": "4177",
+           "available": "54000"
+          },
+          {
+           "resource_name": "F7MUX",
+           "used": "354",
+           "available": "216000"
+          },
+          {
+           "resource_name": "F8MUX",
+           "used": "72",
+           "available": "108000"
+          },
+          {
+           "resource_name": "F9MUX",
+           "used": "0",
+           "available": "54000"
+          },
+          {
+           "resource_name": "BRAM",
+           "used": "251.5",
            "available": "672"
           },
           {
@@ -737,66 +797,6 @@
           {
            "resource_name": "DSPs",
            "used": "1234",
-           "available": "2880"
-          }
-         ]
-        },
-        {
-         "slr_name": "SLR1",
-         "resource_utilization": [
-          {
-           "resource_name": "LUT",
-           "used": "0",
-           "available": "432000"
-          },
-          {
-           "resource_name": "LUTAsLogic",
-           "used": "0",
-           "available": "432000"
-          },
-          {
-           "resource_name": "LUTAsMem",
-           "used": "0",
-           "available": "197760"
-          },
-          {
-           "resource_name": "REG",
-           "used": "0",
-           "available": "864000"
-          },
-          {
-           "resource_name": "CARRY8",
-           "used": "0",
-           "available": "54000"
-          },
-          {
-           "resource_name": "F7MUX",
-           "used": "0",
-           "available": "216000"
-          },
-          {
-           "resource_name": "F8MUX",
-           "used": "0",
-           "available": "108000"
-          },
-          {
-           "resource_name": "F9MUX",
-           "used": "0",
-           "available": "54000"
-          },
-          {
-           "resource_name": "BRAM",
-           "used": "0",
-           "available": "672"
-          },
-          {
-           "resource_name": "URAM",
-           "used": "0",
-           "available": "320"
-          },
-          {
-           "resource_name": "DSPs",
-           "used": "0",
            "available": "3072"
           }
          ]
@@ -936,7 +936,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "largeNet_1",
+        "name": "largeNet_3_1",
         "port_name": "m_axi_gmem"
        },
        "node2": {
@@ -966,7 +966,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "largeNet_1",
+        "name": "largeNet_3_1",
         "port_name": "s_axi_ctrl"
        }
       },
@@ -987,7 +987,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "largeNet_1",
+        "name": "largeNet_3_1",
         "port_name": "ap_clk"
        }
       },
@@ -1008,7 +1008,7 @@
         "kernel_argument_id": "",
         "arg_name": "",
         "mode": "",
-        "name": "largeNet_1",
+        "name": "largeNet_3_1",
         "port_name": "ap_rst_n"
        }
       },

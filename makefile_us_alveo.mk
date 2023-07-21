@@ -38,7 +38,7 @@ help:
 endif
 
 ############################## Setting up Project Variables ##############################
-TOP_FUNC_NAME ?= largeNet
+TOP_FUNC_NAME ?= largeNet_3
 TARGET := hw
 VPP_LDFLAGS :=
 include ./utils.mk

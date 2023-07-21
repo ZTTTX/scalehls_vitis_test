@@ -13,8 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-set FUN_NAME "cemit_replaced_v2"
+#set FUN_NAME "cemit_replaced_v2"
 #set FUN_NAME "forward"
+#set FUN_NAME "largeNet_2_copy"
+
+set FUN_NAME "largeNet_3"
+
 set CUR_DIR "/mnt/shared/home/tz32/scalehls_vitis_test"
 set PROJ "$FUN_NAME.prj"
 set SOLN "sol"
