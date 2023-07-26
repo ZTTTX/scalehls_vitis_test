@@ -7,7 +7,7 @@ import struct
 import time
 # Following found in PYTHONPATH setup by XRT
 import pyxrt
-
+import numpy as np
 sys.path.append('/mnt/shared/home/tz32/Vitis_Accel_Examples/host_py/hello_world_py/src')
 
 from utils_binding import *
@@ -15,20 +15,19 @@ from utils_binding import *
 import torch
 import torch.nn as nn
 
-
-
 def initialize_weights(layer):
+    torch.manual_seed(123)
     if isinstance(layer, nn.Linear):
         nn.init.xavier_uniform_(layer.weight)
 
 def randomize_inputs_weights(opt):
     # Define the module layers
+    torch.manual_seed(123)
     layers = nn.Sequential(
         nn.Flatten(),
         nn.Linear(32 * 32 * 1, 64),
         nn.ReLU()
     )
-
     layers.apply(initialize_weights)
     weights = []
     for param in layers.parameters():
@@ -36,7 +35,7 @@ def randomize_inputs_weights(opt):
 
     # Generate random inputs
     input_shape = (1, 1, 32, 32)  # Adjust the shape according to your module's input shape
-    # torch.manual_seed(123)
+
     inputs = torch.randn(*input_shape)
     inputs_list = inputs.view(-1).tolist()
 
@@ -113,10 +112,11 @@ def main(args):
         inputs_list, weights = randomize_inputs_weights(opt)
 
         # Run the bin.xclbin
-        xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_2_copy.xclbin"
-        bin_output, t_baseline = runKernel(opt, "largeNet_2_copy", xclbin, inputs_list, weights)
+        for j in range(50):
+            xclbin = "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_4.xclbin"
+            bin_output, t_baseline = runKernel(opt, "largeNet_4", xclbin, inputs_list, weights)
 
-        total_basline_time.append(t_baseline)
+            total_basline_time.append(t_baseline)
 
         print("First 10 Outputs:")
         for i in range(10):
@@ -124,7 +124,8 @@ def main(args):
         print("Time for baseline: ", t_baseline)
         print()
         print(total_basline_time)
-       
+        print()
+        print("average time for ", j + 1, 'runs = ', np.average(total_basline_time))
         print("RUN IS DONE")
         return 0
     except OSError as o:

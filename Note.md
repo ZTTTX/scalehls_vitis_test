@@ -36,4 +36,6 @@ src/host_compare.py -k /mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xi
 
 src/host_func.py -k /mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_2_copy.xclbin
 
+src/host_func.py -k /mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_4.xclbin
+
 exit

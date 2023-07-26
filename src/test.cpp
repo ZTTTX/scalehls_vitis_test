@@ -15,7 +15,7 @@
 #include "cemit_replaced_v2.hpp"
 #include "largeNet_2_copy.hpp"
 #include "largeNet_3.hpp"
-
+#include "largeNet_3_df.hpp"
 
 void expected_forward_node0(
   float e_v0[1][10],
@@ -151,7 +151,7 @@ void testbench() {
     // Call the top function
     // cemit_replaced_v2(v25b, v26b, v27b);
     // forward(v25b, v26b, v27b);
-    largeNet_3(v25b, v26b, v27b);
+    largeNet_3_df(v25b, v26b, v27b);
 
     // Calculate the expected output manually
     // calculateForward(expected_v25b, expected_v26b, expected_v27b);
