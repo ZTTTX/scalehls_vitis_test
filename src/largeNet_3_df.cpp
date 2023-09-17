@@ -18,7 +18,6 @@ void forward_node0(
 
 void forward_node1(
   float v8[1][1024],
-  float v9[1024][64],
   float v10[1][64]
 ) {	//
 
@@ -30,7 +29,7 @@ void forward_node1(
   // Copy c10 to p_B
   for (int i = 0; i < 1024; i++) {
     for (int j = 0; j < 64; j++) {
-      p_B[i][j] = v9[i][j];
+      p_B[i][j] = 0.0011;
     }
   }
 
@@ -83,8 +82,7 @@ void forward_node2(
 }
 
 void forward_node3(
-  float v8[1][1024],
-  float v9[1024][64],
+  float v8[1][64],
   float v10[1][64]
 ) {	//
 
@@ -96,18 +94,18 @@ void forward_node3(
   // Copy c10 to p_B
   for (int i = 0; i < 1024; i++) {
     for (int j = 0; j < 64; j++) {
-      p_B[i][j] = v9[i][j];
+      p_B[i][j] = 0.001;
     }
   }
 
   // Copy c11 to p_A
   for (int i = 0; i < 64; i++) {
     for (int j = 0; j < 1024; j++) {
-      if (i < 1) {
+      if (i < 1 && j < 64) {
         p_A[j][i] = v8[i][j];
       }
       else {
-        p_A[j][i] = 0;
+        p_A[j][i] = 0.01;
       }
     }
   }
@@ -139,8 +137,7 @@ void forward_node3(
 }
 
 void forward_node4(
-  float v8[1][1024],
-  float v9[1024][64],
+  float v8[1][64],
   float v10[1][64]
 ) {	//
 
@@ -152,18 +149,18 @@ void forward_node4(
   // Copy c10 to p_B
   for (int i = 0; i < 1024; i++) {
     for (int j = 0; j < 64; j++) {
-      p_B[i][j] = v9[i][j];
+      p_B[i][j] = 0.0012;
     }
   }
 
   // Copy c11 to p_A
   for (int i = 0; i < 32; i++) {
     for (int j = 0; j < 1024; j++) {
-      if (i < 1) {
+      if (i < 1 && j < 64) {
         p_A[j][i] = v8[i][j];
       }
       else {
-        p_A[j][i] = 0;
+        p_A[j][i] = 0.01;
       }
     }
   }
@@ -218,15 +215,15 @@ void largeNet_3_df(
 
 #pragma HLS DATAFLOW
   #pragma HLS resource variable=v20 core=ram_t2p_bram
-  forward_node1(v19, v17, v20);	//
+  forward_node1(v19, v20);	//
 
   float v21[1][64];	// L18
   #pragma HLS resource variable=v21 core=ram_t2p_bram
-  forward_node3(v19, v17, v21);
+  forward_node3(v20, v21);
 
   float v22[1][64];	// L18
   #pragma HLS resource variable=v22 core=ram_t2p_bram
-  forward_node4(v19, v17, v22);
+  forward_node4(v21, v22);
 
-  forward_node0(v20, v18, v16);	//
+  forward_node0(v22, v18, v16);	//
 }

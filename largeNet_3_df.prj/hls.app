@@ -1,4 +1,4 @@
-<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" projectType="C/C++" top="largeNet_3_df" name="largeNet_3_df.prj">
+<AutoPilot:project xmlns:AutoPilot="com.autoesl.autopilot.project" top="largeNet_3_df" name="largeNet_3_df.prj">
     <includePaths/>
     <libraryFlag/>
     <files>

@@ -38,7 +38,7 @@ help:
 endif
 
 ############################## Setting up Project Variables ##############################
-TOP_FUNC_NAME ?= largeNet_3_df
+TOP_FUNC_NAME ?= hls4ml_conv2d
 TARGET := hw
 VPP_LDFLAGS :=
 include ./utils.mk
@@ -62,7 +62,7 @@ CXXFLAGS += -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas
 PLATFORM_BLOCKLIST += nodma zc vck v70 
 ############################## Setting up Host Variables ##############################
 #Include Required Host Source Files
-HOST_SRCS += ./src/host.py 
+HOST_SRCS += ./src/host_conv.py 
 # Host compiler global settings
 CXXFLAGS += -fmessage-length=0
 LDFLAGS += -lrt -lstdc++ 
@@ -72,7 +72,7 @@ LDFLAGS += -lrt -lstdc++
 VPP_FLAGS += --save-temps 
 
 PYTHON_INSTALL ?= /usr/bin
-EXECUTABLE = ./src/host.py
+EXECUTABLE = ./src/host_conv.py
 EMCONFIG_DIR = $(TEMP_DIR)
 
 ############################## Setting Targets ##############################
@@ -89,12 +89,12 @@ xclbin: build
 ############################## Setting Rules for Binary Containers (Building Kernels) ##############################
 $(TEMP_DIR)/$(TOP_FUNC_NAME).xo: src/$(TOP_FUNC_NAME).cpp
 	mkdir -p $(TEMP_DIR)
-	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k $(TOP_FUNC_NAME) --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<' -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src
+	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k $(TOP_FUNC_NAME) --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<' -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src -I/mnt/shared/home/tz32/scalehls_vitis_test/src/hls4ml/nnet_utils
 
 $(BUILD_DIR)/$(TOP_FUNC_NAME).xclbin: $(TEMP_DIR)/$(TOP_FUNC_NAME).xo
 	mkdir -p $(BUILD_DIR)
-	v++ -l $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) $(VPP_LDFLAGS) --temp_dir $(TEMP_DIR) -o'$(LINK_OUTPUT)' $(+) -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src
-	v++ -p $(LINK_OUTPUT) $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) --package.out_dir $(PACKAGE_OUT) -o $(BUILD_DIR)/$(TOP_FUNC_NAME).xclbin -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src
+	v++ -l $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) $(VPP_LDFLAGS) --temp_dir $(TEMP_DIR) -o'$(LINK_OUTPUT)' $(+) -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src -I/mnt/shared/home/tz32/scalehls_vitis_test/src/hls4ml/nnet_utils
+	v++ -p $(LINK_OUTPUT) $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) --package.out_dir $(PACKAGE_OUT) -o $(BUILD_DIR)/$(TOP_FUNC_NAME).xclbin -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src -I/mnt/shared/home/tz32/scalehls_vitis_test/src/hls4ml/nnet_utils
 
 emconfig:$(EMCONFIG_DIR)/emconfig.json
 $(EMCONFIG_DIR)/emconfig.json:

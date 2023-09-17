@@ -39,3 +39,7 @@ src/host_func.py -k /mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilin
 src/host_func.py -k /mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/largeNet_4.xclbin
 
 exit
+
+============================================
+
+src/host_conv.py -k /mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin

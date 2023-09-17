@@ -24,18 +24,15 @@ void forward_node0(
 
 void forward_node1(
   float v8[1][1024],
-  float v9[1024][64],
   float v10[1][64]
 );
 
 void forward_node3(
-  float v8[1][1024],
-  float v9[1024][64],
+  float v8[1][64],
   float v10[1][64]
 );
 void forward_node4(
-  float v8[1][1024],
-  float v9[1024][64],
+  float v8[1][64],
   float v10[1][64]
 );
 
