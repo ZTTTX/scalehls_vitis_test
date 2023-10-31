@@ -11,10 +11,13 @@ void hls4ml_conv2d(
   #pragma HLS interface s_axilite port=return bundle=ctrl
   #pragma HLS interface m_axi offset=slave port=vin
   #pragma HLS interface s_axilite port=vin bundle=ctrl
+
   #pragma HLS interface m_axi offset=slave port=vout
   #pragma HLS interface s_axilite port=vout bundle=ctrl
+
   #pragma HLS interface m_axi offset=slave port=weights
   #pragma HLS interface s_axilite port=weights bundle=ctrl
+  
   #pragma HLS interface m_axi offset=slave port=biases
   #pragma HLS interface s_axilite port=biases bundle=ctrl
     // Call the conv_2d function

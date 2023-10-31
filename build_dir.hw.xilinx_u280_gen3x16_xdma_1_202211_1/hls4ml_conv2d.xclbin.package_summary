@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "Sat Sep 16 17:04:57 2023",
- "timestampMillis": "1694901897790",
+ "dateTimestamp": "Mon Oct 30 16:31:29 2023",
+ "timestampMillis": "1698701489042",
  "buildStep": {
-  "cmdId": "42c890dc-9b05-4cb0-9b18-7ff2e5df8018",
+  "cmdId": "de89ca8d-71e5-443b-b238-1ad58709d274",
   "name": "v++",
   "logFile": "/mnt/shared/home/tz32/scalehls_vitis_test/_x/package/package.steps.log",
   "commandLine": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -p ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.link.xclbin --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --package.out_dir ./package.hw -o ./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src -I/mnt/shared/home/tz32/scalehls_vitis_test/src/hls4ml/nnet_utils ",
@@ -40,10 +40,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Sat Sep 16 17:04:57 2023",
- "timestampMillis": "1694901897790",
+ "dateTimestamp": "Mon Oct 30 16:31:29 2023",
+ "timestampMillis": "1698701489043",
  "status": {
-  "cmdId": "42c890dc-9b05-4cb0-9b18-7ff2e5df8018",
+  "cmdId": "de89ca8d-71e5-443b-b238-1ad58709d274",
   "state": "CS_RUNNING"
  }
 }
@@ -51,8 +51,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "Sat Sep 16 17:05:03 2023",
- "timestampMillis": "1694901903053",
+ "dateTimestamp": "Mon Oct 30 16:31:33 2023",
+ "timestampMillis": "1698701493779",
  "buildSummary": {
   "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
   "hardwareDsa": "",
@@ -79,7 +79,7 @@
     "name": "hls4ml_conv2d.link",
     "file": "/mnt/shared/home/tz32/scalehls_vitis_test/build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.link.xclbin",
     "reports": [],
-    "uuid": "fdb0abd7-696f-4711-8e3b-cbeb0158957c"
+    "uuid": "59bd111c-beb0-417f-9238-7f6c9e936c5e"
    },
    "kernels": []
   }
@@ -89,10 +89,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "Sat Sep 16 17:05:03 2023",
- "timestampMillis": "1694901903759",
+ "dateTimestamp": "Mon Oct 30 16:31:34 2023",
+ "timestampMillis": "1698701494399",
  "status": {
-  "cmdId": "42c890dc-9b05-4cb0-9b18-7ff2e5df8018",
+  "cmdId": "de89ca8d-71e5-443b-b238-1ad58709d274",
   "state": "CS_PASSED"
  }
 }
@@ -100,8 +100,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat Sep 16 17:05:03 2023",
- "timestampMillis": "1694901903917",
+ "dateTimestamp": "Mon Oct 30 16:31:34 2023",
+ "timestampMillis": "1698701494561",
  "report": {
   "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x/reports/package/v++_package_hls4ml_conv2d_guidance.html",
   "name": "",
@@ -114,8 +114,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "Sat Sep 16 17:05:03 2023",
- "timestampMillis": "1694901903918",
+ "dateTimestamp": "Mon Oct 30 16:31:34 2023",
+ "timestampMillis": "1698701494562",
  "report": {
   "path": "/mnt/shared/home/tz32/scalehls_vitis_test/_x/v++_package_hls4ml_conv2d_guidance.pb3",
   "name": "",

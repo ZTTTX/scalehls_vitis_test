@@ -39,6 +39,8 @@ endif
 
 ############################## Setting up Project Variables ##############################
 TOP_FUNC_NAME ?= hls4ml_conv2d
+HOST_NAME = host_conv.py
+
 TARGET := hw
 VPP_LDFLAGS :=
 include ./utils.mk
@@ -62,7 +64,7 @@ CXXFLAGS += -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas
 PLATFORM_BLOCKLIST += nodma zc vck v70 
 ############################## Setting up Host Variables ##############################
 #Include Required Host Source Files
-HOST_SRCS += ./src/host_conv.py 
+HOST_SRCS += ./src/$(HOST_NAME) 
 # Host compiler global settings
 CXXFLAGS += -fmessage-length=0
 LDFLAGS += -lrt -lstdc++ 
@@ -72,7 +74,7 @@ LDFLAGS += -lrt -lstdc++
 VPP_FLAGS += --save-temps 
 
 PYTHON_INSTALL ?= /usr/bin
-EXECUTABLE = ./src/host_conv.py
+EXECUTABLE = ./src/$(HOST_NAME)
 EMCONFIG_DIR = $(TEMP_DIR)
 
 ############################## Setting Targets ##############################

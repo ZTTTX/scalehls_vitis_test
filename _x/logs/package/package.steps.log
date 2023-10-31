@@ -13,7 +13,7 @@ RT_TCL_PATH=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/scripts/rt/base_tcl/tcl
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 LD_LIBRARY_PATH=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/java-cef-95.0.4638.69/bin/lib/linux64:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu/18:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/jre11.0.11_9/lib/:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/jre11.0.11_9/lib//server:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu/18:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o:/scratch/opt/xilinx/xrt/lib:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../lnx64/tools/dot/lib
 XILINX_VITIS=/opt/xilinx/vitis/v2022p2/Vitis/2022.2
-SSH_CONNECTION=10.250.49.132 52887 192.17.102.75 22
+SSH_CONNECTION=10.250.59.91 51738 192.17.102.75 22
 LESSCLOSE=/usr/bin/lesspipe %s %s
 XILINX_DSP=
 RDI_PATCHROOT=
@@ -23,7 +23,7 @@ RDI_INSTALLROOT=/opt/xilinx/vitis/v2022p2
 OLDPWD=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin
 COLORTERM=truecolor
 RDI_PREPEND_PATH=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin
-MAKE_TERMOUT=/dev/pts/251
+MAKE_TERMOUT=/dev/pts/8
 VSCODE_GIT_ASKPASS_EXTRA_ARGS=
 PLATFORM_REPO_PATHS=/opt/xilinx/platforms
 MFLAGS=
@@ -31,7 +31,7 @@ XILINX_XRT=/scratch/opt/xilinx/xrt
 XILINX_VIVADO=/opt/xilinx/vitis/v2022p2/Vivado/2022.2
 XILINX_SDK=/opt/xilinx/vitis/v2022p2/Vitis/2022.2
 XILINX_PLANAHEAD=/opt/xilinx/vitis/v2022p2/Vitis/2022.2
-XDG_SESSION_ID=6325
+XDG_SESSION_ID=890
 USER=tz32
 RDI_BASEROOT=/opt/xilinx/vitis/v2022p2/Vitis
 RDI_INSTALLVER=2022.2
@@ -39,11 +39,11 @@ RDI_JAVA_VERSION=11.0.11_9
 PWD=/mnt/shared/home/tz32/scalehls_vitis_test
 XILINX_HLS=/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2
 HOME=/mnt/shared/home/tz32
-BROWSER=/mnt/shared/home/tz32/.vscode-server/bin/8fa188b2b301d36553cbc9ce1b0a146ccb93351f/bin/helpers/browser.sh
-VSCODE_GIT_ASKPASS_NODE=/mnt/shared/home/tz32/.vscode-server/bin/8fa188b2b301d36553cbc9ce1b0a146ccb93351f/node
+BROWSER=/mnt/shared/home/tz32/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/bin/helpers/browser.sh
+VSCODE_GIT_ASKPASS_NODE=/mnt/shared/home/tz32/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node
 TERM_PROGRAM=vscode
-SSH_CLIENT=10.250.49.132 52887 22
-TERM_PROGRAM_VERSION=1.73.0
+SSH_CLIENT=10.250.59.91 51738 22
+TERM_PROGRAM_VERSION=1.83.1
 TCL_LIBRARY=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/tcl/tcl8.5
 XIL_CHECK_TCL_DEBUG=False
 XILINX_VIVADO_HLS=/opt/xilinx/vitis/v2022p2/Vivado/2022.2
@@ -55,7 +55,7 @@ MYVIVADO=
 RDI_TPS_ROOT=/opt/xilinx/vitis/v2022p2/Vivado/2022.2/tps/lnx64
 RDI_BUILD=yes
 ISL_IOSTREAMS_RSA=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/isl
-VSCODE_IPC_HOOK_CLI=/run/user/1576200146/vscode-ipc-8b4840c4-6d5c-4ed5-a2a6-0b75687beff4.sock
+VSCODE_IPC_HOOK_CLI=/run/user/1576200146/vscode-ipc-1acbbbe2-cbbe-4444-b4bc-fbd862013d44.sock
 LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:
 RDI_PLATFORM=lnx64
 RDI_BINROOT=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin
@@ -64,7 +64,7 @@ HDIPRELDPATH=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu/18:/opt/x
 RDI_DATADIR=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/data
 SYNTH_COMMON=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/scripts/rt/data
 MAIL=/var/mail/tz32
-VSCODE_GIT_ASKPASS_MAIN=/mnt/shared/home/tz32/.vscode-server/bin/8fa188b2b301d36553cbc9ce1b0a146ccb93351f/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_MAIN=/mnt/shared/home/tz32/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/extensions/git/dist/askpass-main.js
 SHELL=/bin/bash
 TERM=xterm-256color
 MAKEOVERRIDES=${-*-command-variables-*-}
@@ -73,26 +73,26 @@ MAKELEVEL=1
 HDI_APPROOT=/opt/xilinx/vitis/v2022p2/Vitis/2022.2
 SHLVL=5
 LANGUAGE=en_US:en
-PYTHONPATH=/scratch/opt/xilinx/xrt/python
-MAKE_TERMERR=/dev/pts/251
-VSCODE_GIT_IPC_HANDLE=/run/user/1576200146/vscode-git-015d8ec289.sock
+PYTHONPATH=/mnt/shared/home/tz32/.local/lib/python3.6/site-packages:/scratch/opt/xilinx/xrt/python
+MAKE_TERMERR=/dev/pts/8
+VSCODE_GIT_IPC_HANDLE=/run/user/1576200146/vscode-git-27ad3b8cd9.sock
 XIL_NO_OVERRIDE=0
 RDI_OPT_EXT=.o
 TARGET=hw
 LOGNAME=tz32
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1576200146/bus
-GIT_ASKPASS=/mnt/shared/home/tz32/.vscode-server/bin/8fa188b2b301d36553cbc9ce1b0a146ccb93351f/extensions/git/dist/askpass.sh
+GIT_ASKPASS=/mnt/shared/home/tz32/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/extensions/git/dist/askpass.sh
 XDG_RUNTIME_DIR=/run/user/1576200146
 XIL_SUPPRESS_OVERRIDE_WARNINGS=1
-PATH=/opt/xilinx/vitis/v2022p2/Vivado/2022.2/tps/lnx64/binutils-2.26/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../gnu/aarch64/lin/aarch64-linux/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../gnu/ppc64le/4.9.3/lnx64/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/xilinx/vitis/v2022p2/Vivado/2022.2/tps/lnx64/gcc-8.3.0/bin:/opt/xilinx/vitis/v2022p2/Vivado/2022.2/gnu/microblaze/lin/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/jre11.0.11_9/bin:/opt/xilinx/vitis/v2022p2/Vivado/2022.2/bin:/scratch/opt/xilinx/xrt/bin:/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/bin:/opt/xilinx/vitis/v2022p2/Model_Composer/2022.2/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/microblaze/lin/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/arm/lin/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch64/lin/aarch64-linux/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/cmake-3.3.2/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/aietools/bin:/opt/xilinx/vitis/v2020p1//DocNav:/mnt/shared/home/tz32/.vscode-server/bin/8fa188b2b301d36553cbc9ce1b0a146ccb93351f/bin/remote-cli:/mnt/shared/home/tz32/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH=/opt/xilinx/vitis/v2022p2/Vivado/2022.2/tps/lnx64/binutils-2.26/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../gnu/aarch64/lin/aarch64-linux/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../gnu/ppc64le/4.9.3/lnx64/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/../gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/xilinx/vitis/v2022p2/Vivado/2022.2/tps/lnx64/gcc-8.3.0/bin:/opt/xilinx/vitis/v2022p2/Vivado/2022.2/gnu/microblaze/lin/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/jre11.0.11_9/bin:/opt/xilinx/vitis/v2022p2/Vivado/2022.2/bin:/scratch/opt/xilinx/xrt/bin:/opt/xilinx/vitis/v2022p2/Vitis_HLS/2022.2/bin:/opt/xilinx/vitis/v2022p2/Model_Composer/2022.2/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/microblaze/lin/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/arm/lin/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch64/lin/aarch64-linux/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/tps/lnx64/cmake-3.3.2/bin:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/aietools/bin:/opt/xilinx/vitis/v2020p1//DocNav:/mnt/shared/home/tz32/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/bin/remote-cli:/mnt/shared/home/tz32/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 RDI_JAVA_PLATFORM=
 MAKEFLAGS= -- PLATFORM=/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm TARGET=hw
 HDI_PROCESSOR=x86_64
 RDI_LIBDIR=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu/18:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o/Ubuntu:/opt/xilinx/vitis/v2022p2/Vitis/2022.2/lib/lnx64.o
 LESSOPEN=| /usr/bin/lesspipe %s
 _=/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++
-XILINX_CD_CONNECT_ID=38527
-XILINX_CD_SESSION=83e7f28f-1159-4e39-a2b5-b9ab9a2f097d
+XILINX_CD_CONNECT_ID=34547
+XILINX_CD_SESSION=8688fb99-e3b2-4346-bcc5-2de6153e2bf8
 
 
 V++ command line:
@@ -135,26 +135,26 @@ FINAL PLATFORM PATH
 
 ==========================================
 new:  steps log generated by v++ for new launch 
-timestamp: 16 Sep 2023 17:05:02
+timestamp: 30 Oct 2023 16:31:33
 ------------------------------------------
 V++ internal step: running xclbinutil to extract system diagram from input xclbin
-timestamp: 16 Sep 2023 17:05:02
+timestamp: 30 Oct 2023 16:31:33
 cmd: /opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/xclbinutil --input /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.link.xclbin --dump-section SYSTEM_METADATA:RAW:/mnt/shared/home/tz32/scalehls_vitis_test/_x/package/extractedSystemDiagram.json --quiet
 V++ internal step status: success
 ------------------------------------------
 V++ internal step: copying input xclbin to output xclbin, from /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.link.xclbin to /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin
-timestamp: 16 Sep 2023 17:05:03
+timestamp: 30 Oct 2023 16:31:33
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: running xclbinutil to replace a section SYSTEM_METADATA:RAW: with a file /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/packagedSystemDiagram.json to output xclbin: /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-46790-xacc-head-000-5.csl.illinois.edu/upsert.xclbin
-timestamp: 16 Sep 2023 17:05:03
-cmd: /opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/xclbinutil --input /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin --replace-section SYSTEM_METADATA:RAW:/mnt/shared/home/tz32/scalehls_vitis_test/_x/package/packagedSystemDiagram.json -o /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-46790-xacc-head-000-5.csl.illinois.edu/upsert.xclbin --quiet --force
+V++ internal step: running xclbinutil to replace a section SYSTEM_METADATA:RAW: with a file /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/packagedSystemDiagram.json to output xclbin: /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-29246-xacc-head-000-5.csl.illinois.edu/upsert.xclbin
+timestamp: 30 Oct 2023 16:31:33
+cmd: /opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/xclbinutil --input /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin --replace-section SYSTEM_METADATA:RAW:/mnt/shared/home/tz32/scalehls_vitis_test/_x/package/packagedSystemDiagram.json -o /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-29246-xacc-head-000-5.csl.illinois.edu/upsert.xclbin --quiet --force
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: copying xclbin from /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-46790-xacc-head-000-5.csl.illinois.edu/upsert.xclbin to /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin
-timestamp: 16 Sep 2023 17:05:03
+V++ internal step: copying xclbin from /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-29246-xacc-head-000-5.csl.illinois.edu/upsert.xclbin to /mnt/shared/home/tz32/scalehls_vitis_test/./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xclbin
+timestamp: 30 Oct 2023 16:31:34
 V++ internal step status: success
 ------------------------------------------
-V++ internal step: removing temporary xclbin: /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-46790-xacc-head-000-5.csl.illinois.edu/upsert.xclbin
-timestamp: 16 Sep 2023 17:05:03
+V++ internal step: removing temporary xclbin: /mnt/shared/home/tz32/scalehls_vitis_test/_x/package/./.Xil/v++-29246-xacc-head-000-5.csl.illinois.edu/upsert.xclbin
+timestamp: 30 Oct 2023 16:31:34
 V++ internal step status: success

@@ -1,2 +1,0 @@
-performing high-level synthesis for kernel: forward
-Log file: /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward/forward/vitis_hls.log

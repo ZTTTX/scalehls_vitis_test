@@ -473,7 +473,7 @@
      "spec_frequency": 300,
      "spec_period": 3.333333,
      "requested_frequency": 300,
-     "achieved_frequency": 300,
+     "achieved_frequency": 250.8,
      "clock_domain": "",
      "inst_ref": "",
      "comp_ref": "",
@@ -519,9 +519,9 @@
     "time_stamp": "2022-10-13-17:52:11",
     "options": "/opt/xilinx/vitis/v2022p2/Vitis/2022.2/bin/unwrapped/lnx64.o/v++ -l --save-temps -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir ./_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1 -o./build_dir.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.link.xclbin _x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/hls4ml_conv2d.xo -I/mnt/shared/home/tz32/scalehls_vitis_test/src/Vitis_Libraries/blas/L1/include/hw -I/mnt/shared/home/tz32/scalehls_vitis_test/src -I/mnt/shared/home/tz32/scalehls_vitis_test/src/hls4ml/nnet_utils ",
     "xclbin_name": "hls4ml_conv2d.link",
-    "uuid": "fdb0abd7-696f-4711-8e3b-cbeb0158957c",
-    "link_uuid": "fdb0abd7-696f-4711-8e3b-cbeb0158957c",
-    "package_uuid": "42c890dc-9b05-4cb0-9b18-7ff2e5df8018",
+    "uuid": "59bd111c-beb0-417f-9238-7f6c9e936c5e",
+    "link_uuid": "59bd111c-beb0-417f-9238-7f6c9e936c5e",
+    "package_uuid": "de89ca8d-71e5-443b-b238-1ad58709d274",
     "system_compile_flow": false
    },
    "user_regions": [
@@ -566,8 +566,8 @@
       {
        "name": "hls4ml_conv2d",
        "estimated_resources": {
-        "LUT": "2409",
-        "REG": "7059",
+        "LUT": "6008",
+        "REG": "2803",
         "BRAM": "",
         "DSP": "",
         "URAM": ""
@@ -656,27 +656,27 @@
        "actual_resources": [
         {
          "design_state": "routed",
-         "LUT": "5534",
-         "REG": "9211",
-         "BRAM": "4",
-         "DSP": "20",
-         "URAM": "0"
+         "LUT": "7146",
+         "REG": "9194",
+         "BRAM": "86",
+         "DSP": "17",
+         "URAM": "1"
         },
         {
          "design_state": "synthesized",
-         "LUT": "5942",
-         "REG": "9313",
-         "BRAM": "4",
-         "DSP": "20",
-         "URAM": "0"
+         "LUT": "7704",
+         "REG": "9291",
+         "BRAM": "86",
+         "DSP": "17",
+         "URAM": "1"
         },
         {
          "design_state": "fully_placed",
-         "LUT": "5534",
-         "REG": "9211",
-         "BRAM": "4",
-         "DSP": "20",
-         "URAM": "0"
+         "LUT": "7142",
+         "REG": "9194",
+         "BRAM": "86",
+         "DSP": "17",
+         "URAM": "1"
         }
        ],
        "clock_name": "",
@@ -698,32 +698,32 @@
          "resource_utilization": [
           {
            "resource_name": "LUT",
-           "used": "5534",
+           "used": "7142",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsLogic",
-           "used": "5016",
+           "used": "6169",
            "available": "439680"
           },
           {
            "resource_name": "LUTAsMem",
-           "used": "518",
+           "used": "973",
            "available": "205440"
           },
           {
            "resource_name": "REG",
-           "used": "9211",
+           "used": "9194",
            "available": "879360"
           },
           {
            "resource_name": "CARRY8",
-           "used": "118",
+           "used": "332",
            "available": "54960"
           },
           {
            "resource_name": "F7MUX",
-           "used": "126",
+           "used": "371",
            "available": "219840"
           },
           {
@@ -738,17 +738,17 @@
           },
           {
            "resource_name": "BRAM",
-           "used": "4",
+           "used": "86",
            "available": "672"
           },
           {
            "resource_name": "URAM",
-           "used": "0",
+           "used": "1",
            "available": "320"
           },
           {
            "resource_name": "DSPs",
-           "used": "20",
+           "used": "17",
            "available": "2880"
           }
          ]

@@ -17,7 +17,7 @@
 #set FUN_NAME "forward"
 #set FUN_NAME "largeNet_2_copy"
 
-set FUN_NAME "largeNet_3_df"
+set FUN_NAME "LeNet_test"
 
 set CUR_DIR "/mnt/shared/home/tz32/scalehls_vitis_test"
 set PROJ "$FUN_NAME.prj"
@@ -29,8 +29,8 @@ if {![info exists CLKP]} {
 
 open_project -reset $PROJ
 
-add_files "src/$FUN_NAME.cpp" -cflags "-std=c++14 -Isrc/Vitis_Libraries/blas/L1/include/hw -Isrc/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils -Isrc/Vitis_Libraries/blas/L1/tests/hw/gemm"
-add_files -tb "src/test.cpp" -cflags "-std=c++14 -Isrc/Vitis_Libraries/blas/L1/include/hw"
+add_files "src/$FUN_NAME.cpp" -cflags "-std=c++14 -Isrc/Vitis_Libraries/blas/L1/include/hw -Isrc/Vitis_Libraries/blas/L1/include/hw/xf_blas/helpers/utils -Isrc/Vitis_Libraries/blas/L1/tests/hw/gemm -Isrc/hls4ml/nnet_utils"
+add_files -tb "src/LeNet_testbench.cpp" -cflags "-std=c++14 -Isrc/Vitis_Libraries/blas/L1/include/hw -Isrc/hls4ml/nnet_utils"
 set_top $FUN_NAME
 open_solution -reset $SOLN
 
@@ -42,7 +42,7 @@ create_clock -period $CLKP
 
 csim_design
 
-if {0==1} {
+if {1==1} {
   csynth_design
   export_design -flow impl -rtl verilog
 }

@@ -28,43 +28,27 @@ def parse_params_header(file_name):
 
     return t_config
 
-def runKernel(opt):
-    t_config = parse_params_header("/mnt/shared/home/tz32/scalehls_vitis_test/src/params.hpp")
-    # Define the convolutional layer using torch
-    conv_layer = nn.Conv2d(in_channels=t_config["n_chan"], out_channels=t_config["n_filt"], kernel_size=(t_config["filt_height"], t_config["filt_width"]), stride=(t_config["stride_height"], t_config["stride_width"]))
+def GenMatrix(in_height, in_width):
+    conv_layer = nn.Conv2d(in_channels=1, out_channels=1, kernel_size=(5,5), stride=(1, 1))
     
     # Initialize the weights and biases here as per your requirements
     nn.init.xavier_uniform_(conv_layer.weight)
     nn.init.zeros_(conv_layer.bias)
 
-    weights = conv_layer.weight.view(-1).tolist()
-    biases = conv_layer.bias.tolist()
-
-    input_shape = (1, t_config["n_chan"], t_config["in_height"], t_config["in_width"])
+    # COLUM FIRST
+    weights = conv_layer.weight.permute(3, 2, 1, 0).contiguous().view(-1).tolist()
+    biases = conv_layer.bias.view(-1).tolist()
+    input_shape = (1, 1, in_height, in_width)
     inputs = torch.randn(*input_shape)
-    inputs_list = inputs.view(-1).tolist()
-
-    golden_out = conv_layer(inputs).view(-1).tolist()
-
-    opt.DATA_SIZE = max(len(inputs_list), len(weights) + len(biases))
+    # Flatten inputs in column-first order
+    inputs_list = inputs.permute(3, 2, 1, 0).contiguous().view(-1).tolist()
+    # Compute golden_out
+    golden_out = conv_layer(inputs).permute(3, 2, 1, 0).contiguous().view(-1).tolist()
     
-    try:
-        d = pyxrt.device(opt.index)
-        xbin = pyxrt.xclbin(opt.bitstreamFile)
-        uuid = d.load_xclbin(xbin)
-    except:
-        print("[Expected Warning] Failed to load xclbin using original code, switching to modified version")
-        d = pyxrt.device(1)
-        xbin = pyxrt.xclbin(opt.bitstreamFile)
-        uuid = d.load_xclbin(xbin)
-        print("UUID loaded successfully")
+    return inputs, weights, biases, golden_out
 
-    kernellist = xbin.get_kernels()
-
-    rule = re.compile("hls4ml_conv2d*")
-    kernel = list(filter(lambda val: rule.match(val.get_name()), kernellist))[0]
-    kHandle = pyxrt.kernel(d, uuid, kernel.get_name(), pyxrt.kernel.shared)
-
+def RunSingleBatch(d, kHandle, opt, inputs_list, weights, biases):
+    opt.DATA_SIZE = max(len(inputs_list), len(weights) + len(biases))
     boHandle1 = pyxrt.bo(d, opt.DATA_SIZE * 4, pyxrt.bo.normal, kHandle.group_id(0))
     boHandle2 = pyxrt.bo(d, opt.DATA_SIZE * 4, pyxrt.bo.normal, kHandle.group_id(1))
     boHandle3 = pyxrt.bo(d, opt.DATA_SIZE * 4, pyxrt.bo.normal, kHandle.group_id(2))
@@ -110,19 +94,84 @@ def runKernel(opt):
         output_float = struct.unpack('f', output_byte)[0]
         output_floats.append(output_float)
 
-   
-    # Compare the output with the golden_out
+    return output_floats
+    
+
+def runKernel(opt):
+    torch.manual_seed(0)
+    t_config = parse_params_header("/mnt/shared/home/tz32/scalehls_vitis_test/src/params.hpp")
+    # Define the convolutional layer using torch
+     
+    try:
+        d = pyxrt.device(opt.index)
+        xbin = pyxrt.xclbin(opt.bitstreamFile)
+        uuid = d.load_xclbin(xbin)
+    except:
+        print("[Expected Warning] Failed to load xclbin using original code, switching to modified version")
+        d = pyxrt.device(1)
+        xbin = pyxrt.xclbin(opt.bitstreamFile)
+        uuid = d.load_xclbin(xbin)
+        print("UUID loaded successfully")  
+    kernellist = xbin.get_kernels()
+    rule = re.compile("hls4ml_conv2d*")
+    kernel = list(filter(lambda val: rule.match(val.get_name()), kernellist))[0]
+    kHandle = pyxrt.kernel(d, uuid, kernel.get_name(), pyxrt.kernel.shared)
+
+
+    in_height = 124
+    in_width = 124
+    filt_height = 5
+    filt_width = 5
+    out_height = in_height - filt_height + 1
+    out_width = in_width - filt_width + 1
+    increment_h = 60
+    increment_w = 60
+    step_size_h = increment_h + filt_height - 1
+    step_size_w = increment_w + filt_width - 1
+    
+    inputs, weights, biases, golden_out = GenMatrix(in_height, in_width)
+    inputs_list = inputs.permute(3, 2, 1, 0).contiguous().view(-1).tolist()
+    output_list = [0 for i in range(out_height * out_width)]
+    
+    
+    # output_list = RunSingleBatch(d, kHandle, opt, inputs_list, weights, biases)
+
+    for i in range(0, in_height - filt_height + 1, increment_h):
+        for j in range(0, in_width - filt_width + 1, increment_w):
+            # Extract the submatrix for the current batch
+            batch_input = []
+            for jj in range(j, j+step_size_w):
+                for ii in range(i, i+step_size_h):     
+                    batch_input.append(inputs_list[ii+jj*in_width])
+            
+            # Run the kernel for this batch
+            batch_output_floats = RunSingleBatch(d, kHandle, opt, batch_input, weights, biases)
+            
+            # Store the output in the correct position in the output_list
+            for jj in range(j, j+increment_w):
+                for ii in range(i, i+increment_h):     
+                    output_list[ii+jj*out_width] = batch_output_floats[ii-i+(jj-j)*increment_h]
+    
+    print("====================")                  
     for i in range(10):
-        # print("Output Num ", i, "= ", output_floats[i], "Golden = ", golden_out[i])
-        print("Output Num ", i, "= ", output_floats[i])
+        print("Output Num ", i, "= ", output_list[i], "Golden = ", golden_out[i])
+    print("====================") 
+
 
     # Validate the output
     tolerance = 1e-5  # Define the tolerance for floating-point comparison
-    for i in range(10):
-        if abs(output_floats[i] - golden_out[i]) > tolerance:
+    count = 0
+    for i in range(len(golden_out)): 
+        if abs(output_list[i] - golden_out[i]) > tolerance:
             print("[Assertion Failed] Computed value does not match the reference.")
+            print("Output Num ", i, "= ", output_list[i], "Golden = ", golden_out[i])
+            count += 1
+        if i == len(golden_out) - 1:
+            print("[Assertion Passed]")
+        if count == 10:
             break
-    print("[Assertion Passed]")
+            
+    print("====================")      
 
 def main(args):
     opt = Options()
@@ -148,3 +197,19 @@ if __name__ == "__main__":
     os.environ["Runtime.xrt_bo"] = "false"
     result = main(sys.argv)
     sys.exit(result)
+
+
+    # for i in range(0, in_height - filt_height + 1, increment_h):
+    #     for j in range(0, in_width - filt_width + 1, increment_w):
+    #         # Extract the submatrix for the current batch
+    #         start_idx = i * in_width + j
+    #         end_idx = start_idx + step_size_h * step_size_w
+    #         batch_input = inputs_list[start_idx:end_idx]
+            
+    #         # Run the kernel for this batch
+    #         batch_output_floats = RunSingleBatch(d, kHandle, opt, batch_input, weights, biases)
+            
+    #         # Store the output in the correct position in the output_list
+    #         start_out_idx = i * out_width + j
+    #         end_out_idx = start_out_idx + increment_h * increment_w
+    #         output_list[start_out_idx:end_out_idx] = batch_output_floats[:increment_h * increment_w]

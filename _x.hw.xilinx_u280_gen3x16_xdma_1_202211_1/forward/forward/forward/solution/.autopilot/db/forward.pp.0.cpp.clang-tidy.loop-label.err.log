@@ -1,5 +1,0 @@
-3 warnings and 29 errors generated.
-Error while processing /mnt/shared/home/tz32/scalehls_vitis_test/_x.hw.xilinx_u280_gen3x16_xdma_1_202211_1/forward/forward/forward/solution/.autopilot/db/forward.pp.0.cpp.
-clang-tidy applied 161 of 161 suggested fixes.
-Suppressed 158 warnings (155 in non-user code, 3 with check filters).
-Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

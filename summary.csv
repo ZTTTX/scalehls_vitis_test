@@ -1,6 +1,6 @@
 Profile Summary
-Generated on: 2023-09-17 15:37:48
-Msec since Epoch: 1694983068802
+Generated on: 2023-10-30 22:26:19
+Msec since Epoch: 1698722779536
 Profiled application: python3.6
 Target platform: Xilinx
 Tool version: 2022.2
@@ -79,7 +79,7 @@ TRACE_BUFFER_FULL,xilinx_u280_gen3x16_xdma_base_1-1,false
 MEMORY_TYPE_BIT_WIDTH,xilinx_u280_gen3x16_xdma_base_1-1|HBM,256,
 MEMORY_TYPE_BIT_WIDTH,xilinx_u280_gen3x16_xdma_base_1-1|DDR,512,
 MEMORY_TYPE_BIT_WIDTH,xilinx_u280_gen3x16_xdma_base_1-1|PLRAM,512,
-APPLICATION_RUN_TIME_MS,all,629.408,
+APPLICATION_RUN_TIME_MS,all,656.157,
 TOTAL_KERNEL_RUN_TIME_MS,all,0,
 XRT_INI_SETTING,opencl_trace,1,Generation of trace of OpenCL APIs and memory transfers
 XRT_INI_SETTING,device_counters,1,Hardware counters added to summary file

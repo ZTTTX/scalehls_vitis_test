@@ -11,7 +11,7 @@ xclbin Information
    Kernels:                hls4ml_conv2d
    Signature:              
    Content:                Bitstream
-   UUID (xclbin):          f11239e1-3b20-9251-5c89-4b5a0d694d55
+   UUID (xclbin):          fecadf89-a5b4-5efe-424c-c046060c9d3f
    UUID (IINTF):           fb2b2c5a19ed63593fea95f51fbc8eb9
    Sections:               BITSTREAM, MEM_TOPOLOGY, IP_LAYOUT, CONNECTIVITY, 
                            CLOCK_FREQ_TOPOLOGY, BUILD_METADATA, 
@@ -49,7 +49,7 @@ Scalable Clocks
    Name:      DATA_CLK
    Index:     2
    Type:      DATA
-   Frequency: 300 MHz
+   Frequency: 250 MHz
 
 System Clocks
 ------
@@ -57,7 +57,7 @@ System Clocks
    Type:           SCALABLE 
    Default Freq:   300 MHz
    Requested Freq: 300 MHz
-   Achieved Freq:  300 MHz
+   Achieved Freq:  250.8 MHz
 
    Name:           ulp_ucs_aclk_kernel_01 
    Type:           SCALABLE 
